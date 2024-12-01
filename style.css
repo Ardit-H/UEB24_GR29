@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border-bottom: 1px solid #6c757d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+  
+/* .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+} */
