@@ -30,69 +30,93 @@ body{
 }
 .Prishtinë{
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap-reverse;
+  
+}
+.Hapesira{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap-reverse;
+
+}
+.Pershkrimi{
+     margin: 7px;
+    width:30rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    text-align: center;
+    justify-content: center;
+}
+.Permbajtja{
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     flex-wrap: wrap-reverse;
 }
-.Pershkrimi{
-
-    width:20rem;
-    height: 10rem;
-    border: 1px solid black;
-    border-radius: 10px;
+.container{
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid black;
+    box-shadow: 2px 5px 30px rgba(30, 30, 200, 0.3);
+    
 }
 .imazhet{
-height: 20rem;
-}
-.slider{
-    position: relative;
-    width: 15%;
-    overflow: hidden;
-    margin-top: 10px;
-
-}
-.images{
-    display: flex;
-    width: 100%;
-}
-.images img{
-    border-radius: 8px;
-    object-fit:cover;
    
-    width: 100%;
-    transition: all 0.15s ease;
-}
-.images input{
-    display: none;
-}
-.dots{
     display: flex;
-    justify-content: center;
-    margin: 5px;
+    object-fit: cover;
+ animation: slide 16s infinite;
 }
-.dots label{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    border: solid black 3px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    margin: 5px;
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
 }
-.dots label:hover{
-    background: black;
+.EmriMonumentit{
+    margin: 0.5rem;    
 }
-#img1:checked~.m1{
-    margin-left: 0;
+.allimages{
+    
+    width: 230px;
+    height: 150px;
+    position: relative;
 }
-#img2:checked~.m2{
-    margin-left: -100%;
-}
-#img3:checked~.m3{
-    margin-left: -200%;
-}
-#img4:checked~.m4{
-    margin-left: -300%;
+.foto{
+    border: 1px solid black;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
 }
