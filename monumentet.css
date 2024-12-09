@@ -67,6 +67,7 @@ h3{
     padding: 2px;
     text-align: center;
     justify-content: center;
+    align-content: center;
 }
 .Permbajtja{
     display: flex;
