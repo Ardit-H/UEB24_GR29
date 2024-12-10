@@ -37,16 +37,15 @@ body{
     width: 230px;
     height: 200px;
     position: relative;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10px;
     
 }
 .EmriiQytetit{
     margin-left: 10%;
     font-style: italic;
+    text-align: center;
 }
-
-
 .Permbajtja{
     display: flex;
     flex-direction: row;
@@ -61,7 +60,7 @@ body{
     margin: 100px;
     padding-right: 4rem;
     font-size: large;
-    line-height: 30px;
+    line-height: 27px;
 }
 .Pershkrimi{
     margin: 15px;
@@ -71,5 +70,28 @@ h4::before{
     content: "*";
     color: red;
 }
+.stars{
+    display: flex;
+    direction: row;
+}
+.star{
+    font-size: 25px;
+    color: #ccc;
+}
+.star.filled{
+    color: gold;
+}
+#test{
+    text-align: center;
+}
+.divider{
+    width: 60rem;
+    height: 0.3rem;
+    background-color: black;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 
