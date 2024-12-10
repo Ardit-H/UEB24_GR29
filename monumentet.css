@@ -6,7 +6,7 @@
 .content{
     display: flex;
     flex-direction: column;
-    width: 22616em;
+    width: 1200px;
    
 }
 nav{
@@ -23,13 +23,11 @@ label.Emriifaqes{
 }
 nav ul{
     float:right;
-    margin: 20px;
-
 }
 nav ul li{
     display: inline-block;
     line-height: 80px;
-    margin: 0 20px;
+
 }
 nav ul li a{
     color:white;
@@ -65,13 +63,7 @@ input{
     background-color: #8000ff;
     border-radius: 50px;
 }
-.title{
-    display:block;
-    margin-top: 3em;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
 
-}
 body{
     height: 100vh;
     display: flex;
@@ -79,8 +71,7 @@ body{
     
 }
 .Qytetet{
-    margin-right:10%;
-    margin-left: 10%;
+    
    
     border-radius: 10px;
 }
@@ -137,44 +128,45 @@ h3{
     align-content: center;
     flex-wrap: wrap-reverse;
 }
-.container{
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 1rem;
-    border: 2px solid black;
-    box-shadow: 2px 5px 30px rgba(30, 30, 200, 0.3);
+.Info{
     
 }
 .imazhet{
-   
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
     display: flex;
-    object-fit: cover;
- animation: slide 16s infinite;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height:400px;
+    background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
+    opacity:0.8;
+    background-position: center;
+    background-size: cover;
+    animation: change 20s infinite ease-in-out;
+    
 }
-@keyframes slide{
+@keyframes change{
     0%{
-        transform: translateX(0);
+       background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
     }
-    25%{
-        transform: translateX(0);
+    20%{
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves3.png');
     }
-    30%{
-        transform: translateX(-100%);
+    40%{
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves4.png');
     }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
+    60%{
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine.png');
     }
     80%{
-        transform: translateX(-300%);
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine1.png'); 
     }
+    
     100%{
-        transform: translateX(-300%);
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine2.png');
     }
 }
 .EmriMonumentit{
