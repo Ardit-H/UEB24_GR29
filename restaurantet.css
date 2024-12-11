@@ -20,11 +20,19 @@ body{
     justify-content: center;
 }
 .Qytetet{
+    border-radius: 0.3%;
+}
+.Qyteti{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap-reverse;
     border: 1px solid black;
     margin-right: 10%;
     margin-left: 10%;
-    border-radius: 10px;
-
+    border-radius: 0.3%;
 }
 .foto{
     border:1px solid black;
@@ -35,7 +43,7 @@ body{
 }
 .images{
     display: flex;
-    width: 17%;
+    width: 16%;
     height: auto;
     position: relative;
     margin: 0.5%;
@@ -43,7 +51,6 @@ body{
     object-fit: cover;
 }
 .EmriiQytetit{
-    margin-left: 10%;
     font-style: italic;
     text-align: center;
 }
