@@ -170,8 +170,60 @@ h3{
         background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine2.png');
     }
 }
-.EmriMonumentit{
-    margin: 0.5rem;    
+.rrethMonumentit{
+      display: flex;
+      flex-direction: row ;
+      justify-content: space-between;
+}
+.like-button {
+    height:45px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 2%;
+    border: 1px solid red;
+    border-radius: 2px;
+}
+.like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("img.png.png");
+    background-position: left;
+    position: absolute;
+}
+.like-button .heart-bg {
+    background-color: rgba(255,192,200,0);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+}
+.like-button .heart-bg:hover {
+    background: rgba(255,192,200,0.7);
+}
+
+.like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+}
+@keyframes like-anim {
+    to {
+        background-position: right;
+    }
+}
+.like-button .like-text {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #888;
+}
+
+.like-button .liked-text {
+    color: red;
 }
 .allimages{
     

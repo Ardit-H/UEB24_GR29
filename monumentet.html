@@ -46,11 +46,34 @@
         <div class="Qytetet">
             <div class="Qyteti" style="margin-top: 0%;">
                 <h2 class="EmriiQytetit">Prishtinë</h2>
+                <div class="rrethMonumentit">
                 <div class="EmriMonumentit">
                     <h3> Muzeu Kombëtar i Kosovës</h3>
                     <p class="Detaje">Periudha: Shekulli XIX</p>
                     <p class="Detaje">Numri i vendimit: 02 - 278/67</p>
                 </div>
+                    <div class="like-button" onclick="toggleLike()">
+                        <div class="heart-bg">
+                        <div class="heart-icon"></div>
+                    </div>
+                    <span class="like-text" id="likeText">Like</span>
+                </div>
+                    <script>
+                        function toggleLike() {
+                            const heartIcon = document.querySelector('.heart-icon');
+        const likeText = document.getElementById('likeText');
+        if (heartIcon.classList.contains('liked')) {
+            heartIcon.classList.remove('liked');
+            likeText.textContent = 'Like'; 
+            likeText.classList.remove('liked-text');
+        } else {
+            heartIcon.classList.add('liked');
+            likeText.textContent = 'Liked'; 
+            likeText.classList.add('liked-text'); 
+        }
+                        }
+                    </script>
+               </div>
                 <div class="Hapesira">
                     <div class="Permbajtja">
                         <div class="Pershkrimi">Muzeu Kombëtar i Kosovës është themeluar në vitin 1949,
@@ -118,10 +141,12 @@
                 </div>
                 <div id="test"> <span class="divider"></span>
                 </div>
+                <div class="rrethMonumentit">
                 <div class="EmriMonumentit">
                     <h3>Xhamia e Pirinazit</h3>
                     <p class="Detaje">Periudha: Shekulli XVI</p>
                     <p class="Detaje">Numri i vendimit: 02/53/1/1967</p>
+                </div>
                 </div>
                 <div class="Hapesira">
                     <div class="Permbajtja">
