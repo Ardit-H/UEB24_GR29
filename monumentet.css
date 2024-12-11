@@ -129,23 +129,24 @@ h3{
     flex-wrap: wrap-reverse;
 }
 .Info{
-    
+   height: 400px; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-weight: bold;
 }
 .imazhet{
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     height:400px;
     background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
     opacity:0.8;
     background-position: center;
     background-size: cover;
-    animation: change 20s infinite ease-in-out;
+    animation: change 20s infinite ease;
     
 }
 @keyframes change{
