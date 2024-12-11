@@ -1,66 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
   /* background-color: #f4f4f9; */
 }
-.navbari {
-  text-decoration: none;
-  display: inline;
-  justify-content: space-around;
-}
-#titulli {
-  text-align: center;
-  font-weight: bold;
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 16px 36px;
+  align-items: center;
+  background-color: #0082e6;
+  color: white;
+  border-radius: 0.5rem;
+}
+#top-titulli {
+  margin: 0rem 36px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+.nav-link {
+  justify-content: space-between;
+  margin: 0 16px;
+  padding-inline: 16px;
+}
+nav a {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.navbar-content a:hover {
+  background-color: rgb(97, 97, 247);
+  transition: 0.5s;
 }
 .content {
   margin: 0 220px;
+  margin-bottom: 1rem;
 }
-.prishtine {
+#prishtine {
   border: thin solid black;
-  border-radius: 1.2rem;
+  border-radius: 0.5rem;
 }
-.galleri-germia {
+section.emri-lokacionit {
   display: flex;
+}
+section.content {
+  display: block;
   margin: 2rem;
   gap: 1.3rem;
 }
-.galleri-germia img {
+section.content img {
   width: 230px;
   height: 230px;
   object-fit: cover;
   border: thin solid black;
   border-radius: 1.2rem;
 }
-.galleri-badovci {
+.permbajtja {
   display: flex;
-  margin: 2rem;
-  gap: 1.3rem;
-}
-.galleri-badovci img {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
-}
-.galleri-blinaja {
-  display: flex;
-  margin: 2rem;
-  gap: 1.3rem;
-}
-.galleri-blinaja img {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
 }
 p {
   border: thin solid black;
   border-radius: 1.2rem;
-  margin: 1.2rem;
-  padding: 0.6rem;
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  margin: 2rem;
+  gap: 1.3rem;
 }
