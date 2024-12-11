@@ -1,0 +1,66 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* background-color: #f4f4f9; */
+}
+.navbari {
+  text-decoration: none;
+  display: inline;
+  justify-content: space-around;
+}
+#titulli {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  margin: 0 220px;
+}
+.prishtine {
+  border: thin solid black;
+  border-radius: 1.2rem;
+}
+.galleri-germia {
+  display: flex;
+  margin: 2rem;
+  gap: 1.3rem;
+}
+.galleri-germia img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: thin solid black;
+  border-radius: 1.2rem;
+}
+.galleri-badovci {
+  display: flex;
+  margin: 2rem;
+  gap: 1.3rem;
+}
+.galleri-badovci img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: thin solid black;
+  border-radius: 1.2rem;
+}
+.galleri-blinaja {
+  display: flex;
+  margin: 2rem;
+  gap: 1.3rem;
+}
+.galleri-blinaja img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: thin solid black;
+  border-radius: 1.2rem;
+}
+p {
+  border: thin solid black;
+  border-radius: 1.2rem;
+  margin: 1.2rem;
+  padding: 0.6rem;
+}
