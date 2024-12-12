@@ -1,66 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
   /* background-color: #f4f4f9; */
 }
-.navbari {
-  text-decoration: none;
-  display: inline;
-  justify-content: space-around;
-}
-#titulli {
-  text-align: center;
-  font-weight: bold;
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 16px 36px;
+  align-items: center;
+  background-color: #0082e6;
+  color: white;
+  border-radius: 0.5rem;
+}
+#top-titulli {
+  margin: 0rem 36px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+.nav-link {
+  justify-content: space-between;
+  margin: 0 16px;
+  padding-inline: 16px;
+}
+nav a {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.navbar-content a:hover {
+  background-color: rgb(97, 97, 247);
+  transition: 0.5s;
 }
 .content {
   margin: 0 220px;
+  margin-bottom: 1rem;
 }
-.prishtine {
+#prishtine {
   border: thin solid black;
-  border-radius: 1.2rem;
+  border-radius: 0.5rem;
 }
-.galleri-germia {
+.emri-lokacionit {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.emri-lokacionit h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.vleresimi {
   display: flex;
-  margin: 2rem;
-  gap: 1.3rem;
+  justify-content: center;
+  gap: 5px;
 }
-.galleri-germia img {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
+
+.vleresimi label {
+  font-size: 24px;
+  color: #ffd700;
+  cursor: pointer;
 }
-.galleri-badovci {
+
+.vleresimi input {
+  display: none;
+}
+
+.foto {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.foto-content {
   display: flex;
-  margin: 2rem;
-  gap: 1.3rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
-.galleri-badovci img {
-  width: 230px;
-  height: 230px;
+
+.secila-foto {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
 }
-.galleri-blinaja {
+
+.butoni {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.butoni-majt {
+  left: 10px;
+}
+
+.butoni-djatht {
+  right: 10px;
+}
+
+.permbajtja {
   display: flex;
-  margin: 2rem;
-  gap: 1.3rem;
-}
-.galleri-blinaja img {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
 }
 p {
   border: thin solid black;
   border-radius: 1.2rem;
-  margin: 1.2rem;
-  padding: 0.6rem;
+  width: 400px;
+  height: 470px;
+  padding: 20px;
+  margin: 2rem;
+  font: optional;
+
+  gap: 1.3rem;
 }

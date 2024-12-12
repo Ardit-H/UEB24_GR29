@@ -7,41 +7,61 @@
     <link rel="stylesheet" href="bukurite_natyrore.css" />
   </head>
   <body>
-    <header>
-      <div class="navbari">
-        <h1>Bukuritë Natyrore</h1>
-        <div class="navcontent">
+    <header class="content">
+      <div class="navbar-content">
+        <div class="navbari" id="top-titulli"><h1>Bukuritë Natyrore</h1></div>
+        <div class="navbari">
           <nav>
-            <a href="">Qytetet</a>
-            <a href="">Bukuritë natyrore</a>
-            <a href="">Monumentet historike</a>
-            <a href="">Restaorantet</a>
+            <ul>
+              <!-- <li class="nav-link"><a href="#">Qytetet</a></li> -->
+              <li class="nav-link"><a href="#">Monumentet historike</a></li>
+              <li class="nav-link"><a href="#">Bukuritë natyrore</a></li>
+              <li class="nav-link"><a href="#">Restaorantet</a></li>
+            </ul>
           </nav>
         </div>
       </div>
-      <div id="titulli">
-        <h2>Bukuritë natyrore</h2>
-      </div>
     </header>
     <div class="content">
-      <div class="prishtine">
+      <div class="qyteti" id="prishtine">
         <h2>Prishtinë</h2>
-        <div class="germia">
-          <h3>Parku i Gëmisë</h3>
-          <section class="galleri-germia">
-            <div class="foto-germia1">
-              <img
-                id="foto-germia1"
-                src="FototperProjekt/BukuriteNatyrore/Germia.webp"
-                alt="Foto e Germise 1"
-              />
-            </div>
-            <div class="foto-germia2">
-              <img
-                class="foto-germia2"
-                src="FototperProjekt/BukuriteNatyrore/GermiaShi.jpg"
-                alt="Foto e Germise 2"
-              />
+        <h3 class="emri-lokacionit">Parku i Gëmisë</h3>
+        <div class="permbajtja" id="germia">
+          <!-- <h3 class="emri-lokacionit">Parku i Gëmisë</h3> -->
+          <section class="content" id="galleri-germia">
+            <div>
+              <div class="emri-lokacionit">
+                <h3>Parku i Germise</h3>
+                <div class="vleresimi">
+                <input type="radio" id="ylli5" name="vleresim" value="5">
+                <label for="ylli5">&#9733</label>
+                <input type="radio" id="ylli4" name="vleresim" value="4">
+                <label for="ylli4">&#9733</label>
+                <input type="radio" id="ylli3" name="vleresim" value="3">
+                <label for="ylli3">&#9733</label>
+                <input type="radio" id="ylli2" name="vleresim" value="2">
+                <label for="ylli2">&#9733</label>
+                <input type="radio" id="ylli1" name="vleresim" value="1">
+                <label for="ylli1">&#9733</label>
+              </div>
+              </div>
+          <div class="foto" id="foto">
+            <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
+              <div class="foto-content">
+                <img
+                  class="secila-foto"
+                  src="FototperProjekt/BukuriteNatyrore/Germia.webp"
+                  alt="Foto e Germise 1"
+                />
+              
+              
+                <img class="secila-foto"
+                  src="FototperProjekt/BukuriteNatyrore/GermiaShi.jpg"
+                  alt="Foto e Germise 2"
+                />
+              </div>
+              <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
+              </div>
             </div>
           </section>
           <p>
@@ -59,25 +79,48 @@
             ideal për relaksim dhe rekreacion për të gjitha moshat.
           </p>
         </div>
-        <div class="badovci">
-          <h3>Liqeni i Badovcit</h3>
-          <section class="galleri-badovci">
-            <div class="foto-badovci1">
-              <img
+        <h3 class="emri-lokacionit">Liqeni i Badovcit</h3>
+        <div class="permbajtja" id="badovci">
+          <!-- <h3 class="emri-lokacionit">Liqeni i Badovcit</h3> -->
+          <section class="content" id="galleri-badovci">
+            <div>
+            <div class="emri-lokacionit">
+                <h3>Liqeni i Badovcit</h3>
+                <div class="vleresimi">
+                <input type="radio" id="ylli5" name="vleresim" value="5">
+                <label for="ylli5">&#9733</label>
+                <input type="radio" id="ylli4" name="vleresim" value="4">
+                <label for="ylli4">&#9733</label>
+                <input type="radio" id="ylli3" name="vleresim" value="3">
+                <label for="ylli3">&#9733</label>
+                <input type="radio" id="ylli2" name="vleresim" value="2">
+                <label for="ylli2">&#9733</label>
+                <input type="radio" id="ylli1" name="vleresim" value="1">
+                <label for="ylli1">&#9733</label>
+              </div>
+              </div>
+            <div class="foto" id="foto">
+<button class="butoni butoni-majt" id="meparshem">&#9664;</button>
+              <div class="foto-content">
+                
+              <img class="secila-foto"
                 src="FototperProjekt/BukuriteNatyrore/Badovci.jpg"
                 alt="Liqeni i Badovcit"
                 width="60"
                 height="60"
               />
-            </div>
-            <div class="foto-badovci2">
-              <img
+            
+              <img class="secila-foto"
                 src="FototperProjekt/BukuriteNatyrore/Badovci2.jpeg"
                 alt=""
                 width="60"
                 height="60"
               />
             </div>
+            <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
+            </div>
+            </div>
+            
           </section>
           <p>
             Rreth 20 minuta nga qendra e Prishtinës ndodhet Liqeni i Badovcit,
@@ -93,24 +136,46 @@
             mrekullueshme dhe për të shijuar qetësinë larg përditshmërisë.
           </p>
         </div>
-        <div class="blinaja">
-          <h3>Parku Nacional Blinaja</h3>
-          <section class="galleri-blinaja">
-            <div class="fotoblinaja1">
-              <img
+        <h3 class="emri-lokacionit">Parku Nacional Blinaja</h3>
+        <div class="permbajtja">
+          <!-- <h3 class="emri-lokacionit">Parku Nacional Blinaja</h3> -->
+          <section class="content" id="galleri-blinaja">
+             <div class="emri-lokacionit">
+                <h3>Parku Blinaja</h3>
+                <div class="vleresimi">
+                <input type="radio" id="ylli5" name="vleresim" value="5">
+                <label for="ylli5">&#9733</label>
+                <input type="radio" id="ylli4" name="vleresim" value="4">
+                <label for="ylli4">&#9733</label>
+                <input type="radio" id="ylli3" name="vleresim" value="3">
+                <label for="ylli3">&#9733</label>
+                <input type="radio" id="ylli2" name="vleresim" value="2">
+                <label for="ylli2">&#9733</label>
+                <input type="radio" id="ylli1" name="vleresim" value="1">
+                <label for="ylli1">&#9733</label>
+              </div>
+              </div>
+
+            <div>
+              <div class="foto" id="foto">
+                 <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
+              <div class="foto-content">
+              <img class="secila-foto"
                 src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes1.jpg"
                 alt="ParkuBlinajes"
                 width="60"
                 height="60"
               />
-            </div>
-            <div class="fotoblinaja2">
-              <img
+            
+              <img class="secila-foto"
                 src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes2.jpg"
                 alt="ParkuBlinajes"
                 width="60"
                 height="60"
               />
+            </div>
+            <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
+            </div>
             </div>
           </section>
           <p>
@@ -124,16 +189,18 @@
             shtigje për ecje, mundësi për vëzhgimin e shpendëve dhe një ambient
             të qetë për relaksim. Pyjet e tij të dendura dhe gjelbërimi i
             harlisur krijojnë një atmosferë të përsosur për ata që kërkojnë
-            largimin nga zhurma e përditshme dhe lidhjen me natyrën. Me peizazhe
+            largimin nga zhurma e përditshme dhe lidhjen me natyrën.
+            <!-- Me peizazhe
             të larmishme dhe pamje mbresëlënëse, Parku Blinaja është një vend
-            ideal për fotografi, shëtitje dhe vëzhgim të kafshëve të egra.
-            Përpjekjet e vazhdueshme për mbrojtjen dhe zhvillimin e tij e kanë
+            ideal për fotografi, shëtitje dhe vëzhgim të kafshëve të egra. -->
+            <!-- Përpjekjet e vazhdueshme për mbrojtjen dhe zhvillimin e tij e kanë
             kthyer Blinajën në një nga atraksionet më të rëndësishme natyrore të
             Kosovës, duke u bërë një vend i preferuar për turistët vendas dhe
-            ndërkombëtarë.
+            ndërkombëtarë. -->
           </p>
         </div>
       </div>
     </div>
+    <script src="bukurite_natyrore.js"></script>
   </body>
 </html>
