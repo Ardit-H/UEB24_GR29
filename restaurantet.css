@@ -6,7 +6,8 @@
 .content{
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    align-items: center;
+   
 }
 .title{
     display: block;
@@ -21,6 +22,8 @@ body{
 }
 .Qytetet{
     border-radius: 0.3%;
+    width: 1200px;
+    
 }
 .Qyteti{
     display: flex;
@@ -30,7 +33,6 @@ body{
     align-content: stretch;
     flex-wrap: wrap-reverse;
     border: 1px solid black;
-    
     border-radius: 0.3%;
 }
 .foto{
@@ -107,6 +109,36 @@ h4{
 h3{
     text-decoration: underline;
 }
-
+.fotografite{
+    height: 500px;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    animation: change 30s infinite ease;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    
+}
+@keyframes change{
+    0%{
+        background-image: url('FototperProjekt/Restaurantet/SaltRestaurant.jpg');
+    }
+    20%{
+        background-image: url('FototperProjekt/Restaurantet/AlulaEatingHouse2.jpeg');
+    }
+    40%{
+        background-image: url('FototperProjekt/Restaurantet/MrFisher2.jpg');
+    }
+    60%{
+        background-image: url('FototperProjekt/Restaurantet/SaltRestaurant1.jpg');
+    }
+    80%{
+        background-image: url('FototperProjekt/Restaurantet/UjevaraDrinit1.png');
+    }
+    100%{
+        background-image: url('FototperProjekt/Restaurantet/CasaRita6.jpg');
+    }
+    
+}
 
 
