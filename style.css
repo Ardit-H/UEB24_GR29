@@ -7,7 +7,39 @@ body{
     background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     border-bottom: 1px solid #6c757d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    text-align: right;
+    padding: 3%;
 
+}
+img#logo{
+    width: 10%;
+    justify-content: center;
+    float: left;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    /* background-color: rgb(0, 0, 0); */
+}
+li {
+    float: left;
+}
+li a {
+    font-size: 20px;
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+li a:hover {
+    color:#6c757d;
+    font-size: 23px;
+    transform: scale(1.2);
 }
   
 /* .navbar-brand {
