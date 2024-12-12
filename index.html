@@ -20,8 +20,35 @@
         </div>
     </nav>
 
-    <div class="foto_k">
-        <p></p>
+    <div class="foto_k"></div>
+    <div id="search_btn">
+        <p id="Pershkrimi_Search">Për më shumë informata rreth një qyteti kërko qytetin më poshtë!</p>
+        <input type="search" placeholder="Kërko qytetin "id="search_bt" alt="kerkimi">
+        <button onclick="dergoNeFaqe()">Kërko</button>
     </div>
+    <script>
+        function dergoNeFaqe(){
+            const query = document.getElementById('search_bt').value.toLowerCase();
+            
+            
+            if(query === "prishtina"  || query=== "prishtine"){
+                window.location.href = "monumentet.html#Prishtina";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else if(query === "prizren"  || query=== "prizreni"){
+                window.location.href = "monumentet.html#Prizreni";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else if(query === "peja"  || query=== "peje" || query=== "pejë" ){
+                window.location.href = "monumentet.html#Peja";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else{
+                alert("Nuk u gjet asnje qytet!");
+            }
+        }
+    </script>
+
+
 </body>
 </html>

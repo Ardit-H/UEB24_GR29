@@ -38,7 +38,6 @@ li a {
 }
 li a:hover {
     color:#6c757d;
-    font-size: 23px;
     transform: scale(1.2);
 }
 /* Slide foto*/
@@ -72,4 +71,31 @@ li a:hover {
     100%{
         background-image: url('FototperProjekt/Main/Mitrovica.jpg');
     }
+}
+/*  Search button */
+#Pershkrimi_Search{
+    font-size: 25px;
+
+}
+
+#search_btn{
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    padding-top: 3%;
+}
+
+input[alt="kerkimi"]{
+    width: 30%;
+    height: 32px;
+    border: 1px solid green;
+    border-radius: 15px;
+    box-shadow: 0px 1px 6px 4px rgba(83, 230, 86, 0.3);
+}
+
+button{
+    height: 32px;
+    border: 1px solid green;
+    border-radius: 15px;
+    box-shadow: 0px 1px 6px 4px rgba(83, 230, 86, 0.3);
 }
