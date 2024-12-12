@@ -6,8 +6,8 @@
 .content{
     display: flex;
     flex-direction: column;
-    width: 1200px;
-   
+    
+    align-items: center;
 }
 nav{
     background-color: #0082e6;
@@ -71,9 +71,10 @@ body{
     
 }
 .Qytetet{
-    
-   
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
 }
 .Qyteti{
     display: flex;
@@ -137,10 +138,10 @@ h3{
    font-weight: bold;
 }
 .imazhet{
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid black;
+   
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    border: 0.5px solid black;
     height:400px;
     background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
     opacity:0.8;
@@ -254,7 +255,8 @@ border-radius: 10px;
 }
 footer{
     background: #0082e6;
-    border-radius: 10px;
+    width: 100%;
+    margin-top: 0.5%;
 }
 .HapesiraeFooterit{
 display: flex;
