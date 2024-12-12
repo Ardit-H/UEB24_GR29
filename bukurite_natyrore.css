@@ -55,21 +55,77 @@ nav a {
   border: thin solid black;
   border-radius: 0.5rem;
 }
-section.emri-lokacionit {
+.emri-lokacionit {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.emri-lokacionit h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.vleresimi {
   display: flex;
+  justify-content: center;
+  gap: 5px;
 }
-section.content {
-  display: block;
-  margin: 2rem;
-  gap: 1.3rem;
+
+.vleresimi label {
+  font-size: 24px;
+  color: #ffd700;
+  cursor: pointer;
 }
-section.content img {
-  width: 230px;
-  height: 230px;
+
+.vleresimi input {
+  display: none;
+}
+
+.foto {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.foto-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.secila-foto {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: thin solid black;
-  border-radius: 1.2rem;
 }
+
+.butoni {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.butoni-majt {
+  left: 10px;
+}
+
+.butoni-djatht {
+  right: 10px;
+}
+
 .permbajtja {
   display: flex;
 }
@@ -77,8 +133,10 @@ p {
   border: thin solid black;
   border-radius: 1.2rem;
   width: 400px;
-  height: 450px;
+  height: 470px;
   padding: 20px;
   margin: 2rem;
+  font: optional;
+
   gap: 1.3rem;
 }
