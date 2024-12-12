@@ -77,6 +77,7 @@ body{
     width: 1200px;
 }
 .Qyteti{
+    background-color: #ecebeb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -130,45 +131,47 @@ h3{
     flex-wrap: wrap-reverse;
 }
 .Info{
-   height: 400px; 
+   height: 430px; 
    display: flex;
    justify-content: center;
    align-items: center;
    text-align: center;
    font-weight: bold;
+   font-size: 35px;
+   color:rgb(255, 255, 255);
+   text-shadow: 6px 6px 8px rgba(0, 0, 0, 1);
 }
 .imazhet{
    
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     border: 0.5px solid black;
-    height:400px;
-    background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
+    height:430px;
     opacity:0.8;
     background-position: center;
     background-size: cover;
-    animation: change 20s infinite ease;
+    animation: change 30s infinite ease;
     
 }
 @keyframes change{
     0%{
-       background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
+       background-image: url('FototperProjekt/Monumentet kulturore-historike/KalajaePrizrenit5.png');
     }
     20%{
-        background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves3.png');
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png');
     }
     40%{
-        background-image: url('FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves4.png');
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/LidhjaePrizrenit2.png');
     }
     60%{
         background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine.png');
     }
     80%{
-        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine1.png'); 
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/KishaeShenSpasitShelbuesit1.png'); 
     }
     
     100%{
-        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaEPirinazitPrishtine2.png');
+        background-image: url('FototperProjekt/Monumentet kulturore-historike/XhamiaeSinanPashes3.png');
     }
 }
 .rrethMonumentit{
