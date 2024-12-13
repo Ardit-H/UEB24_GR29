@@ -1007,6 +1007,26 @@
                 </div>
             </div>
         </div>
+        <script>
+          window.onload = function() {
+            const hash = window.location.hash.substring(1); 
+            const qytetet = document.querySelectorAll('.Qyteti'); 
+            qytetet.forEach(function(qyteti) {
+                qyteti.style.display = 'none';
+            });
+
+            if (hash) {
+                const qyteti = document.getElementById(hash);
+                if (qyteti) {
+                    qyteti.style.display = 'block'; 
+                }
+            } else {
+                qytetet.forEach(function(qyteti) {
+                    qyteti.style.display = 'block';
+                });
+            }
+        }
+        </script>
         <footer>
             <div class="HapesiraeFooterit">
                 <div class="Footer-content">
