@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    width: 100%;
 }
 .title{
     display: block;
@@ -110,14 +110,15 @@ h3{
     text-decoration: underline;
 }
 .fotografite{
-    height: 500px;
+    height: 450px;
     opacity: 1;
     background-position: center;
     background-size: cover;
     animation: change 30s infinite ease;
     margin-top: 0.5%;
     margin-bottom: 0.5%;
-    
+    width: 100vw;
+    max-width: 100%;
 }
 @keyframes change{
     0%{
@@ -140,5 +141,41 @@ h3{
     }
     
 }
-
+.navbar{
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border-bottom: 1px solid #6c757d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 30px;
+    text-align: right;
+    display: flex;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+img#logo{
+    width: 8%;
+    justify-content: center;
+    float: left;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+li a{
+    font-size: 20px;
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+li a:hover{
+    color:#6c757d;
+    transform: scale(1.2);
+}
 
