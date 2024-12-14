@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,25 +7,21 @@
     <link rel="stylesheet" href="bukurite_natyrore.css" />
   </head>
   <body>
-    <header class="content">
-      <div class="navbar-content">
-        <div class="navbari" id="top-titulli"><h1>Bukuritë Natyrore</h1></div>
-        <div class="navbari">
-          <nav>
-            <ul>
-              <!-- <li class="nav-link"><a href="#">Qytetet</a></li> -->
-              <li class="nav-link"><a href="#">Monumentet historike</a></li>
-              <li class="nav-link"><a href="#">Bukuritë natyrore</a></li>
-              <li class="nav-link"><a href="#">Restaorantet</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
     <div class="content">
+      <nav class="navbar">
+        <div>
+          <ul>
+            <li><img src="FototperProjekt/Main/logo.webp" id="logo" /></li>
+            <li><a href="index.html">Sugjerime turistike</a></li>
+            <li><a href="monumentet.html">Monumentet historike</a></li>
+            <li><a href="bukurite_natyrore.html">Bukurite natyrore</a></li>
+            <li><a href="restaurantet.html">Restaurantet</a></li>
+            <li><a href="#">Rreth nesh</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="qyteti" id="prishtine">
         <h2>Prishtinë</h2>
-<<<<<<< Updated upstream
         <h3 class="emri-lokacionit">Parku i Gëmisë</h3>
         <div class="permbajtja" id="germia">
           <!-- <h3 class="emri-lokacionit">Parku i Gëmisë</h3> -->
@@ -34,53 +30,39 @@
               <div class="emri-lokacionit">
                 <h3>Parku i Germise</h3>
                 <div class="vleresimi">
-                <input type="radio" id="ylli5" name="vleresim" value="5">
-                <label for="ylli5">&#9733</label>
-                <input type="radio" id="ylli4" name="vleresim" value="4">
-                <label for="ylli4">&#9733</label>
-                <input type="radio" id="ylli3" name="vleresim" value="3">
-                <label for="ylli3">&#9733</label>
-                <input type="radio" id="ylli2" name="vleresim" value="2">
-                <label for="ylli2">&#9733</label>
-                <input type="radio" id="ylli1" name="vleresim" value="1">
-                <label for="ylli1">&#9733</label>
+                  <input type="radio" id="ylli5" name="vleresim" value="5" />
+                  <label for="ylli5">&#9733;</label>
+                  <input type="radio" id="ylli4" name="vleresim" value="4" />
+                  <label for="ylli4">&#9733;</label>
+                  <input type="radio" id="ylli3" name="vleresim" value="3" />
+                  <label for="ylli3">&#9733;</label>
+                  <input type="radio" id="ylli2" name="vleresim" value="2" />
+                  <label for="ylli2">&#9733;</label>
+                  <input type="radio" id="ylli1" name="vleresim" value="1" />
+                  <label for="ylli1">&#9733;</label>
+                </div>
               </div>
+              <div class="foto" id="foto">
+                <button class="butoni butoni-majt" id="meparshem">
+                  &#9664;
+                </button>
+                <div class="foto-content">
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/Germia.webp"
+                    alt="Foto e Germise 1"
+                  />
+
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/GermiaShi.jpg"
+                    alt="Foto e Germise 2"
+                  />
+                </div>
+                <button class="butoni butoni-djatht" id="ardhshem">
+                  &#9654;
+                </button>
               </div>
-          <div class="foto" id="foto">
-            <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
-              <div class="foto-content">
-                <img
-                  class="secila-foto"
-                  src="FototperProjekt/BukuriteNatyrore/Germia.webp"
-                  alt="Foto e Germise 1"
-                />
-              
-              
-                <img class="secila-foto"
-                  src="FototperProjekt/BukuriteNatyrore/GermiaShi.jpg"
-                  alt="Foto e Germise 2"
-                />
-              </div>
-              <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
-              </div>
-=======
-        <div class="germia" id="germia">
-          <h3>Parku i Gëmisë</h3>
-          <section class="galleri-germia">
-            <div class="foto-germia1">
-              <img
-                id="foto-germia1"
-                src="FototperProjekt/BukuriteNatyrore/Germia.webp"
-                alt="Foto e Germise 1"
-              />
-            </div>
-            <div class="foto-germia2">
-              <img
-                class="foto-germia2"
-                src="FototperProjekt/BukuriteNatyrore/GermiaShi.jpg"
-                alt="Foto e Germise 2"
-              />
->>>>>>> Stashed changes
             </div>
           </section>
           <p>
@@ -103,43 +85,47 @@
           <!-- <h3 class="emri-lokacionit">Liqeni i Badovcit</h3> -->
           <section class="content" id="galleri-badovci">
             <div>
-            <div class="emri-lokacionit">
+              <div class="emri-lokacionit">
                 <h3>Liqeni i Badovcit</h3>
                 <div class="vleresimi">
-                <input type="radio" id="ylli5" name="vleresim" value="5">
-                <label for="ylli5">&#9733</label>
-                <input type="radio" id="ylli4" name="vleresim" value="4">
-                <label for="ylli4">&#9733</label>
-                <input type="radio" id="ylli3" name="vleresim" value="3">
-                <label for="ylli3">&#9733</label>
-                <input type="radio" id="ylli2" name="vleresim" value="2">
-                <label for="ylli2">&#9733</label>
-                <input type="radio" id="ylli1" name="vleresim" value="1">
-                <label for="ylli1">&#9733</label>
+                  <input type="radio" id="ylli5" name="vleresim" value="5" />
+                  <label for="ylli5">&#9733;</label>
+                  <input type="radio" id="ylli4" name="vleresim" value="4" />
+                  <label for="ylli4">&#9733;</label>
+                  <input type="radio" id="ylli3" name="vleresim" value="3" />
+                  <label for="ylli3">&#9733;</label>
+                  <input type="radio" id="ylli2" name="vleresim" value="2" />
+                  <label for="ylli2">&#9733;</label>
+                  <input type="radio" id="ylli1" name="vleresim" value="1" />
+                  <label for="ylli1">&#9733;</label>
+                </div>
               </div>
+              <div class="foto" id="foto">
+                <button class="butoni butoni-majt" id="meparshem">
+                  &#9664;
+                </button>
+                <div class="foto-content">
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/Badovci.jpg"
+                    alt="Liqeni i Badovcit"
+                    width="60"
+                    height="60"
+                  />
+
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/Badovci2.jpeg"
+                    alt=""
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <button class="butoni butoni-djatht" id="ardhshem">
+                  &#9654;
+                </button>
               </div>
-            <div class="foto" id="foto">
-<button class="butoni butoni-majt" id="meparshem">&#9664;</button>
-              <div class="foto-content">
-                
-              <img class="secila-foto"
-                src="FototperProjekt/BukuriteNatyrore/Badovci.jpg"
-                alt="Liqeni i Badovcit"
-                width="60"
-                height="60"
-              />
-            
-              <img class="secila-foto"
-                src="FototperProjekt/BukuriteNatyrore/Badovci2.jpeg"
-                alt=""
-                width="60"
-                height="60"
-              />
             </div>
-            <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
-            </div>
-            </div>
-            
           </section>
           <p>
             Rreth 20 minuta nga qendra e Prishtinës ndodhet Liqeni i Badovcit,
@@ -159,42 +145,48 @@
         <div class="permbajtja">
           <!-- <h3 class="emri-lokacionit">Parku Nacional Blinaja</h3> -->
           <section class="content" id="galleri-blinaja">
-             <div class="emri-lokacionit">
-                <h3>Parku Blinaja</h3>
-                <div class="vleresimi">
-                <input type="radio" id="ylli5" name="vleresim" value="5">
-                <label for="ylli5">&#9733</label>
-                <input type="radio" id="ylli4" name="vleresim" value="4">
-                <label for="ylli4">&#9733</label>
-                <input type="radio" id="ylli3" name="vleresim" value="3">
-                <label for="ylli3">&#9733</label>
-                <input type="radio" id="ylli2" name="vleresim" value="2">
-                <label for="ylli2">&#9733</label>
-                <input type="radio" id="ylli1" name="vleresim" value="1">
-                <label for="ylli1">&#9733</label>
+            <div class="emri-lokacionit">
+              <h3>Parku Blinaja</h3>
+              <div class="vleresimi">
+                <input type="radio" id="ylli5" name="vleresim" value="5" />
+                <label for="ylli5">&#9733;</label>
+                <input type="radio" id="ylli4" name="vleresim" value="4" />
+                <label for="ylli4">&#9733;</label>
+                <input type="radio" id="ylli3" name="vleresim" value="3" />
+                <label for="ylli3">&#9733;</label>
+                <input type="radio" id="ylli2" name="vleresim" value="2" />
+                <label for="ylli2">&#9733;</label>
+                <input type="radio" id="ylli1" name="vleresim" value="1" />
+                <label for="ylli1">&#9733;</label>
               </div>
-              </div>
+            </div>
 
             <div>
               <div class="foto" id="foto">
-                 <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
-              <div class="foto-content">
-              <img class="secila-foto"
-                src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes1.jpg"
-                alt="ParkuBlinajes"
-                width="60"
-                height="60"
-              />
-            
-              <img class="secila-foto"
-                src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes2.jpg"
-                alt="ParkuBlinajes"
-                width="60"
-                height="60"
-              />
-            </div>
-            <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
-            </div>
+                <button class="butoni butoni-majt" id="meparshem">
+                  &#9664;
+                </button>
+                <div class="foto-content">
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes1.jpg"
+                    alt="ParkuBlinajes"
+                    width="60"
+                    height="60"
+                  />
+
+                  <img
+                    class="secila-foto"
+                    src="FototperProjekt/BukuriteNatyrore/ParkuBlinajes2.jpg"
+                    alt="ParkuBlinajes"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <button class="butoni butoni-djatht" id="ardhshem">
+                  &#9654;
+                </button>
+              </div>
             </div>
           </section>
           <p>
