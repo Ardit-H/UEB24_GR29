@@ -14,6 +14,9 @@ body {
   display: flex;
   justify-content: center;
 }
+header {
+  width: 100%;
+}
 
 /* Navbar style */
 .navbar {
@@ -24,11 +27,9 @@ body {
   text-align: right;
   display: flex;
   padding: 3%;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
-
 img#logo {
   width: 8%;
   justify-content: center;
@@ -37,6 +38,7 @@ img#logo {
 }
 ul {
   list-style-type: none;
+  display: flex;
   overflow: hidden;
 }
 li {
@@ -52,14 +54,19 @@ li a {
 }
 li a:hover {
   color: #6c757d;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 /* Navbar style end */
 
 #prishtine {
   border: thin solid black;
   border-radius: 0.5rem;
+  margin-top: 2rem;
 }
+.emri-i-qytetit {
+  padding: 2rem;
+}
+
 .emri-lokacionit {
   text-align: center;
   margin-bottom: 20px;
@@ -122,14 +129,18 @@ li a:hover {
 }
 .permbajtja {
   display: flex;
+  justify-self: center;
+  margin-bottom: 4rem;
+}
+.galleri-germia {
+  justify-content: center;
 }
 p {
+  width: 50%;
+  max-width: 400px;
   border: thin solid black;
   border-radius: 1.2rem;
-  width: 400px;
-  height: 470px;
   padding: 20px;
-  margin: 2rem;
-  font: optional;
-  gap: 1.3rem;
+  margin: 3.8rem;
+  overflow-wrap: break-word;
 }
