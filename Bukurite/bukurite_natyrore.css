@@ -16,45 +16,7 @@ body {
 }
 header {
   width: 100%;
-} /* Navbar style */
-.navbar {
-  background: linear-gradient(135deg, #343a40 0%, #495057 100%);
-  border-bottom: 1px solid #6c757d;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  height: 30px;
-  text-align: right;
-  display: flex;
-  padding: 3%;
-  align-items: center;
-  width: 100%;
 }
-img#logo {
-  width: 8%;
-  justify-content: center;
-  float: left;
-  padding: 0;
-}
-ul {
-  list-style-type: none;
-  display: flex;
-  overflow: hidden;
-}
-li {
-  float: left;
-}
-li a {
-  font-size: 20px;
-  color: white;
-  padding: 12px;
-  display: block;
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
-li a:hover {
-  color: #6c757d;
-  transform: scale(1.1);
-}
-/* Navbar style end */
 #prishtine {
   border: thin solid black;
   border-radius: 0.5rem;
