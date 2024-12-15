@@ -6,7 +6,8 @@
 .content{
     display: flex;
     flex-direction: column;
-    width: 22616em;
+    align-items: center;
+    width: 100%;
 }
 .title{
     display: block;
@@ -20,11 +21,19 @@ body{
     justify-content: center;
 }
 .Qytetet{
+    border-radius: 0.3%;
+    width: 1200px;
+    
+}
+.Qyteti{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap-reverse;
     border: 1px solid black;
-    margin-right: 10%;
-    margin-left: 10%;
-    border-radius: 10px;
-
+    border-radius: 0.3%;
 }
 .foto{
     border:1px solid black;
@@ -34,15 +43,15 @@ body{
     border-radius: 10px;
 }
 .images{
-    width: 230px;
-    height: 200px;
+    display: flex;
+    width: 16%;
+    height: auto;
     position: relative;
-    margin: 5px;
-    border-radius: 10px;
-    
+    margin: 0.5%;
+    border-radius: 10%;
+    object-fit: cover;
 }
 .EmriiQytetit{
-    margin-left: 10%;
     font-style: italic;
     text-align: center;
 }
@@ -67,7 +76,7 @@ body{
     margin-top: -30px;
 }
 h4::before{
-    content: "*";
+    content: "**";
     color: red;
 }
 .stars{
@@ -92,6 +101,81 @@ h4::before{
     border-radius: 50%;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
-
-
+h4{
+    margin: 1%;
+    padding: 3%;
+    font-size: 20px;
+}
+h3{
+    text-decoration: underline;
+}
+.fotografite{
+    height: 450px;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    animation: change 30s infinite ease;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    width: 100vw;
+    max-width: 100%;
+}
+@keyframes change{
+    0%{
+        background-image: url('FototperProjekt/Restaurantet/SaltRestaurant.jpg');
+    }
+    20%{
+        background-image: url('FototperProjekt/Restaurantet/AlulaEatingHouse2.jpeg');
+    }
+    40%{
+        background-image: url('FototperProjekt/Restaurantet/MrFisher2.jpg');
+    }
+    60%{
+        background-image: url('FototperProjekt/Restaurantet/SaltRestaurant1.jpg');
+    }
+    80%{
+        background-image: url('FototperProjekt/Restaurantet/UjevaraDrinit1.png');
+    }
+    100%{
+        background-image: url('FototperProjekt/Restaurantet/CasaRita6.jpg');
+    }
+    
+}
+.navbar{
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border-bottom: 1px solid #6c757d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 30px;
+    text-align: right;
+    display: flex;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+img#logo{
+    width: 8%;
+    justify-content: center;
+    float: left;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+li a{
+    font-size: 20px;
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+li a:hover{
+    color:#6c757d;
+    transform: scale(1.2);
+}
 

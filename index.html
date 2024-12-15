@@ -8,12 +8,56 @@
 </head>
 <body>
     <nav class="navbar">
-        <a class="navbar-brand" href="#">Sugjerime turistike</a>
-        <a href="#">Qytetet</a>
-        <a href="#">Bukurit natyrore</a>
-        <a href="#">Monumentet historike</a>
-        <a href="#">Restaorantet</a>
-        <a href="#">Rreth nesh</a>
+        <div>
+            <ul>
+                <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
+                <li><a href="index.html">Sugjerime turistike</a></li>
+                <li><a href="monumentet.html">Monumentet historike</a></li>
+                <li><a href="bukurite_natyrore.html">Bukurit natyrore</a></li>
+                <li><a href="restaurantet.html">Restaorantet</a></li>
+                <li><a href="#">Rreth nesh</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <div class="foto_k"></div>
+    <div id="search_btn">
+        <p id="Pershkrimi_Search">Për më shumë informata rreth një qyteti kërko qytetin më poshtë!</p>
+        <input type="search" placeholder="Kërko qytetin "id="search_bt" alt="kerkimi">
+        <button onclick="dergoNeFaqe()">Kërko</button>
+    </div>
+    <script>
+        function dergoNeFaqe(){
+            const query = document.getElementById('search_bt').value.toLowerCase();
+            
+            
+            if(query === "prishtina"  || query=== "prishtine" || query=== "prishtinë" || query=== "prishtin"){
+                window.location.href = "monumentet.html#Prishtina";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else if(query === "prizren"  || query=== "prizreni"){
+                window.location.href = "monumentet.html#Prizreni";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else if(query === "peja"  || query=== "peje" || query=== "pejë" ){
+                window.location.href = "monumentet.html#Peja";
+                document.scrollingElement({behavior: 'smooth'});
+            }
+            else{
+                alert("Nuk u gjet asnje qytet!");
+            }
+        }
+    </script>
+
+    <div class="mostVisited">
+        <p id="pVendet">Disa nga vendet më të vizituara</p>
+        <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Prishtinë</p>
+        <div class="divVendet">
+            <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
+            <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
+            <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për me shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+        </div>
+
+    </div>
 </body>
 </html>
