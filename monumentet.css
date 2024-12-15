@@ -122,9 +122,9 @@ h3{
     flex-wrap: wrap-reverse;
 }
 mark {
-    background-color: rgb(215, 215, 148); /* Ngjyra e theksuar */
-    color: black; /* Ngjyra e tekstit */
-    font-weight: bold; /* Të theksuarit e fjalës me shtim të trashësisë */
+    background-color: rgb(215, 215, 148); 
+    color: black; 
+    font-weight: bold; 
 }
 .Info{
    height: 430px; 
