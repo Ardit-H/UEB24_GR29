@@ -73,7 +73,7 @@ input{
     width: 20px;
     background-color: #8000ff;
     border-radius: 50px;
-} */
+}
 
 body{
     height: 100vh;
@@ -111,6 +111,7 @@ h3{
 .Detaje{
     margin-top: 0.2rem;
     font-style: italic;
+    font-size: 19px;
    
 }
 .Hapesira{
@@ -132,6 +133,7 @@ h3{
     text-align: center;
     justify-content: center;
     align-content: center;
+    font-size: 18px;
 }
 .Permbajtja{
     display: flex;
@@ -193,6 +195,22 @@ h3{
 }
 .EmriMonumentit{
     margin-left: 2%;
+}
+#restaurantetlinkBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #343a40;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#restaurantetlinkBtn:hover {
+    background-color:#555a5f;
 }
 .like-button {
     height:45px;
