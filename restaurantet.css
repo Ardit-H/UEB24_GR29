@@ -178,4 +178,20 @@ li a:hover{
     color:#6c757d;
     transform: scale(1.2);
 }
-
+table{
+    width:400px;
+    margin-left: 630px;
+    border: none;
+    border-spacing: 0;
+    justify-content: left;
+}
+th , td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: transparent;
+}
+td{
+    border-bottom: 1px solid transparent;
+}

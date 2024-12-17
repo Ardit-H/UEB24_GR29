@@ -52,6 +52,24 @@
         </div>
         </div>
         <div class="Pershkrimi">
+            <table style="color:red;">
+                <caption style="font-size: 25px; color: rgb(105, 189, 208);">Orari i punës</caption><br>
+                <thead>
+                    <tr>
+                        <th>Dita</th>
+                        <th>Orari i hapjes</th>
+                        <th>Orari i mbylljes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E hënë - E shtunë</td>
+                        <td>08:00 AM</td>
+                        <td>11:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
             <h4>Restaurant me ushqime tradicionale nga kuzhina ballkanike. Menyja është e larmishme,
             duke përfshirë pjatat më të njohura dhe të dashura nga tradita, si pjatat me mish,
             sallatat, byrekët, supat, dhe ëmbëlsirat tradicionale. Me një atmosferë të ngrohtë 
@@ -718,5 +736,25 @@
         </div>
 </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const hash = window.location.hash;
+
+        const qytetet = document.querySelectorAll(".Qyteti");
+        qytetet.forEach(function(qyteti){
+                    qyteti.style.display = 'none';
+        });
+        if(hash){
+            const qyteti = document.querySelector(hash);
+            if(qyteti){
+                qyteti.style.display = 'block';
+            }
+        } else {
+            qytetet.forEach(function(qyteti){
+                qyteti.style.display = 'block';
+            })
+        }
+    });
+</script>
 </body>
 </html>
