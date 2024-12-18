@@ -33,7 +33,7 @@ body{
     align-content: stretch;
     flex-wrap: wrap-reverse;
     border: 1px solid black;
-    border-radius: 0.3%;
+    border-radius: 10px;
 }
 .foto{
     border:1px solid black;
@@ -195,13 +195,22 @@ th{
 td{
     border-bottom: 1px solid transparent;
 }
+#linqet{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: right;
+    text-align: right;
+    margin: 20px;
+    margin-bottom: -30px;
+}
 #monumentetlink{
     display:inline-block;
     font-size: 20px;
     padding: 10px 20px;
     color: #fff;
     text-align: center;
-    margin-left: 800px;
+    /* margin-left: 800px; */
     border: none;
     border-radius: 5px;
     background-color:#343a40;
@@ -211,4 +220,7 @@ td{
 #monumentetlink:hover {
     background-color: #6c757d;
 }
+
+
+
 
