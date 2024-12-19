@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family:'LibreBodoni' ;
+    src: url(/LibreBodoni-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:'Lobster' ;
+    src: url(/Lobster-Regular.ttf);
+}
 /* Komplet faqja*/
 .content{
     display: flex;
@@ -80,7 +88,8 @@ body{
 }
 .EmriiQytetit{
     text-align: center;
-    font-style: italic;
+    font-family: "LibreBodoni",sans-serif;
+    font-size: 30px;
 
 }
 h3{
@@ -183,6 +192,7 @@ mark {
     display: inline-block;
     padding: 10px 20px;
     font-size: 18px;
+    font-family: "Lobster",sans-serif;
     color: #fff;
     background-color: #343a40;
     border: none;
