@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family:'LibreBodoni' ;
+    src: url(/LibreBodoni-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:'Lobster' ;
+    src: url(/Lobster-Regular.ttf);
+}
 .content{
     display: flex;
     flex-direction: column;
@@ -52,8 +60,8 @@ body{
     object-fit: cover;
 }
 .EmriiQytetit{
-    font-style: italic;
     text-align: center;
+    font-family: "LibreBodoni",sans-serif;
 }
 .Permbajtja{
     display: flex;
@@ -207,6 +215,7 @@ td{
 #monumentetlink{
     display:inline-block;
     font-size: 20px;
+    font-family: "Lobster",sans-serif;
     padding: 10px 20px;
     color: #fff;
     text-align: center;
