@@ -49,7 +49,18 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+.foto:hover{
+    transform: scale(2);
+    z-index: 9999;
+}
+/* .enlarged{
+    transform: scale(2);
+    z-index: 9999;
+    position: relative;
+} */
 .images{
     display: flex;
     width: 16%;
@@ -185,23 +196,6 @@ li a{
 li a:hover{
     color:#6c757d;
     transform: scale(1.2);
-}
-table{
-    width:400px;
-    margin-left: 630px;
-    border: none;
-    border-spacing: 0;
-    justify-content: left;
-}
-th , td{
-    padding: 10px;
-    text-align: center;
-}
-th{
-    background-color: transparent;
-}
-td{
-    border-bottom: 1px solid transparent;
 }
 #linqet{
     display: flex;
