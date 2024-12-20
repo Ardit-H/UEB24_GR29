@@ -46,10 +46,10 @@
                     <div id="restaurantetlink">
                         <a href="restaurantet.html#Prishtina" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
                     </div>
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="15">
                         <div class="heart-bg">
                             <div class="heart-icon">
-                            <span class="like-count">5</span>
+                            <span class="like-count">15</span>
                         </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
@@ -65,14 +65,13 @@
                                 const audio = document.getElementById('likeAudio');
                                 let index = Array.from(document.querySelectorAll('.like-button')).indexOf(button);
                                
-            // Nëse butoni nuk është në array, shto një hyrje të re me numrin e pëlqimeve 0
                                 if (index === -1) {
                                     likeCounts.push(0);
                                     index = likeCounts.length - 1;
                                 }                     
-                                if (isNaN(likeCounts[index])) {
-                                        likeCounts[index] = 5;
-                                    }
+                                if (likeCounts[index] === undefined) {
+                                    likeCounts[index] = parseInt(button.getAttribute('data-initial-value'));
+                                }
                                 if (heartIcon.classList.contains('liked')) {
                                     heartIcon.classList.remove('liked');
                                     likeText.textContent = 'Like'; 
@@ -163,9 +162,11 @@
                         <p class="Detaje">Periudha: Shekulli XVI</p>
                         <p class="Detaje">Numri i vendimit: 02/53/1/1967</p>
                     </div>
-                        <div class="like-button" >
+                        <div class="like-button" data-initial-value="25">
                             <div class="heart-bg">
-                                <div class="heart-icon"></div>
+                                <div class="heart-icon">
+                                    <span class="like-count">25</span>
+                                </div>
                             </div>
                             <span class="like-text" id="likeText">Like</span>
                         </div>
@@ -226,9 +227,11 @@
                         <p class="Detaje">Numri i vendimit: 02 - 278/67</p>
                     </div>
                 
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="20">
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                                <span class="like-count">20</span>
+                            </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
@@ -311,9 +314,11 @@
                         <p class="Detaje">Periudha: 1461</p>
                         <p class="Detaje">Numri i vendimit: 848/1953</p>
                     </div>
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="23">
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                                <span class="like-count">23</span>
+                            </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
@@ -397,9 +402,11 @@
                 <div id="restaurantetlink">
                     <a href="restaurantet.html#Prizren" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="22">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">22</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -476,9 +483,11 @@
                     <p class="Detaje">Periudha:Shekulli XIX </p>
                     <p class="Detaje">Numri i vendimit:414/77 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="21">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">21</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -563,9 +572,11 @@
                     <p class="Detaje">Periudha:Mesjetë </p>
                     <p class="Detaje">Numri i vendimit:1599/48 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="23">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">23</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -671,9 +682,11 @@
                     <p class="Detaje">Periudha:Mesjetë </p>
                     <p class="Detaje">Numri i vendimit:1598/48 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="20">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">20</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -733,9 +746,11 @@
                 <div id="restaurantetlink">
                         <a href="restaurantet.html#Peje" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
                     </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="17">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">17</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -792,9 +807,11 @@
                     <p class="Detaje">Periudha: Mesjetë</p>
                     <p class="Detaje">Numri i vendimit: 02-552/71</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="13">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">13</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -904,9 +921,11 @@
                     <p class="Detaje">Periudha: Viti 1800</p>
                     <p class="Detaje">Numri i vendimit: 610/55</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="17">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">17</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -987,9 +1006,11 @@
                     <p class="Detaje">Periudha: Mesjetë</p>
                     <p class="Detaje">Numri i vendimit: 428/47; LZVM</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="24">
                             <div class="heart-bg">
-                                <div class="heart-icon"></div>
+                                <div class="heart-icon">
+                                    <span class="like-count">24</span>
+                                </div>
                             </div>
                             <span class="like-text" id="likeText">Like</span>
                         </div>
