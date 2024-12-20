@@ -48,27 +48,44 @@
                     </div>
                     <div class="like-button" >
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                            <span class="like-count">5</span>
+                        </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
                     <script>
+                            let likeCounts = [];
                         document.body.addEventListener('click', function(event) {
                             if (event.target.closest('.like-button')) {
                                 const button = event.target.closest('.like-button');
                                 const heartIcon = button.querySelector('.heart-icon');
                                 const likeText = button.querySelector('.like-text');
+                                const likeCount = button.querySelector('.like-count'); 
                                 const audio = document.getElementById('likeAudio');
+                                let index = Array.from(document.querySelectorAll('.like-button')).indexOf(button);
+                               
+            // Nëse butoni nuk është në array, shto një hyrje të re me numrin e pëlqimeve 0
+                                if (index === -1) {
+                                    likeCounts.push(0);
+                                    index = likeCounts.length - 1;
+                                }                     
+                                if (isNaN(likeCounts[index])) {
+                                        likeCounts[index] = 5;
+                                    }
                                 if (heartIcon.classList.contains('liked')) {
                                     heartIcon.classList.remove('liked');
                                     likeText.textContent = 'Like'; 
                                     likeText.classList.remove('liked-text');
+                                    likeCounts[index]--;
                                 } else {
                                     heartIcon.classList.add('liked');
                                     likeText.textContent = 'Liked';
                                     likeText.classList.add('liked-text');
+                                    likeCounts[index]++;
                                     audio.play();
                                 }
+                                likeCount.textContent = likeCounts[index];
                             }
                         });
                     </script>

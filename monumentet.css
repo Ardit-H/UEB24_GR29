@@ -223,6 +223,9 @@ mark {
     background: url("img.png.png");
     background-position: left;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .like-button .heart-bg {
     background-color: rgba(255,192,200,0);
@@ -253,6 +256,12 @@ mark {
 
 .like-button .liked-text {
     color: red;
+}
+.like-button .heart-icon .like-count {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 .allimages{
     
