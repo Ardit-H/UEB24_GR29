@@ -65,28 +65,34 @@
                                 const audio = document.getElementById('likeAudio');
                                 let index = Array.from(document.querySelectorAll('.like-button')).indexOf(button);
                                
-                                if (index === -1) {
-                                    likeCounts.push(0);
-                                    index = likeCounts.length - 1;
-                                }                     
+                                        
                                 if (likeCounts[index] === undefined) {
                                     likeCounts[index] = parseInt(button.getAttribute('data-initial-value'));
                                 }
+                                likeCounts = likeCounts.map((count, idx) => {
+                                    if (idx === index) {
                                 if (heartIcon.classList.contains('liked')) {
                                     heartIcon.classList.remove('liked');
                                     likeText.textContent = 'Like'; 
                                     likeText.classList.remove('liked-text');
-                                    likeCounts[index]--;
+                                    return count - 1;
                                 } else {
                                     heartIcon.classList.add('liked');
                                     likeText.textContent = 'Liked';
                                     likeText.classList.add('liked-text');
-                                    likeCounts[index]++;
                                     audio.play();
+                                    return count + 1;
                                 }
-                                likeCount.textContent = likeCounts[index];
+                               
                             }
+                            return count; 
                         });
+                        const activeLikeCounts = likeCounts.filter((count, idx) => {
+                            return count !== undefined && idx === index; 
+                        });
+                        likeCount.textContent = activeLikeCounts.reduce((acc, count) => count, 0);
+                        }
+                    });
                     </script>
                 </div>
                 <div class="Hapesira">
