@@ -105,3 +105,8 @@ header {
 .galleri-germia {
   justify-content: center;
 }
+#badovci {
+  border: 10px solid black;
+  border-radius: 2px;
+  padding: 20px black;
+}
