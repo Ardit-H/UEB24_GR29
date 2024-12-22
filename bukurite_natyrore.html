@@ -6,13 +6,20 @@
     <title>Bukuritë Natyrore</title>
     <link rel="stylesheet" href="Bukurite/bukurite_natyrore.css" />
     <link rel="stylesheet" href="general.css" />
-    <script src="general.js"></script>
   </head>
   <body>
     <div class="content">
       <header id="navbar-placeholder"></header>
-      <p id="mesazhi"></p>
-      <div class="qyteti" id="prishtine">
+      <div class="imazhet"></div>
+      <div class="tabs">
+        <button class="tab-butoni active" data-city="prishtine">
+          Prishtinë
+        </button>
+        <button class="tab-butoni" data-city="peje">Pejë</button>
+        <button class="tab-butoni" data-city="prizreni">Prizren</button>
+      </div>
+
+      <div class="qyteti active" id="prishtine">
         <h2 class="emri-i-qytetit">Prishtin&#235;</h2>
         <div class="permbajtja" id="germia">
           <section class="content" id="galleri-germia">
@@ -98,7 +105,7 @@
             >.
           </p>
         </div>
-        <div class="permbajtja" id="badovci" style="border: 10px black">
+        <div class="permbajtja" id="badovci">
           <section class="content" id="galleri-badovci">
             <div>
               <div class="emri-lokacionit">
@@ -272,9 +279,29 @@
           </p>
         </div>
       </div>
+
+      <!-- PEJA -->
+      <div class="qyteti" id="peje">
+        <h2 class="emri-i-qytetit">Pejë</h2>
+        <p>
+          Peja është e njohur për Grykën e Rugovës dhe bukuritë natyrore që
+          tërheqin turistët.
+        </p>
+      </div>
+      <!-- PRIZRENI -->
+      <div class="qyteti" id="prizreni">
+        <h2 class="emri-i-qytetit">Prizren</h2>
+        <p>
+          Prizreni është një nga qytetet më të bukura dhe më të vizituara të
+          Kosovës.
+        </p>
+      </div>
+
       <footer id="footer-placeholder"></footer>
     </div>
     <script src="Bukurite/bukurite_natyrore.js"></script>
+    <script src="general.js"></script>
+    <script src="Bukurite/tabs.js"></script>
      
   </body>
 </html>
