@@ -179,6 +179,7 @@ input[alt="kerkimi"]{
     flex-direction: column;
     align-items: center;
     width: 30%;
+    height: auto;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -186,12 +187,17 @@ input[alt="kerkimi"]{
     border-radius: 10px;
 }
 
-
 #imgVendet {
     width: 100%;
     height: 50%;
     margin-bottom: 10px;
     border-radius: 10px;
+    transition: transform 0.5s ease;
+
+}
+#imgVendet:hover {
+    transform: scale(1.3);
+    z-index: 9999;
 }
 
 
@@ -219,6 +225,7 @@ input[alt="kerkimi"]{
 #linku_vendi:hover {
     color: #0056b3;
 }
+
 
 
 @media (max-width: 1024px) {
