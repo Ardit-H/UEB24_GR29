@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+/* body {
+  height: 100%;
+  margin: 0;
+} */
 .content {
   display: flex;
   flex-direction: column;
@@ -10,17 +14,51 @@
   width: 100%;
 }
 body {
-  height: 100hv;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
 header {
   width: 100%;
 }
-#prishtine {
+.imazhet {
+  margin-top: 0.5%;
+  margin-bottom: 0.1%;
+  border: 0.5px solid black;
+  height: 430px;
+  width: 100%;
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  animation: change 30s infinite ease;
+}
+@keyframes change {
+  0% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/Germia.webp");
+  }
+  20% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/Germia4.jpg");
+  }
+  40% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/Badovci.jpg");
+  }
+  60% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/Badovci2.jpeg");
+  }
+  80% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/ParkuBlinajes1.jpg");
+  }
+
+  100% {
+    background-image: url("../FototperProjekt/BukuriteNatyrore/ParkuBlinajes2.jpg");
+  }
+}
+
+.qyteti {
   border: thin solid black;
   border-radius: 0.5rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .emri-i-qytetit {
   padding: 2rem;
@@ -95,6 +133,7 @@ header {
 }
 .permbajtja > p {
   width: 50%;
+  height: 50%;
   max-width: 400px;
   border: thin solid black;
   border-radius: 1.2rem;
@@ -105,8 +144,36 @@ header {
 .galleri-germia {
   justify-content: center;
 }
-#badovci {
-  border: 10px solid black;
-  border-radius: 2px;
-  padding: 20px black;
+
+/* tabs */
+
+.tabs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
+
+.tab-butoni {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-butoni.active {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+.tab-butoni:hover {
+  background-color: #e0e0e0;
+}
+
+.qyteti:not(.active) {
+  display: none; /* Only show active city */
+}
+
+/* end of tabs */
