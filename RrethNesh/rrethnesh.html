@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rreth nesh</title>
-  <link rel="stylesheet" href="rrethnesh.css" />
+  <link rel="stylesheet" href="rrethnesh.css">
   <link rel="stylesheet" href="/general.css">
 </head>
 <body>
   <div class="content">
-    <nav class="navbar">
+      <nav class="navbar">
       <div>
         <ul>
           <li><img src="/FototperProjekt/Main/logo.webp" id="logo"></li>
@@ -17,28 +17,38 @@
           <li><a href="/monumentet.html">Monumentet historike</a></li>
           <li><a href="/bukurite_natyrore.html">Bukurite natyrore</a></li>
           <li><a href="/restaurantet.html">Restaurantet</a></li>
-          <li><a href="#">Rreth nesh</a></li>
+          <li><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
         </ul>
       </div>
     </nav>
+
     <section class="Kontakti">
-      <p class="Info">Ne butonin me poshte mund te kontaktoni direkt me ne!</p>
-      <a href="#" class="butoni">KONTAKTI</a>
+      <p class="Info">Ne butonin më poshtë mund të kontaktoni direkt me ne!</p>
+      <a href="#" class="butoni-kontakti" onclick="openContactForm()">KONTAKTI</a>
     </section>
-    
- 
 
     <h2 class="titujt">Rreth Nesh</h2>
-
     <div class="about-content">
-      <p><strong>Sugjerime Turistike</strong> është platforma ideale për ata që dëshirojnë të zbulojnë bukuritë natyrore, monumentet historike dhe trashëgiminë kulturore të pasur të Kosovës dhe qyteteve të saj. Ne ofrojmë udhëzime dhe rekomandime të personalizuara për çdo udhëtar që kërkon të eksperimentojë me eksperienca të ndryshme, nga zbuluar qytetet me histori të pasur deri tek aventurat natyrore në mjedise mahnitëse.</p>
-      <br>
-      <p><strong>Misioni ynë</strong> është të krijojmë mundësi për të eksploruar destinacione që përshtaten me interesat dhe dëshirat tuaja. Qoftë përmes udhëzimeve për monumentet e njohura dhe qytetet historike, apo edhe përmes sugjerimeve për ekskursione në natyrë, ne sigurojmë që çdo udhëtim të bëhet një eksperiencë të paharrueshme.</p>
-      <br>
-      <p><strong>Ekipa jonë</strong> është e përbërë nga ekspertë të turizmit, historianë dhe udhëzues lokalë, të cilët janë të apasionuar pas promovimit të bukurive natyrore dhe historisë së Kosovës. Ne punojmë për t’u siguruar që çdo vizitor të gjejë destinacionet më të përshtatshme për aventurat e tij, me informacione të detajuara dhe këshilla praktike që e bëjnë udhëtimin më të lehtë dhe më të këndshëm.</p>
-      <br>
-      <p><strong>Na kontaktoni</strong> për çdo pyetje, sugjerim, ose informacion shtesë. Jemi gjithmonë të gatshëm t'ju ndihmojmë të planifikoni udhëtimin tuaj të ardhshëm dhe t’ju japim mundësinë të zbulojnë Kosoven nga një këndvështrim i ri!</p>
+      <p><strong>Sugjerime Turistike</strong> është platforma ideale për ata që dëshirojnë të zbulojnë bukuritë natyrore, monumentet historike dhe trashëgiminë kulturore të Kosovës dhe qyteteve të saj. Ne ofrojmë udhëzime dhe rekomandime të personalizuara për çdo udhëtar që kërkon të eksperimentojë me eksperienca të ndryshme.</p>
+      <p><strong>Misioni ynë</strong> është të krijojmë mundësi për të eksploruar destinacione që përshtaten me interesat dhe dëshirat tuaja.</p>
+      <p><strong>Ekipa jonë</strong> është e përbërë nga ekspertë të turizmit, historianë dhe udhëzues lokalë, të cilët janë të apasionuar pas promovimit të bukurive natyrore dhe historisë së Kosovës.</p>
+      <p><strong>Na kontaktoni</strong> për çdo pyetje, sugjerim, ose informacion shtesë. Jemi gjithmonë të gatshëm t'ju ndihmojmë.</p>
     </div>
+
+    <div class="Kontakti-form" id="Kontakti-form">
+
+      <div class="Kontakti-form-body">
+        <form action="" method="post">
+          <div><input type="text" name="first-name" id="first-name" placeholder="Emri" required></div>
+          <div><input type="text" name="last-name" id="last-name" placeholder="Mbiemri" required></div>
+          <div><input type="text" name="phone" id="phone" placeholder="Numri" required></div>
+          <div><input type="email" name="email" id="email" placeholder="Email" required></div>
+          <div><textarea name="message" id="message" placeholder="Mesazhi juaj" required></textarea></div>
+          <button type="submit">Dërgo</button>
+        </form>
+      </div>
+    </div>
+
     <footer>
       <div class="footer-container">
         <div>
@@ -49,10 +59,10 @@
         </div>
         <div>
           <h3>Quick Links</h3>
-          <ul class="list" style="list-style: none; padding: 0">
+          <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Monumentet historiko-kulturore</a></li>
-            <li><a href="#">Bukurite natyrore</a></li>
+            <li><a href="#">Bukuritë natyrore</a></li>
             <li><a href="#">Restaurantet</a></li>
           </ul>
         </div>
@@ -66,9 +76,19 @@
         </div>
       </div>
       <div class="bottom-bar">
-        <p>&copy; 2024 Sugjerime turistike. All rights reserved.</p>
-      </div>
+        <p>&copy; 2024 Sugjerime Turistike. All rights reserved.</p>
+      </div>  
     </footer>
   </div>
+
+  <script>
+    function openContactForm() {
+      document.getElementById("Kontakti-form").style.visibility = "visible";
+    }
+
+    function closeContactForm() {
+      document.getElementById("Kontakti-form").style.visibility = "hidden";
+    }
+  </script>
 </body>
 </html>
