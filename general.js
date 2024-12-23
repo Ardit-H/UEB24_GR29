@@ -10,7 +10,11 @@ async function loadPartial(partialUrl, placeholderId) {
   } catch (error) {
     console.error("Error ne loading e pjeseve te faqes", error);
     const placeholder = document.getElementById(placeholderId);
-    if (placeholder) {
+    const massage = document.getElementById("mesazhi");
+    if (massage) {
+      massage.textContent =
+        "Ngarkimi i faqës dështoi. Ju lutemi kontaktoni mirëmbajtesin e Web faqës.";
+    } else if (placeholder) {
       placeholder.innerHTML =
         "<p>Ngarkimi i faqës dështoi. Ju lutemi kontaktoni mirëmbajtesin e Web faqës.</p>";
     }

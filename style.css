@@ -1,6 +1,6 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 /* Navbar */
 .navbar {
@@ -93,61 +93,162 @@ input[alt="kerkimi"]{
     box-shadow: 0px 1px 6px 4px rgba(83, 230, 86, 0.3);
 }
 
-button{
+#search_btn button{
     height: 32px;
     border: 1px solid green;
     border-radius: 15px;
     box-shadow: 0px 1px 6px 4px rgba(83, 230, 86, 0.3);
 }
 
+/* videos */
+
+.videos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.div_video{
+    display: flex;
+    flex-direction: column; /* Vendos butonin poshtë videos */
+    align-items: center;
+    width: 45%;
+    margin: 20px;
+}
+.video{
+    /* width: 80%;
+    max-width: 600px;
+    border: 5px solid #333;
+    border-radius: 10px; */
+    width: 100%; 
+    border: 5px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* margin: 10px; */
+}
+#videoButton{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px dotted black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#videoButton:hover{
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .videos {
+        flex-direction: column;
+    }
+
+    #video1 {
+        width: 100%;
+    }
+}
+
+
 /* most visited */
 
-.mostVisited{
-    width:max-content;
-    height: 120px;
+
+
+/* Stili për kontejnerin kryesor */
+.mostVisited {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
-#pVendet{
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+#pVendet {
     font-size: 20px;
     font-weight: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 4%;
+    padding: 2%;
 }
-.divVendet{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 50%;
-    margin: 0% 5%;
-    /* display: flex; */
-    align-items: flex-start; 
-    /* align-items: center;  */
-    /* margin: 0 auto; */
-    /* padding: 10px; */
-}
-#vendi{
-    /* position: absolute; */
-    font-size: 18px;
-    /* padding-left: 8px; */
-    padding: 5px;
-    /* left: 35%; */
-}
-#imgVendet{
-    width: 100%;
+
+
+.divVendet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
     height: auto;
-    padding-bottom: 2%;
-    margin-right: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px dashed black;
     border-radius: 10px;
-    /* position: relative; */
-    /* top: 30px; */
-    
 }
-#pershkrim_vendi{
+
+#imgVendet {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+
+}
+#imgVendet:hover {
+    transform: scale(1.3);
+    z-index: 9999;
+}
+
+
+#vendi {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#pershkrim_vendi {
     padding: 10px;
     text-indent: 2%;
-    text-align: left;
-    width: 100%;
+    text-align: justify;
+    font-size: 16px;
 }
-#linku_vendi{
+
+
+#linku_vendi {
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
+    color: #007bff;
+}
+
+#linku_vendi:hover {
+    color: #0056b3;
+}
+
+
+
+@media (max-width: 1024px) {
+    .divVendet {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .divVendet {
+        width: 90%; 
+    }
+    #pVendet {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #pVendet {
+        font-size: 16px;
+    }
+    #pershkrim_vendi {
+        font-size: 12px;
+        padding: 5px;
+    }
 }

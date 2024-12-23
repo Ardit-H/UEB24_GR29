@@ -10,12 +10,12 @@
 
 <body>
     <div class="content">
-        
+        <header style="width: 100%;">
         <nav class="navbar" id="fillimi faqes">
             <div>
                 <ul>
                     <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
-                    <li><a href="index.html">Sugjerime turistike</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="monumentet.html">Monumentet historike</a></li>
                     <li><a href="bukurite_natyrore.html">Bukurite natyrore</a></li>
                     <li><a href="restaurantet.html">Restaurantet</a></li>
@@ -23,7 +23,7 @@
                 </ul>
             </div>
         </nav>
-       
+    </header>
         <div class="imazhet">
                 <p class="Info">Kosova me vlerat e saj të trashëgimisë kulturore dhe historike është dhe mbetet një vend shumë tërheqës dhe i hapur për të gjithë.
                     Disa prej monumenteve të trashëgimisë kulturore-historike janë të paraqitura më poshtë.
@@ -41,40 +41,62 @@
                         <p class="Detaje">Numri i vendimit: 02 - 278/67</p>
                     </div>
                     <div id="bukuritelink">
-                        <a href="bukurite_natyrore.html#prishtine" id="restaurantetlinkBtn">Shiko bukurite natyrore per kete qytet</a>
+                        <a href="bukurite_natyrore.html#prishtine" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
                     </div>
                     <div id="restaurantetlink">
-                        <a href="restaurantet.html#Prishtina" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
+                        <a href="restaurantet.html#Prishtina" id="restaurantetlinkBtn">Shiko restaurantet për këtë qytet</a>
                     </div>
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="15">
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                            <span class="like-count">15</span>
+                        </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
                     <script>
+                            let likeCounts = [];
                         document.body.addEventListener('click', function(event) {
                             if (event.target.closest('.like-button')) {
                                 const button = event.target.closest('.like-button');
                                 const heartIcon = button.querySelector('.heart-icon');
                                 const likeText = button.querySelector('.like-text');
+                                const likeCount = button.querySelector('.like-count'); 
                                 const audio = document.getElementById('likeAudio');
+                                let index = Array.from(document.querySelectorAll('.like-button')).indexOf(button);
+                               
+                                        
+                                if (likeCounts[index] === undefined) {
+                                    likeCounts[index] = parseInt(button.getAttribute('data-initial-value'));
+                                }
+                                likeCounts = likeCounts.map((count, idx) => {
+                                    if (idx === index) {
                                 if (heartIcon.classList.contains('liked')) {
                                     heartIcon.classList.remove('liked');
                                     likeText.textContent = 'Like'; 
                                     likeText.classList.remove('liked-text');
+                                    return count - 1;
                                 } else {
                                     heartIcon.classList.add('liked');
                                     likeText.textContent = 'Liked';
                                     likeText.classList.add('liked-text');
                                     audio.play();
+                                    return count + 1;
                                 }
+                               
                             }
+                            return count; 
                         });
+                        const activeLikeCounts = likeCounts.filter((count, idx) => {
+                        return count !== undefined && idx === index; 
+                    });
+                    likeCount.textContent = activeLikeCounts.reduce((acc, count) => count, 0);
+                        }
+                    });
                     </script>
                 </div>
                 <div class="Hapesira">
-                    <div class="Permbajtja">
+                    <div class="Permbajtja" id="MuzeuiKosoves">
                         <div class="Pershkrimi">Muzeu Kombëtar i Kosovës është themeluar në vitin 1949,
                             ndërkaq ndërtesa me arkitekturë Austro-hungareze daton që nga viti 1885/6.
                             Ajo ka për qëllim ruajtjen, mbrojtjen dhe prezantimin e Trashëgimisë Kulturore të Kosovës.
@@ -146,9 +168,11 @@
                         <p class="Detaje">Periudha: Shekulli XVI</p>
                         <p class="Detaje">Numri i vendimit: 02/53/1/1967</p>
                     </div>
-                        <div class="like-button" >
+                        <div class="like-button" data-initial-value="25">
                             <div class="heart-bg">
-                                <div class="heart-icon"></div>
+                                <div class="heart-icon">
+                                    <span class="like-count">25</span>
+                                </div>
                             </div>
                             <span class="like-text" id="likeText">Like</span>
                         </div>
@@ -209,9 +233,11 @@
                         <p class="Detaje">Numri i vendimit: 02 - 278/67</p>
                     </div>
                 
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="20">
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                                <span class="like-count">20</span>
+                            </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
@@ -294,9 +320,11 @@
                         <p class="Detaje">Periudha: 1461</p>
                         <p class="Detaje">Numri i vendimit: 848/1953</p>
                     </div>
-                    <div class="like-button" >
+                    <div class="like-button" data-initial-value="23">
                         <div class="heart-bg">
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                                <span class="like-count">23</span>
+                            </div>
                         </div>
                         <span class="like-text" id="likeText">Like</span>
                     </div>
@@ -368,21 +396,23 @@
 
             <div class="Qyteti" id="Prizreni">
                 <h2 class="EmriiQytetit">Prizren</h2>
-                <div class="rrethMonumentit">
+                <div class="rrethMonumentit" id="KalajaePrizrenit" >
                 <div class="EmriMonumentit">
                     <h3> Kalaja e Prizrenit</h3>
                     <p class="Detaje">Periudha: Parahistori, Koha e re</p>
                     <p class="Detaje">Numri i vendimit: 1585/48</p>
                 </div>
                 <div id="bukuritelink">
-                    <a href="bukurite_natyrore.html#Prizren" id="restaurantetlinkBtn">Shiko bukurite natyrore per kete qytet</a>
+                    <a href="bukurite_natyrore.html#Prizren" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
                 </div>
                 <div id="restaurantetlink">
-                    <a href="restaurantet.html#Prizren" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
+                    <a href="restaurantet.html#Prizren" id="restaurantetlinkBtn">Shiko restaurantet për këtë qytet</a>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="22">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">22</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -459,9 +489,11 @@
                     <p class="Detaje">Periudha:Shekulli XIX </p>
                     <p class="Detaje">Numri i vendimit:414/77 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="21">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">21</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -546,9 +578,11 @@
                     <p class="Detaje">Periudha:Mesjetë </p>
                     <p class="Detaje">Numri i vendimit:1599/48 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="23">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">23</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -654,9 +688,11 @@
                     <p class="Detaje">Periudha:Mesjetë </p>
                     <p class="Detaje">Numri i vendimit:1598/48 </p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="20">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">20</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -684,7 +720,7 @@
                                 alt="Kisha e Shen Spasit foto 1 nga brenda" class="foto">
                         </div>
                     </div>
-                    <div class="Permbajtja" style="margin-top: 8px;">
+                    <div class="Permbajtja" style="margin-top: 8px; margin-bottom: 8px;">
                         <div class="allimages" style="height:15rem;width: 25rem;">
                             <img src="FototperProjekt/Monumentet kulturore-historike/KishaeShenSpasitShelbuesit3.png"
                                 alt="Kisha e Shen Spasit foto 2 nga jashte" class="foto">
@@ -711,14 +747,16 @@
                     <p class="Detaje">Numri i vendimit: 01 - 98/81</p>
                 </div>
                 <div id="bukuritelink">
-                    <a href="bukurite_natyrore.html#Peje" id="restaurantetlinkBtn">Shiko bukurite natyrore per kete qytet</a>
+                    <a href="bukurite_natyrore.html#Peje" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
                 </div>
                 <div id="restaurantetlink">
-                        <a href="restaurantet.html#Peje" id="restaurantetlinkBtn">Shiko restaurantet per kete qytet</a>
+                        <a href="restaurantet.html#Peje" id="restaurantetlinkBtn">Shiko restaurantet për këtë qytet</a>
                     </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="17">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">17</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -775,9 +813,11 @@
                     <p class="Detaje">Periudha: Mesjetë</p>
                     <p class="Detaje">Numri i vendimit: 02-552/71</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="13">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">13</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -887,9 +927,11 @@
                     <p class="Detaje">Periudha: Viti 1800</p>
                     <p class="Detaje">Numri i vendimit: 610/55</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="17">
                     <div class="heart-bg">
-                        <div class="heart-icon"></div>
+                        <div class="heart-icon">
+                            <span class="like-count">17</span>
+                        </div>
                     </div>
                     <span class="like-text" id="likeText">Like</span>
                 </div>
@@ -970,9 +1012,11 @@
                     <p class="Detaje">Periudha: Mesjetë</p>
                     <p class="Detaje">Numri i vendimit: 428/47; LZVM</p>
                 </div>
-                <div class="like-button" >
+                <div class="like-button" data-initial-value="24">
                             <div class="heart-bg">
-                                <div class="heart-icon"></div>
+                                <div class="heart-icon">
+                                    <span class="like-count">24</span>
+                                </div>
                             </div>
                             <span class="like-text" id="likeText">Like</span>
                         </div>
@@ -1025,8 +1069,8 @@
 
                 </div>
             </div>
-            <div>
-                <table border="1" style="margin-top: 10px; font-size: 17px;">
+            <div class="Qyteti" style="padding: 0.3%;">
+                <table border="1" style="border-radius: 4px;border-style: double; margin-top: 10px; font-size: 17px; text-align: center;" cellspacing="4" cellpadding="2" >
                     <thead style="background-color: #495057; color: #fff;">
                         <th>Qyteti</th>
                         <th>Emri i Monumentit</th>
@@ -1115,7 +1159,7 @@
                 </table>
             </div>
             <div  style="display: flex; flex-direction: row; justify-content: left; align-items: center; gap: 10px; margin-top: 5px;">
-              <a href="#fillimi faqes" style="text-decoration: none;width: 40px;height: 40px; text-align: center;line-height: 30px;color: #fff; background-color: #333;">^</a>
+              <a href="#fillimi faqes" style="text-decoration: none;width: 25px;height: 25px; text-align: center;line-height: 30px;color: #fff; background-color: #333; border-radius: 50%;">^</a>
               <p>Kliko këtu për tu kthyer në fillim të faqes</p>
             </div>
         </div>
@@ -1129,6 +1173,7 @@
 
             if (hash) {
                 const qyteti = document.getElementById(hash);
+                console.log(hash);
                 if (qyteti) {
                     qyteti.style.display = 'block'; 
                 }

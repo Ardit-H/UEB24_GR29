@@ -8,14 +8,14 @@
 </head>
 <body>
     <nav class="navbar">
-        <div>
+        <div class="div_navbar">
             <ul>
                 <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
-                <li><a href="index.html">Sugjerime turistike</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="monumentet.html">Monumentet historike</a></li>
                 <li><a href="bukurite_natyrore.html">Bukurit natyrore</a></li>
-                <li><a href="restaurantet.html">Restaorantet</a></li>
-                <li><a href="#">Rreth nesh</a></li>
+                <li><a href="restaurantet.html">Restaurantet</a></li>
+                <li><a href="RrethNesh/rrethnesh.html">Rreth nesh</a></li>
             </ul>
         </div>
     </nav>
@@ -49,15 +49,85 @@
         }
     </script>
 
+    <div class="videos">
+        <div class="div_video">
+        <video id="video1" class="video">
+            <source src="FototperProjekt/Main/video1.mp4" type="video/mp4">Shfletuesi juaj nuk mbështet videon.
+        </video>
+        <button id="videoButton" data-video="video1">Play/Pause</button>
+        </div>
+
+        <div class="div_video">
+        <video id="video2" class="video">
+            <source src="FototperProjekt/Main/video2.mp4" type="video/mp4">Shfletuesi juaj nuk mbështet videon.
+        </video>
+        <button id="videoButton" data-video="video2">Play/Pause</button>
+        </div>
+    </div>
+
+
+
     <div class="mostVisited">
         <p id="pVendet">Disa nga vendet më të vizituara</p>
         <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Prishtinë</p>
-        <div class="divVendet">
-            <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
-            <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
-            <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për me shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+        <div class="row">
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
+                <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
+                <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Monumentet kulturore-historike/MuzeuiKosoves1.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Muzeu Kombëtar i Kosovës</p>
+                <p id="pershkrim_vendi">Muzeu Kombëtar i Kosovës është themeluar në vitin 1949, ndërkaq ndërtesa me arkitekturë Austro-hungareze daton që nga viti 1885/6. Për më shumë informata<a href="monumentet.html#MuzeuiKosoves" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Restaurantet/HamariAgroturizem.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Hamari Agroturizëm</p>
+                <p id="pershkrim_vendi">Restaurant që ofron ushqime tradicionale, një vend ku vizitorët mund të shijojnë gatime të bëra sipas recetave tradicionale, që kanë kaluar nga brezi në brez. Për më shumë informata<a href="restaurantet.html#ResPrishtin" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+        </div>
+        <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Prizren</p>
+        <div class="row">
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
+                <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
+                <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Monumentet kulturore-historike/KalajaePrizrenit5.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Kalaja e Prizrenit</p>
+                <p id="pershkrim_vendi">Kalaja e Prizrenit është një
+                    monument i trashëgimisë kulturore,një kështjellë mesjetare në Prizren, Kosovë. Ajo është e ndërtuar në një kodër mbi qytet, me lartësi 525 metra mbi nivelin e detit. Për më shumë informata<a href="monumentet.html#KalajaePrizrenit" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Restaurantet/PanoramaRestaurant2.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Panorama Restaurant</p>
+                <p id="pershkrim_vendi">Restauranti ofron një përvojë të veçantë që bashkon shijet e kuzhinës tradicionale 
+                    lokale me ato të kuzhinës italiane. Për më shumë informata<a href="restaurantet.html#ResPrizren" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+        </div>
+
+        <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Pejë</p>
+        <div class="row">
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
+                <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
+                <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Monumentet kulturore-historike/MulliriHaxhiZekes4.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Mulliri i Haxhi Zekës</p>
+                <p id="pershkrim_vendi">Mulliri i Haxhi Zekës është mulliri i parë në rajon, teknologjia e të cilit është sjellë nga Austria. Mulliri i Haxhi Zekaës është kompleks i madh i trashëgimisë industriale i cili i takon pjesës së dytë të shekullit të 19-të. Për më shumë informata<a href="monumentet.html#MuzeuiKosoves" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
+            <div class="divVendet">
+                <img id="imgVendet" src="FototperProjekt/Restaurantet/AnesDrinit1.png">
+                <p id="vendi" style="font-family: Trebuchet MS;">Anës Drinit</p>
+                <p id="pershkrim_vendi">Një vend i jashtëzakonshëm që ofron një përvojë kulinare të paharrueshme për ata që duan të shijojnë specialitete të peshqeve të ndryshëm në një ambient magjik, pranë një lumi me pamje spektakolare. Për më shumë informata<a href="restaurantet.html#ResPeje" id="linku_vendi"> kliko këtu!</a></p>
+            </div>
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
