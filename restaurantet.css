@@ -56,11 +56,6 @@ body{
     transform: scale(2);
     z-index: 9999;
 }
-/* .enlarged{
-    transform: scale(2);
-    z-index: 9999;
-    position: relative;
-} */
 .images{
     display: flex;
     width: 16%;
@@ -223,6 +218,7 @@ li a:hover{
 #monumentetlink:hover {
     background-color: #6c757d;
 }
+
 
 
 
