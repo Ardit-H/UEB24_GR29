@@ -24,9 +24,11 @@
     text-align: center;
 }
 body{
-    height: 100hv;
+    height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin: 0;
 }
 .Qytetet{
     border-radius: 0.3%;
@@ -218,7 +220,44 @@ li a:hover{
 #monumentetlink:hover {
     background-color: #6c757d;
 }
-
+footer{
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer-section{
+    flex: 1;
+    display: block;
+    min-width: 250px;
+}
+h2{
+    margin-top: 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.5rem;
+}
+ol{
+    padding-left: 1.2rem;
+    counter-reset: item;
+}
+ol ul{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    counter-reset: item;
+}
+.li{
+    margin: 0.2rem;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+   
+}
 
 
 
