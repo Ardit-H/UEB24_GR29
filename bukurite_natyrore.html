@@ -52,6 +52,39 @@
     <script src="Bukurite/bukurite_natyrore.js"></script>
     <script src="general.js"></script>
     <script src="Bukurite/tabs.js"></script>
-     
+    <script src="Bukurite/update-foto.js"></script>
+    <script>
+      async function loadFooter() {
+        const footerPlaceholder = document.getElementById("footer-placeholder");
+        const response = await fetch("footer.html");
+        if (response.ok) {
+          footerPlaceholder.innerHTML = await response.text();
+
+          const currentYearElement = document.getElementById("currentYear");
+          if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+          } else {
+            console.error(
+              "Elementi me id 'currentYear' nuk u gjete ne footer!"
+            );
+          }
+
+          const canvas = document.getElementById("circleCanvas");
+          if (canvas) {
+            const ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+            ctx.stroke();
+          } else {
+            console.error("Elementi Canvas nuk u gjete!");
+          }
+        } else {
+          console.error("Deshtoje ngarkimi i footer:", response.statusText);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        loadFooter();
+      });
+    </script>
   </body>
 </html>
