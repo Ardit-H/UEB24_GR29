@@ -110,21 +110,18 @@ input[alt="kerkimi"]{
 }
 .div_video{
     display: flex;
-    flex-direction: column; /* Vendos butonin poshtë videos */
+    flex-direction: column; 
     align-items: center;
     width: 45%;
     margin: 20px;
+    margin-top: 35px;
 }
 .video{
-    /* width: 80%;
-    max-width: 600px;
-    border: 5px solid #333;
-    border-radius: 10px; */
     width: 100%; 
     border: 5px solid #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* margin: 10px; */
+    
 }
 #videoButton{
     margin-top: 10px;
