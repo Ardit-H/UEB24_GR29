@@ -175,14 +175,14 @@ img#logo{
     float: left;
     padding: 0;
 }
-ul{
+.navbar ul{
     list-style-type: none;
     overflow: hidden;
 }
-li{
+.navbar li{
     float: left;
 }
-li a{
+.navbar a{
     font-size: 20px;
     color: white;
     padding: 12px;
@@ -190,7 +190,7 @@ li a{
     text-decoration: none;
     transition: all 0.5s ease;
 }
-li a:hover{
+.navbar li a:hover{
     color:#6c757d;
     transform: scale(1.2);
 }
@@ -288,6 +288,7 @@ footer {
     display: inline;
     margin: 3rem;
   }
+  
   
   /* End footer style */
 

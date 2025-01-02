@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurantet</title>
     <link rel="stylesheet" href="restaurantet.css" >
+
 </head>
 <body>
     <div class="content">
@@ -762,6 +763,30 @@
         }
     });
 </script>
+<script>
+    function loadFooter() {
+       const currentYearElement = document.getElementById("currentYear");
+       if (currentYearElement) {
+         currentYearElement.textContent = new Date().getFullYear();
+       } else {
+         console.error(
+           "Elementi me id 'currentYear' nuk u gjete ne footer!"
+         );
+       }
+       const canvas = document.getElementById("circleCanvas");
+       if (canvas) {
+         const ctx = canvas.getContext("2d");
+         ctx.beginPath();
+         ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+         ctx.stroke();
+       } else {
+         console.error("Elementi Canvas nuk u gjete!");
+       }
+   }
+   document.addEventListener("DOMContentLoaded", () => {
+     loadFooter();
+   });
+ </script>
 <footer>
     <div class="footer-content">
       <div class="footer-section">
