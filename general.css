@@ -16,15 +16,15 @@ img#logo {
   float: left;
   padding: 0;
 }
-ul {
+#navbar-ul {
   list-style-type: none;
   display: flex;
   overflow: hidden;
 }
-li {
+.navbar-li {
   float: left;
 }
-li a {
+.navbar-li a {
   font-size: 20px;
   color: white;
   padding: 12px;
@@ -32,7 +32,7 @@ li a {
   text-decoration: none;
   transition: all 0.5s ease;
 }
-li a:hover {
+.navbar-li a:hover {
   color: #6c757d;
   transform: scale(1.1);
 }
@@ -40,65 +40,63 @@ li a:hover {
 
 /* Footer style */
 footer {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  font-size: 14px;
+  background-color: #333;
+  color: white;
+  padding: 2rem;
   width: 100%;
-  margin-top: auto;
+  box-sizing: border-box;
 }
 
-footer .footer-container {
-  margin: 0 auto;
+.footer-content {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 20px;
-  gap: 10px;
+  gap: 2rem;
+}
+.footer-section {
+  flex: 1;
+  display: block;
+  min-width: 250px;
+}
+h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #555;
+  padding-bottom: 0.5rem;
+}
+ol {
+  padding-left: 1.2rem;
+  counter-reset: item;
 }
 
-footer .footer-container > div {
-  flex: 1 1 200px;
-  min-width: 150px;
+/* .footer-li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+} */
+ol ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  counter-reset: item;
 }
-
-footer h3 {
-  font-size: 15px;
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-footer p,
-footer li,
-footer a {
-  font-size: 14px;
+a {
   color: #ddd;
-  margin: 0;
-}
-
-footer a {
   text-decoration: none;
-  color: #ddd;
+  transition: color 0.3s ease;
 }
-
-footer a:hover {
-  color: #bbb;
+.footer-li {
+  margin: 0.2rem;
 }
-
-footer .bottom-bar {
+.contact {
+  display: inline;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 5px 0;
-  border-top: 1px solid #444;
-  font-size: 13px;
-  color: #aaa;
+  margin: 20px auto; /* Add margin for spacing */
+  padding: 20px;
+  width: 100%; /* Optional: Limit the width */
 }
-
-@media (max-width: 600px) {
-  footer .footer-container {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
+.info p {
+  display: inline;
+  margin: 3rem;
 }
 
 /* End footer style */

@@ -24,9 +24,11 @@
     text-align: center;
 }
 body{
-    height: 100hv;
+    height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin: 0;
 }
 .Qytetet{
     border-radius: 0.3%;
@@ -56,11 +58,6 @@ body{
     transform: scale(2);
     z-index: 9999;
 }
-/* .enlarged{
-    transform: scale(2);
-    z-index: 9999;
-    position: relative;
-} */
 .images{
     display: flex;
     width: 16%;
@@ -178,14 +175,14 @@ img#logo{
     float: left;
     padding: 0;
 }
-ul{
+.navbar ul{
     list-style-type: none;
     overflow: hidden;
 }
-li{
+.navbar li{
     float: left;
 }
-li a{
+.navbar a{
     font-size: 20px;
     color: white;
     padding: 12px;
@@ -193,7 +190,7 @@ li a{
     text-decoration: none;
     transition: all 0.5s ease;
 }
-li a:hover{
+.navbar li a:hover{
     color:#6c757d;
     transform: scale(1.2);
 }
@@ -223,6 +220,77 @@ li a:hover{
 #monumentetlink:hover {
     background-color: #6c757d;
 }
+/* Footer style */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-section {
+    flex: 1;
+    display: block;
+    min-width: 250px;
+  }
+  .footer-section h3{
+    margin-top: 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+  }
+  .contact h3{
+    margin-top: 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+  }
+  ol {
+    padding-left: 1.2rem;
+    counter-reset: item;
+  }
+  
+  /* .footer-li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+  } */
+  ol ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    counter-reset: item;
+  }
+  a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-li {
+    margin: 0.2rem;
+    
+  }
+  .contact {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto; /* Add margin for spacing */
+    padding: 20px;
+    width: 100%; /* Optional: Limit the width */
+  }
+  .info p {
+    display: inline;
+    margin: 3rem;
+  }
+  
+  
+  /* End footer style */
 
 
 

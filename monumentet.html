@@ -11,18 +11,24 @@
 <body>
     <div class="content">
         <header style="width: 100%;">
-        <nav class="navbar" id="fillimi faqes">
-            <div>
-                <ul>
-                    <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="monumentet.html">Monumentet historike</a></li>
-                    <li><a href="bukurite_natyrore.html">Bukurite natyrore</a></li>
-                    <li><a href="restaurantet.html">Restaurantet</a></li>
-                    <li><a href="#">Rreth nesh</a></li>
-                </ul>
-            </div>
-        </nav>
+            <nav class="navbar" id="fillimi faqes">
+                <div style="display: flex">
+                  <ul id="navbar-ul">
+                    <li class="navbar-li">
+                      <img src="FototperProjekt/Main/logo.webp" id="logo" />
+                    </li>
+                    <li class="navbar-li"><a href="index.html">Home</a></li>
+                    <li class="navbar-li">
+                      <a href="monumentet.html">Monumentet historike</a>
+                    </li>
+                    <li class="navbar-li">
+                      <a href="bukurite_natyrore.html">Bukurit&#235; natyrore</a>
+                    </li>
+                    <li class="navbar-li"><a href="restaurantet.html">Restaurantet</a></li>
+                    <li class="navbar-li"><a href="#">Rreth nesh</a></li>
+                  </ul>
+                </div>
+              </nav>
     </header>
         <div class="imazhet">
                 <p class="Info">Kosova me vlerat e saj të trashëgimisë kulturore dhe historike është dhe mbetet një vend shumë tërheqës dhe i hapur për të gjithë.
@@ -1184,36 +1190,172 @@
             }
         }
         </script>
-        <footer>
-            <div class="HapesiraeFooterit">
-                <div class="Footer-content">
-                    <h3>Contact Us</h3>
-                    <p>Email:</p>
-                    <p>Phone:</p>
-                    <p>Address:</p>
-                </div>
-                <div class="Footer-content">
-                    <h3>Quick Links</h3>
-                    <ul class="list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Monumentet historiko-kulturore</a></li>
-                        <li><a href="#">Bukurite natyrore</a></li>
-                        <li><a href="#">Restaurantet</a></li>
-                    </ul>
-                </div>
-                <div class="Footer-content">
-                    <h3>Follow Us</h3>
-
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-
-                </div>
-            </div>
-            <div class="bottom-bar">
-                <p>&copy; 2024 Sugjerime turistike.All rights reserved</p>
-            </div>
-        </footer>
+         <script>
+             function loadFooter() {
+                const currentYearElement = document.getElementById("currentYear");
+                if (currentYearElement) {
+                  currentYearElement.textContent = new Date().getFullYear();
+                } else {
+                  console.error(
+                    "Elementi me id 'currentYear' nuk u gjete ne footer!"
+                  );
+                }
+                const canvas = document.getElementById("circleCanvas");
+                if (canvas) {
+                  const ctx = canvas.getContext("2d");
+                  ctx.beginPath();
+                  ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+                  ctx.stroke();
+                } else {
+                  console.error("Elementi Canvas nuk u gjete!");
+                }
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+              loadFooter();
+            });
+          </script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Monumentet historike</h3>
+        <div class="lists-container">
+          <ol>
+            <li class="footer-li">
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Muzeu Komb&#235;tar i Kosov&#235;s</li>
+                <li class="footer-li">Xhamia e Pirinazit</li>
+                <li class="footer-li">Sahat Kulla</li>
+                <li class="footer-li">Xhamia e Mbretit</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Prizren
+              <ul>
+                <li class="footer-li">Kalaja e Prizrenit</li>
+                <li class="footer-li">
+                  Kompleksi Monumental i Lidhjes Shqiptare t&#235; Prizrenit
+                </li>
+                <li class="footer-li">Xhamia e Sinan Pash&#235;s</li>
+                <li class="footer-li">Kisha e Sh&#235;n Spasit</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Pej&#235;
+              <ul>
+                <li class="footer-li">
+                  Kompleksi i Mullirit t&#235; Haxhi Zek&#235;s
+                </li>
+                <li class="footer-li">
+                  G&#235;rmadhat e Hamamit t&#235; Haxhi Beut
+                </li>
+                <li class="footer-li">Konaku i Tahir Begut</li>
+                <li class="footer-li">Patriarkana e Pej&#235;s</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Bukurit&#235; Natyrore</h3>
+        <div class="lists-container">
+          <ol>
+            <li class="footer-li">
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Parku i Germis&#235;</li>
+                <li class="footer-li">Liqeni i Badovcit</li>
+                <li class="footer-li">Parku Blinaja</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Prizren
+              <ul>
+                <li class="footer-li">Bjeshk&#235;t e Sharrit</li>
+                <li class="footer-li">Lumbardhi i Prizrenit</li>
+                <li class="footer-li">Prevalla</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Pej&#235;
+              <ul>
+                <li class="footer-li">Bjeshk&#235;t e Rugov&#235;s</li>
+                <li class="footer-li">Radavci</li>
+                <li class="footer-li">Bjeshk&#235;t e Nemuna</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Restaurantet</h3>
+        <div class="lists-container">
+          <ol>
+            <li>
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Panorama Dining</li>
+                <li class="footer-li">Hamari Agroturiz&#235;m</li>
+                <li class="footer-li">Mr Fisher</li>
+                <li class="footer-li">Salt Restaurant</li>
+                <li class="footer-li">Alula House</li>
+                <li class="footer-li">Stepia D'arra</li>
+                <li class="footer-li">Casa Rita</li>
+              </ul>
+            </li>
+            <li>
+              Prizren
+              <ul>
+                <li class="footer-li">Natyra Restaurant</li>
+                <li class="footer-li">Mrizi i Shqiponjave</li>
+                <li class="footer-li">Sht&#235;pia e Bardh&#235;</li>
+                <li class="footer-li">Ambient Restaurant</li>
+                <li class="footer-li">Restaurant Ermali</li>
+                <li class="footer-li">Panorama Restaurant</li>
+              </ul>
+            </li>
+  
+            <li>
+              Pej&#235;
+              <ul>
+                <li class="footer-li">Restaurant Era</li>
+                <li class="footer-li">An&#235;s Drinit</li>
+                <li class="footer-li">Gradé Restaurant</li>
+                <li class="footer-li">Flo's Restaurant</li>
+                <li class="footer-li">Uj&#235;vara e Drinit</li>
+                <li class="footer-li">Restaurant Kalaja Lip&#235;</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <h3>Contact us</h3>
+      <address>
+        <div class="info">
+          <p id="email" class="footer-li">
+            Email:
+            <u
+              ><a href="mailto:sugjerimeturistike@gmail.com"
+                >sugjerimeturistike@gmail.com</a
+              ></u
+            >
+          </p>
+          <p id="phone">Phone: <span id="numri">+3835251341</span></p>
+          <p id="adresa">Address: Prishtin&#235;, Kosov&#235;</p>
+          <canvas
+            id="circleCanvas"
+            width="20"
+            height="20"
+            style="margin-top: 10px; margin-bottom: -4px; margin-right: 4px"
+          ></canvas>
+          <span id="currentYear"></span> Sugjerime turistike. All rights reserved.
+        </div>
+      </address>
+    </div>
+  </footer>
+  
     </div>
 </body>
 
