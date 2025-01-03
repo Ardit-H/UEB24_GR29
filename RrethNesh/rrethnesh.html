@@ -6,6 +6,7 @@
   <title>Rreth nesh</title>
   <link rel="stylesheet" href="rrethnesh.css">
   <link rel="stylesheet" href="/general.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
   <div class="content">
@@ -51,6 +52,59 @@
         </form>
       </div>
     </div>
+
+
+    <div class="seksioni-ekipit">
+      <button id="ndiqniEkipin">Ekipi Yn&euml;</button>
+      <div id="informacioniEkipit">
+          <h2>Njihuni me Ekipin Ton&euml;</h2>
+          <div class="anëtar-i-ekipit">
+              <p>👨‍💻 <strong>Albin Bujupi</strong></p>
+          </div>
+          <div class="anëtar-i-ekipit">
+            <p>👨‍💻 <strong>Albison Bekaj</strong></p>
+          </div>  
+          <div class="anëtar-i-ekipit">
+              <p>👨‍💻 <strong>Ardit Hyseni</strong></p>
+          </div>
+          <div class="anëtar-i-ekipit">
+              <p>👨‍💻 <strong>Dua Gashi</strong></p>
+          </div>
+          <div class="anëtar-i-ekipit">
+              <p>👨‍💻 <strong>Erzana Beqaj</strong></p>
+          </div>
+      </div>
+  </div>
+
+  <script>
+       $(document).ready(function() {
+          $("#informacioniEkipit").hide();  
+          $("#ndiqniEkipin").click(function() {
+              $("#informacioniEkipit").slideToggle(600);
+          });
+
+       $(".anëtar-i-ekipit p").hover(
+              function() {
+                  $(this).css("color", "orangered");
+              },
+              function() {
+                  $(this).css("color", "black");
+              });
+
+       $("#ndiqniEkipin").click(function() {
+              var currentText = $(this).text();
+              $(this).text(currentText === "Ekipi Ynë" ? "Mbyll Ekipin" : "Ekipi Ynë");
+          });
+
+       $("#informacioniEkipit").on('click', '.anëtar-i-ekipit', function() {
+              $(this).removeClass('anëtar-i-ekipit');
+          });
+
+       $("#ndiqniEkipin").dblclick(function() {
+              $("#informacioniEkipit").fadeOut(800); 
+          });
+      });
+  </script>
 
     
     <footer>
