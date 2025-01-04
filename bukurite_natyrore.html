@@ -24,12 +24,102 @@
       <div class="qyteti" id="peje"></div>
       <!-- PRIZRENI -->
       <div class="qyteti" id="prizreni"></div>
+      <div class="table" id="table">
+        <table>
+          <thead style="background-color: #495057; color: white">
+            <tr>
+              <th>Qytetet</th>
+              <th>Bukurit&#235; Natyrore</th>
+              <th>Kategoria e Bukuris&#235; Natyrore</th>
+              <th>Sezoni m&#235; i Populluar</th>
+              <th>Me te vizituarat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rreshti për Prishtinën -->
+            <tr>
+              <td rowspan="3">Prishtin&#235;</td>
+              <td>Parku i Germis&#235;</td>
+              <td>Park Komb&#235;tar</td>
+              <td>Ver&#235;</td>
+              <td rowspan="3">
+                <ol>
+                  <li class="renditja">Parku i Germis&#235;</li>
+                  <li class="renditja">Liqeni i Badovcit</li>
+                  <li class="renditja">Parku i Blinaja</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Parku i Blinaja</td>
+              <td>Park Komb&#235;tar</td>
+              <td>Pranver&#235;</td>
+            </tr>
+            <tr>
+              <td>Liqeni i Badovcit</td>
+              <td>Liqen</td>
+              <td>Ver&#235;</td>
+            </tr>
+
+            <!-- Rreshti për Pejën -->
+            <tr>
+              <td rowspan="3">Pejë</td>
+              <td>Bjeshk&#235;t e Rugov&#235;s</td>
+              <td>Mal</td>
+              <td>Ver&#235;</td>
+              <td rowspan="3">
+                <ol>
+                  <li class="renditja">Bjeshk&#235;t e Rugov&#235;s</li>
+                  <li class="renditja">Radvci</li>
+                  <li class="renditja">Bjeshk&#235;t e Nemuna</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Radavci</td>
+              <td>Uj&#235;var&#235;</td>
+              <td>Pranver&#235;</td>
+            </tr>
+            <tr>
+              <td>Bjeshk&#235;t e Nemuna</td>
+              <td>Mal</td>
+              <td>Ver&#235;</td>
+            </tr>
+
+            <!-- Rreshti për Prizrenin -->
+            <tr>
+              <td rowspan="3">Prizren</td>
+              <td>Bjeshk&#235;t e Sharrit</td>
+              <td>Mal</td>
+              <td>Dim&#235;r</td>
+              <td rowspan="3">
+                <ol>
+                  <li class="renditja">Prevalla</li>
+                  <li class="renditja">Bjeshk&#235;t e Sharrit</li>
+                  <li class="renditja">Lumbardhi i Prizrenit</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Lumbardhi i Prizrenit</td>
+              <td>Lum&#235;</td>
+              <td>Pranver&#235;</td>
+            </tr>
+            <tr>
+              <td>Prevalla</td>
+              <td>Park Komb&#235;tar</td>
+              <td>Dim&#235;r</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <footer id="footer-placeholder"></footer>
     </div>
     <script>
       async function vendosPermbajtjenEQytetit(qytetiID, qytetiFile) {
         const targetCity = document.getElementById(qytetiID);
         const response = await fetch(qytetiFile);
+        console.log(qytetiID, "qyteti id");
         if (response.ok) {
           const html = await response.text();
           targetCity.innerHTML = html;
@@ -49,7 +139,7 @@
       vendosPermbajtjenEQytetit("peje", "Bukurite/peja.html");
       vendosPermbajtjenEQytetit("prizreni", "Bukurite/prizreni.html");
     </script>
-    <script src="Bukurite/bukurite_natyrore.js"></script>
+    <script src="Bukurite/bukurite_natyrore.js" defer></script>
     <script src="general.js"></script>
     <script src="Bukurite/tabs.js"></script>
     <script src="Bukurite/update-foto.js"></script>
