@@ -373,3 +373,29 @@ input[alt="kerkimi"]{
 
 
 
+#backToTopLink {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #787878;
+    color: white;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px; 
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  
+  #backToTopLink:hover {
+    background-color: #454545;
+    transform: scale(1.1); 
+  }
+
