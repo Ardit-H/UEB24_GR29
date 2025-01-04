@@ -1,34 +1,43 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url('FototperProjekt/Main/backgoundImage.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* ose menyra e shkurt */
+    /* background: url('FototperProjekt/Main/backgoundImage.jpg') no-repeat fixed; */
+
 }
 /* Navbar */
 .navbar {
     background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     border-bottom: 1px solid #6c757d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    height: 30px;
-    text-align: right;
-    padding: 3%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 3%;
+    box-sizing: border-box;
+}
 
+.navbar canvas {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px; 
 }
-img#logo{
-    width: 8%;
-    justify-content: center;
-    float: left;
-    padding: 0;
-}
-ul {
+
+
+.navbar ul {
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    /* background-color: rgb(0, 0, 0); */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; 
+    justify-content: flex-end; 
 }
-li {
-    float: left;
-}
-li a {
+
+.navbar li a {
     font-size: 20px;
     color: white;
     padding: 12px;
@@ -36,16 +45,16 @@ li a {
     text-decoration: none;
     transition: all 0.5s ease;
 }
-li a:hover {
-    color:#6c757d;
+
+.navbar li a:hover {
+    color: #6c757d;
     transform: scale(1.2);
 }
 /* Slide foto*/
 
 .foto_k{
-    height:500px;
+    height:550px;
     background-image: url('FototperProjekt/Main/Prishtina.png');
-    opacity:1;
     background-position: center;
     background-size: cover;
     animation: change 30s infinite 1s normal;
@@ -118,8 +127,10 @@ input[alt="kerkimi"]{
 }
 .video{
     width: 100%; 
-    border: 5px solid #333;
-    border-radius: 10px;
+    border: 5px solid transparent;
+    /* border-radius: 10px; */
+    border-image: url('FototperProjekt/Main/borderImage.jpg') 10 stretch;
+    background-origin: padding-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     
 }
@@ -129,7 +140,8 @@ input[alt="kerkimi"]{
     font-size: 16px;
     background-color: #007bff;
     color: white;
-    border: 1px dotted black;
+    outline: 1px dotted black; 
+    outline-offset: 0px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -179,8 +191,8 @@ input[alt="kerkimi"]{
     height: auto;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px dashed black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px dashed transparent;
     border-radius: 10px;
 }
 
@@ -249,3 +261,113 @@ input[alt="kerkimi"]{
         padding: 5px;
     }
 }
+
+/* thenje*/
+
+.thenje-nderro {
+    background-color:rgb(249, 249, 249);
+    padding: 20px 10px;
+    text-align: center;
+    margin: 20px auto;
+    border-top: 2px solid rgb(204,204,204);
+    border-bottom: 2px solid rgb(204,204,204);
+    position: relative;
+    width: 85%;
+    height: 90px;
+
+    background-image:
+        radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), 
+        url('image1.jpg'), 
+        url('image2.jpg');
+    background-position: center left, center right; 
+    background-size: 50%, 50%; 
+    background-repeat: no-repeat;
+    animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image1.jpg'), 
+            url('FototperProjekt/Main/image2.jpg');
+    }
+    25% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image3.jpg'), 
+            url('FototperProjekt/Main/image4.jpg');
+    }
+    50% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image5.jpg'),
+            url('FototperProjekt/Main/image6.jpg');
+    }
+    75% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image7.jpg'),
+            url('FototperProjekt/Main/image8.jpg');
+    }
+    100% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image1.jpg'), 
+            url('FototperProjekt/Main/image2.jpg');
+    }
+}
+
+.thenje-nderro h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+.thenje-nderro{
+    height: 170px;
+}
+
+.thenje_div {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.thenje {
+    position: absolute;
+    white-space: nowrap;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    animation: slideInOut 32s infinite;
+}
+
+
+.thenje:nth-child(1) {
+    animation-delay: 0s;
+}
+.thenje:nth-child(2) {
+    animation-delay: 8s;
+}
+.thenje:nth-child(3) {
+    animation-delay: 16s;
+}
+.thenje:nth-child(4) {
+    animation-delay: 24s;
+}
+
+@keyframes slideInOut {
+    0% { transform: translateX(100%); opacity: 0; }
+    20% { transform: translateX(0); opacity: 1; }
+    40% { transform: translateX(0); opacity: 0; }
+    75% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(-100%); opacity: 0; }
+}
+
+
+

@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif; /*-- */
+  font-family: 'Poppins', sans-serif; 
 }
 .about-content {
   font-size: 16px;
@@ -134,6 +134,20 @@ body {
   font-weight: 500;
 }
 
+.iks {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #adb5bd;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.iks:hover {
+  color: #ff6347;
+  transform: scale(1.2);
+}
 
 .Kontakti-form-body {
   height: 480px;
@@ -183,6 +197,7 @@ button:hover {
     width: 100%;
   }
 }
+
 
 
 

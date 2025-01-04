@@ -46,7 +46,7 @@
     float: left;
   }
   .navbar-li a {
-    font-size: 18px;
+    font-size: 22px;
     color: white;
     padding: 12px;
     display: block;
@@ -96,6 +96,7 @@
     margin-top: 0.5rem;
     margin-left: 1rem;
     counter-reset: item;
+    list-style-type:disc;
   }
   .footer-li a {
     color: #ddd;
@@ -116,7 +117,7 @@
   }
   .info p {
     display: inline;
-    margin: 6rem;
+    margin: 4rem;
   }
   
   /* End footer style */

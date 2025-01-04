@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sugjerime turistike </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="div_navbar">
+      <div>
+        <canvas id="logoCanvas" width="500" height="500"></canvas>
+      </div>
             <ul>
-                <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="monumentet.html">Monumentet historike</a></li>
                 <li><a href="bukurite_natyrore.html">Bukurit natyrore</a></li>
                 <li><a href="restaurantet.html">Restaurantet</a></li>
                 <li><a href="RrethNesh/rrethnesh.html">Rreth nesh</a></li>
             </ul>
-        </div>
     </nav>
 
     <div class="foto_k"></div>
+
+  
     <div id="search_btn">
         <p id="Pershkrimi_Search">Për më shumë informata rreth një qyteti kërko qytetin më poshtë!</p>
         <input type="search" placeholder="Kërko qytetin "id="search_bt" alt="kerkimi">
@@ -58,7 +61,7 @@
         </div>
 
         <div class="div_video">
-        <video id="video2" class="video">
+        <video id="video2" class="video" muted>
             <source src="FototperProjekt/Main/video2.mp4" type="video/mp4">Shfletuesi juaj nuk mbështet videon.
         </video>
         <button id="videoButton" data-video="video2">Play/Pause</button>
@@ -90,9 +93,9 @@
         <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Prizren</p>
         <div class="row">
             <div class="divVendet">
-                <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
-                <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
-                <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+                <img id="imgVendet" src="../FototperProjekt/BukuriteNatyrore/Lumbardhi1.jpg">
+                <p id="vendi" style="font-family: Trebuchet MS;">Lumbardhi i Prizrenit</p>
+                <p id="pershkrim_vendi">Lumbardhi i Prizrenit, lumi që përshkon zemrën e qytetit të Prizrenit, është një simbol i gjallë i bukurisë natyrore dhe qetësisë që karakterizon këtë qytet historik. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
             </div>
             <div class="divVendet">
                 <img id="imgVendet" src="FototperProjekt/Monumentet kulturore-historike/KalajaePrizrenit5.png">
@@ -111,9 +114,9 @@
         <p  style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic; font-size: 20px;">Pejë</p>
         <div class="row">
             <div class="divVendet">
-                <img id="imgVendet" src="FototperProjekt/BukuriteNatyrore/Germia.webp">
-                <p id="vendi" style="font-family: Trebuchet MS;">Germia</p>
-                <p id="pershkrim_vendi">Parku i Gërmisë është një nga destinacionet më të njohura në Prishtinë për natyrë dhe rekreacion. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
+                <img id="imgVendet" src="../FototperProjekt/BukuriteNatyrore/Bnemun3.jpg">
+                <p id="vendi" style="font-family: Trebuchet MS;">Bjeshkët e Nemuna</p>
+                <p id="pershkrim_vendi">Bjeshkët e Nemuna janë një rajon malor mahnitës që shtrihet në kufirin mes Kosovës dhe Malit të Zi. Të mbuluara me pyje të gjelbra, livadhe alpine dhe maja të thepisura, këto bjeshkë janë një destinacion i preferuar për ecje malore, ngjitje dhe kamping. Për më shumë informata<a href="bukurite_natyrore.html#germia" id="linku_vendi"> kliko këtu!</a></p>
             </div>
             <div class="divVendet">
                 <img id="imgVendet" src="FototperProjekt/Monumentet kulturore-historike/MulliriHaxhiZekes4.png">
@@ -127,7 +130,186 @@
             </div>
         </div>
 
+        
     </div>
+    <div class="thenje-nderro">
+        <h2>Inspirohuni për udhëtime</h2>
+        <div class="thenje_div">
+            <div class="thenje">"The journey not the arrival matters." – T.S. Eliot</div>
+            <div class="thenje">"Travel makes one modest; you see what a tiny place you occupy in the world." – Gustave Flaubert</div>
+            <div class="thenje">"Not all those who wander are lost." – J.R.R. Tolkien</div>
+            <div class="thenje">"Take only memories, leave only footprints." – Chief Seattle</div>
+        </div>
+    </div>
+  
+    <script>
+        function loadFooter() {
+           const currentYearElement = document.getElementById("currentYear");
+           if (currentYearElement) {
+             currentYearElement.textContent = new Date().getFullYear();
+           } else {
+             console.error(
+               "Elementi me id 'currentYear' nuk u gjete ne footer!"
+             );
+           }
+           const canvas = document.getElementById("circleCanvas");
+           if (canvas) {
+             const ctx = canvas.getContext("2d");
+             ctx.beginPath();
+             ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+             ctx.stroke();
+           } else {
+             console.error("Elementi Canvas nuk u gjete!");
+           }
+       }
+       document.addEventListener("DOMContentLoaded", () => {
+         loadFooter();
+       });
+     </script>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Monumentet historike</h3>
+            <div class="lists-container">
+              <ol>
+                <li class="footer-li">
+                  Prishtin&#235;
+                  <ul>
+                    <li class="footer-li">Muzeu Komb&#235;tar i Kosov&#235;s</li>
+                    <li class="footer-li">Xhamia e Pirinazit</li>
+                    <li class="footer-li">Sahat Kulla</li>
+                    <li class="footer-li">Xhamia e Mbretit</li>
+                  </ul>
+                </li>
+                <li class="footer-li">
+                  Prizren
+                  <ul>
+                    <li class="footer-li">Kalaja e Prizrenit</li>
+                    <li class="footer-li">
+                      Kompleksi Monumental i Lidhjes Shqiptare t&#235; Prizrenit
+                    </li>
+                    <li class="footer-li">Xhamia e Sinan Pash&#235;s</li>
+                    <li class="footer-li">Kisha e Sh&#235;n Spasit</li>
+                  </ul>
+                </li>
+                <li class="footer-li">
+                  Pej&#235;
+                  <ul>
+                    <li class="footer-li">
+                      Kompleksi i Mullirit t&#235; Haxhi Zek&#235;s
+                    </li>
+                    <li class="footer-li">
+                      G&#235;rmadhat e Hamamit t&#235; Haxhi Beut
+                    </li>
+                    <li class="footer-li">Konaku i Tahir Begut</li>
+                    <li class="footer-li">Patriarkana e Pej&#235;s</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Bukurit&#235; Natyrore</h3>
+            <div class="lists-container">
+              <ol>
+                <li class="footer-li">
+                  Prishtin&#235;
+                  <ul>
+                    <li class="footer-li">Parku i Germis&#235;</li>
+                    <li class="footer-li">Liqeni i Badovcit</li>
+                    <li class="footer-li">Parku Blinaja</li>
+                  </ul>
+                </li>
+                <li class="footer-li">
+                  Prizren
+                  <ul>
+                    <li class="footer-li">Bjeshk&#235;t e Sharrit</li>
+                    <li class="footer-li">Lumbardhi i Prizrenit</li>
+                    <li class="footer-li">Prevalla</li>
+                  </ul>
+                </li>
+                <li class="footer-li">
+                  Pej&#235;
+                  <ul>
+                    <li class="footer-li">Bjeshk&#235;t e Rugov&#235;s</li>
+                    <li class="footer-li">Radavci</li>
+                    <li class="footer-li">Bjeshk&#235;t e Nemuna</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Restaurantet</h3>
+            <div class="lists-container">
+              <ol>
+                <li>
+                  Prishtin&#235;
+                  <ul>
+                    <li class="footer-li">Panorama Dining</li>
+                    <li class="footer-li">Hamari Agroturiz&#235;m</li>
+                    <li class="footer-li">Mr Fisher</li>
+                    <li class="footer-li">Salt Restaurant</li>
+                    <li class="footer-li">Alula House</li>
+                    <li class="footer-li">Stepia D'arra</li>
+                    <li class="footer-li">Casa Rita</li>
+                  </ul>
+                </li>
+                <li>
+                  Prizren
+                  <ul>
+                    <li class="footer-li">Natyra Restaurant</li>
+                    <li class="footer-li">Mrizi i Shqiponjave</li>
+                    <li class="footer-li">Sht&#235;pia e Bardh&#235;</li>
+                    <li class="footer-li">Ambient Restaurant</li>
+                    <li class="footer-li">Restaurant Ermali</li>
+                    <li class="footer-li">Panorama Restaurant</li>
+                  </ul>
+                </li>
+      
+                <li>
+                  Pej&#235;
+                  <ul>
+                    <li class="footer-li">Restaurant Era</li>
+                    <li class="footer-li">An&#235;s Drinit</li>
+                    <li class="footer-li">Gradé Restaurant</li>
+                    <li class="footer-li">Flo's Restaurant</li>
+                    <li class="footer-li">Uj&#235;vara e Drinit</li>
+                    <li class="footer-li">Restaurant Kalaja Lip&#235;</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Contact us</h3>
+          <address>
+            <div class="info">
+              <p id="email">
+                Email:
+                <u
+                  ><a href="mailto:sugjerimeturistike@gmail.com"
+                    >sugjerimeturistike@gmail.com</a
+                  ></u
+                >
+              </p>
+              <p id="phone">Phone: <span id="numri">+3835251341</span></p>
+              <p id="adresa">Address: Prishtin&#235;, Kosov&#235;</p>
+              <canvas
+                id="circleCanvas"
+                width="20"
+                height="20"
+                style="margin-top: 10px; margin-bottom: -4px; margin-right: 4px"
+              ></canvas>
+              <span id="currentYear"></span> Sugjerime turistike. &copy; All rights reserved.
+            </div>
+          </address>
+        </div>
+      </footer>
+      
+      
     <script src="script.js"></script>
+    <script src="general.js"></script>
 </body>
 </html>

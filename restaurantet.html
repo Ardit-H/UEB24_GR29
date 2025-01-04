@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurantet</title>
     <link rel="stylesheet" href="restaurantet.css" >
+
 </head>
 <body>
     <div class="content">
@@ -762,106 +763,170 @@
         }
     });
 </script>
-<footer >
+<script>
+    function loadFooter() {
+       const currentYearElement = document.getElementById("currentYear");
+       if (currentYearElement) {
+         currentYearElement.textContent = new Date().getFullYear();
+       } else {
+         console.error(
+           "Elementi me id 'currentYear' nuk u gjete ne footer!"
+         );
+       }
+       const canvas = document.getElementById("circleCanvas");
+       if (canvas) {
+         const ctx = canvas.getContext("2d");
+         ctx.beginPath();
+         ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+         ctx.stroke();
+       } else {
+         console.error("Elementi Canvas nuk u gjete!");
+       }
+   }
+   document.addEventListener("DOMContentLoaded", () => {
+     loadFooter();
+   });
+ </script>
+<footer>
     <div class="footer-content">
-        <div class="footer-section">
-            <h2>Monumentet historike</h2>
-            <div class="lists-container">
-                <ol>
-                    <li class="li">Prishtinë
-                        <ul>
-                            <li class="li">Muzeu Kombetar i Kosovës</li>
-                            <li class="li">Xhamia e Pirinazit</li>
-                            <li class="li">Sahat Kulla</li>
-                            <li class="li">Xhamia e Mbretit</li>
-                        </ul>
-                    </li>
-                    <li class="li">Prizren
-                        <ul>
-                            <li class="li">Kalaja e Prizrenit</li>
-                            <li class="li">Kompleksi Monumental i Lidhjes Shqiptare të Prizrenit</li>
-                            <li class="li">Xhamia e Sinan Pashës</li>
-                            <li class="li">Kisha e Shën Spasit</li>
-                        </ul>
-                    </li>
-                    <li class="li">Pejë
-                        <ul>
-                            <li class="li">Kompleksi i Mullirit të Haxhi Zekës</li>
-                            <li class="li">Gërmadhat e Hamamit të Haxhi Beut</li>
-                            <li class="li">Konaku i Tahir Begut</li>
-                            <li class="li">Patriarkana e Pejës</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+      <div class="footer-section">
+        <h3>Monumentet historike</h3>
+        <div class="lists-container">
+          <ol>
+            <li class="footer-li">
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Muzeu Komb&#235;tar i Kosov&#235;s</li>
+                <li class="footer-li">Xhamia e Pirinazit</li>
+                <li class="footer-li">Sahat Kulla</li>
+                <li class="footer-li">Xhamia e Mbretit</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Prizren
+              <ul>
+                <li class="footer-li">Kalaja e Prizrenit</li>
+                <li class="footer-li">
+                  Kompleksi Monumental i Lidhjes Shqiptare t&#235; Prizrenit
+                </li>
+                <li class="footer-li">Xhamia e Sinan Pash&#235;s</li>
+                <li class="footer-li">Kisha e Sh&#235;n Spasit</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Pej&#235;
+              <ul>
+                <li class="footer-li">
+                  Kompleksi i Mullirit t&#235; Haxhi Zek&#235;s
+                </li>
+                <li class="footer-li">
+                  G&#235;rmadhat e Hamamit t&#235; Haxhi Beut
+                </li>
+                <li class="footer-li">Konaku i Tahir Begut</li>
+                <li class="footer-li">Patriarkana e Pej&#235;s</li>
+              </ul>
+            </li>
+          </ol>
         </div>
-        <div class="footer-section">
-            <h2>Bukuritë Natyrore</h2>
-            <div class="lists-container">
-                <ol>
-                    <li class="li">Prishtinë
-                        <ul>
-                            <li class="li">Parku i Germisë</li>
-                            <li class="li">Liqeni Badovcit</li>
-                            <li class="li">Parku Blinaja</li>
-                        </ul>
-                    </li>
-                    <li class="li">Prizren
-                        <ul>
-                            <li class="li">Bjeshkët e Sharrit</li>
-                            <li class="li">Lumbardhi i Prizrenit</li>
-                            <li class="li">Prevalla</li>
-                        </ul>
-                    </li>
-                    <li class="li">Pejë
-                        <ul>
-                            <li class="li">Bjeshkët e Rugovës</li>
-                            <li class="li">Radavci</li>
-                            <li class="li">Bjeshkët e Nemuna</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+      </div>
+      <div class="footer-section">
+        <h3>Bukurit&#235; Natyrore</h3>
+        <div class="lists-container">
+          <ol>
+            <li class="footer-li">
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Parku i Germis&#235;</li>
+                <li class="footer-li">Liqeni i Badovcit</li>
+                <li class="footer-li">Parku Blinaja</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Prizren
+              <ul>
+                <li class="footer-li">Bjeshk&#235;t e Sharrit</li>
+                <li class="footer-li">Lumbardhi i Prizrenit</li>
+                <li class="footer-li">Prevalla</li>
+              </ul>
+            </li>
+            <li class="footer-li">
+              Pej&#235;
+              <ul>
+                <li class="footer-li">Bjeshk&#235;t e Rugov&#235;s</li>
+                <li class="footer-li">Radavci</li>
+                <li class="footer-li">Bjeshk&#235;t e Nemuna</li>
+              </ul>
+            </li>
+          </ol>
         </div>
-        <div class="footer-section">
-            <h2>Restaurantet</h2>
-            <div class="lists-container">
-                <ol>
-                    <li class="li">Prishtinë
-                        <ul>
-                            <li class="li">Panorama Dining</li>
-                            <li class="li">Hamari Agroturizëm</li>
-                            <li class="li">Mr Fisher</li>
-                            <li class="li">Salt Restaurant</li>
-                            <li class="li">Alula House</li>
-                            <li class="li">Casa Rita</li>
-                        </ul>
-                    </li>
-                    <li class="li">Prizren
-                        <ul>
-                            <li class="li">Natyra Restaurant</li>
-                            <li class="li">Mrizi i Shqiponjave</li>
-                            <li class="li">Shtëpia e Bardhë</li>
-                            <li class="li">Ambient Resataurant</li>
-                            <li class="li">Restaurant Ermali</li>
-                            <li class="li">Panorama Resataurant</li>
-                        </ul>
-                    </li>
-                    <li class="li">Pejë
-                        <ul>
-                            <li class="li">Resataurant Era</li>
-                            <li class="li">Anës Drinit</li>
-                            <li class="li">Grade Resataurant</li>
-                            <li class="li">Flo's Resataurant</li>
-                            <li class="li">Ujëvara Drinit</li>
-                            <li class="li">Restaurant Kalaja Lipë</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+      </div>
+      <div class="footer-section">
+        <h3>Restaurantet</h3>
+        <div class="lists-container">
+          <ol>
+            <li>
+              Prishtin&#235;
+              <ul>
+                <li class="footer-li">Panorama Dining</li>
+                <li class="footer-li">Hamari Agroturiz&#235;m</li>
+                <li class="footer-li">Mr Fisher</li>
+                <li class="footer-li">Salt Restaurant</li>
+                <li class="footer-li">Alula House</li>
+                <li class="footer-li">Stepia D'arra</li>
+                <li class="footer-li">Casa Rita</li>
+              </ul>
+            </li>
+            <li>
+              Prizren
+              <ul>
+                <li class="footer-li">Natyra Restaurant</li>
+                <li class="footer-li">Mrizi i Shqiponjave</li>
+                <li class="footer-li">Sht&#235;pia e Bardh&#235;</li>
+                <li class="footer-li">Ambient Restaurant</li>
+                <li class="footer-li">Restaurant Ermali</li>
+                <li class="footer-li">Panorama Restaurant</li>
+              </ul>
+            </li>
+  
+            <li>
+              Pej&#235;
+              <ul>
+                <li class="footer-li">Restaurant Era</li>
+                <li class="footer-li">An&#235;s Drinit</li>
+                <li class="footer-li">Gradé Restaurant</li>
+                <li class="footer-li">Flo's Restaurant</li>
+                <li class="footer-li">Uj&#235;vara e Drinit</li>
+                <li class="footer-li">Restaurant Kalaja Lip&#235;</li>
+              </ul>
+            </li>
+          </ol>
         </div>
+      </div>
     </div>
-    
-</footer>
+    <div class="contact">
+      <h3>Contact us</h3>
+      <address>
+        <div class="info">
+          <p id="email">
+            Email:
+            <u
+              ><a href="mailto:sugjerimeturistike@gmail.com"
+                >sugjerimeturistike@gmail.com</a
+              ></u
+            >
+          </p>
+          <p id="phone">Phone: <span id="numri">+3835251341</span></p>
+          <p id="adresa">Address: Prishtin&#235;, Kosov&#235;</p>
+          <canvas
+            id="circleCanvas"
+            width="20"
+            height="20"
+            style="margin-top: 10px; margin-bottom: -4px; margin-right: 4px"
+          ></canvas>
+          <span id="currentYear"></span> Sugjerime turistike. All rights reserved.
+        </div>
+      </address>
+    </div>
+  </footer>
 </body>
 </html>
