@@ -258,22 +258,70 @@ input[alt="kerkimi"]{
     }
 }
 
+/* thenje part */
+
 .thenje-nderro {
-    background-color: #f9f9f9;
+    background-color:rgb(249, 249, 249);
     padding: 20px 10px;
     text-align: center;
     margin: 20px auto;
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
+    border-top: 2px solid rgb(204,204,204);
+    border-bottom: 2px solid rgb(204,204,204);
     position: relative;
     width: 85%;
     height: 90px;
+
+    background-image:
+        radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), 
+        url('image1.jpg'), 
+        url('image2.jpg');
+    background-position: center left, center right; 
+    background-size: 50%, 50%; 
+    background-repeat: no-repeat;
+    animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image1.jpg'), 
+            url('FototperProjekt/Main/image2.jpg');
+    }
+    25% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image3.jpg'), 
+            url('FototperProjekt/Main/image4.jpg');
+    }
+    50% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image5.jpg'),
+            url('FototperProjekt/Main/image6.jpg');
+    }
+    75% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image7.jpg'),
+            url('FototperProjekt/Main/image8.jpg');
+    }
+    100% {
+        background-image: 
+            radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+            url('FototperProjekt/Main/image1.jpg'), 
+            url('FototperProjekt/Main/image2.jpg');
+    }
 }
 
 .thenje-nderro h2 {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 24px;
     margin-bottom: 15px;
+    color: white;
+}
+.thenje-nderro{
+    height: 170px;
 }
 
 .thenje_div {
@@ -290,7 +338,7 @@ input[alt="kerkimi"]{
     white-space: nowrap;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-    color: #555;
+    color: white;
     opacity: 0;
     animation: slideInOut 32s infinite;
 }
@@ -316,3 +364,6 @@ input[alt="kerkimi"]{
     75% { transform: translateX(-100%); opacity: 0; }
     100% { transform: translateX(-100%); opacity: 0; }
 }
+
+
+
