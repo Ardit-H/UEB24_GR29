@@ -1390,6 +1390,22 @@
         monumenti3.shfaqInformacion();
         monumenti4.shfaqInformacion();
     </script>
+    <script>
+        const pershkrime = document.querySelectorAll('.Pershkrimi');
+        let kaTekstArkitekturor = false;
+
+        pershkrime.forEach(function(div) {
+            if (div.textContent.match(/Arkitekturor/)) {
+                kaTekstArkitekturor = true;
+            }
+        });
+
+        if (kaTekstArkitekturor) {
+            console.log("Teksti 'Arkitekturor' është gjetur në faqen tuaj.");
+        } else {
+            console.log("Teksti 'Arkitekturor' nuk është gjetur.");
+        }
+    </script>
 </body>
 
 </html>
