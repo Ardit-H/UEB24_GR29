@@ -21,10 +21,9 @@ body{
     box-sizing: border-box;
 }
 
-.navbar canvas {
-    width: 70px;
-    height: 70px;
-    margin-right: 20px; 
+svg {
+    width: 100px;
+    height: 100px;
 }
 
 
