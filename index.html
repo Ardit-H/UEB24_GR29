@@ -9,8 +9,10 @@
 </head>
 <body>
     <nav class="navbar">
+      <div>
+        <canvas id="logoCanvas" width="500" height="500"></canvas>
+      </div>
             <ul>
-                <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="monumentet.html">Monumentet historike</a></li>
                 <li><a href="bukurite_natyrore.html">Bukurit natyrore</a></li>
@@ -20,6 +22,8 @@
     </nav>
 
     <div class="foto_k"></div>
+
+  
     <div id="search_btn">
         <p id="Pershkrimi_Search">Për më shumë informata rreth një qyteti kërko qytetin më poshtë!</p>
         <input type="search" placeholder="Kërko qytetin "id="search_bt" alt="kerkimi">
@@ -137,6 +141,7 @@
             <div class="thenje">"Take only memories, leave only footprints." – Chief Seattle</div>
         </div>
     </div>
+  
     <script>
         function loadFooter() {
            const currentYearElement = document.getElementById("currentYear");

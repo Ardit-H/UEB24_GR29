@@ -56,7 +56,7 @@
 
 
     <div class="seksioni-ekipit">
-      <button id="ndiqniEkipin">Ekipi Yn&euml;</button>
+      <button onclick="playAudio()" id="ndiqniEkipin">Ekipi Yn&euml;</button>
       <div id="informacioniEkipit">
           <h2>Njihuni me Ekipin Ton&euml;</h2>
           <div class="anëtar-i-ekipit">
@@ -77,11 +77,24 @@
       </div>
   </div>
 
+  <audio id="audio">
+    <source src="clicksound.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function playAudio(){
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+  </script>
+
   <script>
        $(document).ready(function() {
           $("#informacioniEkipit").hide();  
           $("#ndiqniEkipin").click(function() {
-              $("#informacioniEkipit").slideToggle(600);
+              $("#informacioniEkipit").slideToggle(600,function(){
+                console.log("Animacioni përfundoi!");
+              });
           });
 
        $(".anëtar-i-ekipit p").hover(
