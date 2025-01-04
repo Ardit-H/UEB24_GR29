@@ -80,7 +80,9 @@
        $(document).ready(function() {
           $("#informacioniEkipit").hide();  
           $("#ndiqniEkipin").click(function() {
-              $("#informacioniEkipit").slideToggle(600);
+              $("#informacioniEkipit").slideToggle(600,function(){
+                console.log("Animacioni përfundoi!");
+              });
           });
 
        $(".anëtar-i-ekipit p").hover(
