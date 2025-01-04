@@ -6,23 +6,29 @@
   <title>Rreth nesh</title>
   <link rel="stylesheet" href="rrethnesh.css">
   <link rel="stylesheet" href="/general.css">
-  <link rel="stylesheet" href="/style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
   <div class="content">
-      <nav class="navbar">
-      <div>
-        <ul>
-          <li><img src="/FototperProjekt/Main/logo.webp" id="logo"></li>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/monumentet.html">Monumentet historike</a></li>
-          <li><a href="/bukurite_natyrore.html">Bukurite natyrore</a></li>
-          <li><a href="/restaurantet.html">Restaurantet</a></li>
-          <li><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
+    <nav class="navbar">
+      <div style="display: flex">
+        <ul id="navbar-ul">
+          <li class="navbar-li">
+            <img src="../FototperProjekt/Main/logo.webp" id="logo" />
+          </li>
+          <li class="navbar-li"><a href="/index.html">Home</a></li>
+          <li class="navbar-li">
+            <a href="/monumentet.html">Monumentet historike</a>
+          </li>
+          <li class="navbar-li">
+            <a href="/bukurite_natyrore.html">Bukurit&#235; natyrore</a>
+          </li>
+          <li class="navbar-li"><a href="/restaurantet.html">Restaurantet</a></li>
+          <li class="navbar-li"><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
         </ul>
       </div>
     </nav>
+    
 
     <section class="Kontakti">
       <p class="Info">Ne butonin më poshtë mund të kontaktoni direkt me ne!</p>
@@ -190,6 +196,22 @@
     }
   </script>
 
+
+  <script>
+     let timeout;
+    function resetTimeout() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        closeContactForm();
+        alert("Forma u mbyll për shkat të mosaktivitetit.");
+      }, 60000);
+    }
+
+document.getElementById("Kontakti-form").addEventListener('mousemove', resetTimeout);
+document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeout);
+
+
+  </script>
 
 <footer>
   <div class="footer-content">
