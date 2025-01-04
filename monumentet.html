@@ -1366,8 +1366,27 @@
       </address>
     </div>
   </footer>
-  
     </div>
+    <script>
+        function Monumenti(emri,vitiNdertimit,vendodhja,lloji){
+            this.emri=emri;
+            this.vitiNdertimit=vitiNdertimit;
+            this.vendodhja=vendodhja;
+            this.lloji=lloji;
+            this.shfaqInformacion=function(){
+                console.log("Emri: "+this.emri);
+                console.log("Periudha e ndërtimit: "+this.vitiNdertimit);
+                console.log("Vendodhja: "+this.vendodhja);
+                console.log("Lloji: "+this.lloji);
+            }
+
+        }
+        let monumenti1=new Monumenti("Xhamia e Mbretit",1461,"Prishtinë,Kosovë","Xhami");
+        let monumenti2=new Monumenti("Kalaja e Prizrenit","Parahistori,Koha e re","Prizren,Kosovë","Kala");
+        let monumenti3=new Monumenti("Xhamia e Mbretit",1461,"Prishtinë,Kosovë","Xhami");
+        monumenti1.shfaqInformacion();
+        monumenti2.shfaqInformacion();
+    </script>
 </body>
 
 </html>
