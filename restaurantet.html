@@ -6,21 +6,54 @@
     <title>Restaurantet</title>
     <link rel="stylesheet" href="restaurantet.css" >
 
+    <style>
+        svg {
+            width: 130px;
+            height: 130px;
+            justify-content: center;
+            float: left;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="content">
         <nav class="navbar">
-            <div>
-                <ul>
-                    <li><img src="FototperProjekt/Main/logo.webp" id="logo"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="monumentet.html">Monumentet historike</a></li>
-                    <li><a href="bukurite_natyrore.html">Bukurite natyrore</a></li>
-                    <li><a href="restaurantet.html">Restaurantet</a></li>
-                    <li><a href="RrethNesh/rrethnesh.html">Rreth nesh</a></li>
-                </ul>
+            <div style="display: flex;justify-content: space-between; width: 100%; align-items: center;" >
+              <ul id="navbar-logo">
+                <li class="navbar-li">
+                    <svg viewBox="0 0 100 90">
+                        <!-- Definimi i gradientit për malet për të krijuar hije -->
+                        <defs>
+                            <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color: #388E3C; stop-opacity: 1" />
+                                <stop offset="100%" style="stop-color: #2C6B3F; stop-opacity: 1" />
+                            </linearGradient>
+                            <linearGradient id="mountainShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color: #2C6B3F; stop-opacity: 0.7" />
+                                <stop offset="100%" style="stop-color: #388E3C; stop-opacity: 0" />
+                            </linearGradient>
+                        </defs>
+                
+                        <!-- Dielli -->
+                        <circle cx="50" cy="35" r="15" fill="yellow" />
+                
+                        <!-- Malet me hije -->
+                        <polygon points="10,70 30,40 50,70" fill="url(#mountainGradient)" />
+                        <polygon points="25,70 50,30 75,70" fill="url(#mountainShadow)" />
+                        <polygon points="40,70 60,40 80,70" fill="url(#mountainGradient)" />
+                    </svg>
+                </li>
+              </ul>
+              <ul id="navbar-ul">
+                <li class="navbar-li"><a href="index.html">Home</a></li>
+                <li class="navbar-li"><a href="monumentet.html">Monumentet historike</a></li>
+                <li class="navbar-li"><a href="bukurite_natyrore.html">Bukurit&#235; natyrore</a></li>
+                <li class="navbar-li"><a href="restaurantet.html">Restaurantet</a></li>
+                <li class="navbar-li"><a href="RrethNesh/rrethnesh.html">Rreth nesh</a></li>
+              </ul>
             </div>
-        </nav>
+          </nav>
     <div class="fotografite" style="width: 100%;">
     </div>
         <div class="Qytetet">
@@ -289,7 +322,7 @@
                     <a href="monumentet.html#Prizreni" id="monumentetlink">Shiko monumentet për këtë qytet</a>
                 </div>
                 <div id="bukuritenatyrore">
-                    <a href="bukurite_natyrore.html#prizren" id="monumentetlink">Shiko bukuritë natyrore për këtë qytet</a>
+                    <a href="bukurite_natyrore.html#prizreni" id="monumentetlink">Shiko bukuritë natyrore për këtë qytet</a>
                 </div>
             </div>
             <div class="Permbajtja">
@@ -520,7 +553,7 @@
                             <a href="monumentet.html#Peja" id="monumentetlink">Shiko monumentet për këtë qytet</a>
                         </div>
                         <div id="bukuritenatyrore">
-                            <a href="bukurite_natyrore.html#Peje" id="monumentetlink">Shiko bukuritë natyrore për këtë qytet</a>
+                            <a href="bukurite_natyrore.html#peje" id="monumentetlink">Shiko bukuritë natyrore për këtë qytet</a>
                         </div>
                     </div>
                     <div class="Permbajtja">

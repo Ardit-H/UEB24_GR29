@@ -157,43 +157,39 @@ h3{
     }
     
 }
-.navbar{
+/* Navbar style */
+.navbar {
     background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     border-bottom: 1px solid #6c757d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     height: 30px;
-    text-align: right;
     display: flex;
     padding: 3%;
-    justify-content: center;
     align-items: center;
     width: 100%;
-}
-img#logo{
-    width: 8%;
-    justify-content: center;
-    float: left;
-    padding: 0;
-}
-.navbar ul{
+  }
+  #navbar-logo{
+      list-style-type: none;
+  }
+  #navbar-ul {
     list-style-type: none;
-    overflow: hidden;
-}
-.navbar li{
-    float: left;
-}
-.navbar a{
+    display: flex;
+    justify-content: flex-end; 
+  }
+
+  .navbar-li a {
     font-size: 20px;
     color: white;
     padding: 12px;
     display: block;
     text-decoration: none;
     transition: all 0.5s ease;
-}
-.navbar li a:hover{
-    color:#6c757d;
-    transform: scale(1.2);
-}
+  }
+  .navbar-li a:hover {
+    color: #6c757d;
+    transform: scale(1.1);
+  }
+  /* Navbar style end */
 #linqet{
     display: flex;
     flex-direction: row;

@@ -17,73 +17,31 @@ butonat.forEach(button => {
     });
 });
 
-var canvas = document.getElementById('logoCanvas');
-var ctx = canvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopLink = document.getElementById('backToTopLink');
 
+    // Kontrollojmë scroll-in dhe shfaqim/fshehim linkun
+    window.addEventListener('scroll', () => {
+        console.log('Vlera e scrollY: ', window.scrollY);
+      if (window.scrollY > 400) {
+        backToTopLink.style.display = 'block'; // Shfaq linkun
+      } else {
+        backToTopLink.style.display = 'none'; // Fshi linkun
+      }
+    });
 
-var centerX = 250, centerY = 250;
-var innerRadius = 60; 
-var arrowLength = 100; 
-var arrowWidth = 20; 
-var squareSize = 60; 
-
-
-ctx.beginPath();
-ctx.arc(centerX, centerY, 220, 0, 2 * Math.PI);
-ctx.lineWidth = 6;
-ctx.strokeStyle = '#FFFFFF';
-ctx.stroke();
-
-
-ctx.beginPath();
-ctx.rect(centerX - squareSize / 2, centerY - squareSize / 2, squareSize, squareSize);
-ctx.fillStyle = '#FFFFFF'; 
-ctx.fill();
-ctx.lineWidth = 6;
-ctx.strokeStyle = '#FFFFFF';
-ctx.stroke();
-
-
-function drawTriangle(baseX, baseY, direction) {
-    var height = 60; 
-    var width = squareSize; 
-    ctx.beginPath();
-
-    if (direction === 'N') {
-       
-        ctx.moveTo(baseX, baseY - 180); 
-        ctx.lineTo(baseX - width / 2, baseY); 
-        ctx.lineTo(baseX + width / 2, baseY); 
-    } else if (direction === 'S') {
-        
-        ctx.moveTo(baseX, baseY + 180); 
-        ctx.lineTo(baseX - width / 2, baseY); 
-        ctx.lineTo(baseX + width / 2, baseY); 
-    } else if (direction === 'E') {
-        
-        ctx.moveTo(baseX + 180, baseY); 
-        ctx.lineTo(baseX, baseY - width / 2); 
-        ctx.lineTo(baseX, baseY + width / 2); 
-    } else if (direction === 'W') {
-        
-        ctx.moveTo(baseX - 180, baseY); 
-        ctx.lineTo(baseX, baseY - width / 2); 
-        ctx.lineTo(baseX, baseY + width / 2); 
-    }
-
-    ctx.closePath();
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = '#FFFFFF';
-    ctx.stroke();
-    ctx.fillStyle = '#FFFFFF'; 
-    ctx.fill();
-}
-
-
-drawTriangle(centerX, centerY - squareSize / 2, 'N');
-
-drawTriangle(centerX, centerY + squareSize / 2, 'S');
-
-drawTriangle(centerX + squareSize / 2, centerY, 'E');
-
-drawTriangle(centerX - squareSize / 2, centerY, 'W');
+    // Funksion për të shkuar në fillim të faqes me fallback
+    backToTopLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      if ('scrollBehavior' in document.documentElement.style) {
+        // Smooth scrolling në shfletues modernë
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        // Fallback për shfletues më të vjetër
+        window.scrollTo(0, 0);
+      }
+    });
+  });
