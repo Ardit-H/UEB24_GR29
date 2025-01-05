@@ -10,10 +10,51 @@
   width: 100%;
   flex-grow: 1;
 }
+.navbar {
+  background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+  border-bottom: 1px solid #6c757d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.navbar li a {
+  font-size: 20px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.navbar li a:hover {
+  color: #6c757d;
+  transform: scale(1.2);
+}
 .title {
   display: block;
   margin-top: 3em;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
 }
 body {
@@ -21,7 +62,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 .about-content {
   font-size: 16px;
@@ -71,19 +112,18 @@ body {
   transition: background-color 0.3s ease;
   margin-top: 20px;
 }
- 
+
 .butoni-kontakti:hover {
   background-color: orangered;
 }
 
 .Kontakti {
-  
   width: 100%;
   background-image: url(../FototperProjekt/Rrethnesh/Offices.jpg);
   border: 0.5px solid black;
   background-position: center;
   background-size: cover;
-  min-height: 430px; 
+  min-height: 430px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,8 +136,7 @@ body {
   padding: 30px;
 }
 
-
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .Kontakti {
     font-size: 24px;
   }
@@ -105,7 +144,6 @@ body {
     width: 150px;
   }
 }
-
 
 .Kontakti-form {
   visibility: hidden;
@@ -121,8 +159,8 @@ body {
   text-align: center;
   width: 498px;
   height: 607px;
-  color: rgb(11,43,82);
-  font-family: 'Poppins', sans-serif;
+  color: rgb(11, 43, 82);
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
@@ -162,7 +200,7 @@ body {
   height: 58px;
   padding: 16px 12px;
   margin-bottom: 16px;
-  border: 1px solid rgb(173,181,189);
+  border: 1px solid rgb(173, 181, 189);
   border-radius: 5px;
 }
 
@@ -186,19 +224,16 @@ button {
   margin-top: 20px;
 }
 
-
-
 button:hover {
   background-color: orangered;
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .contact-form-body input,
   .contact-form-body textarea {
     width: 100%;
   }
 }
-
 
 .table-container {
   width: 100%;
@@ -211,20 +246,19 @@ button:hover {
   overflow-x: auto;
 }
 
-
 table {
   width: 100%;
   border-collapse: collapse;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333;
 }
 
-th, td {
+th,
+td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-
 
 th {
   background-color: #343a40;
@@ -232,14 +266,13 @@ th {
   font-size: 18px;
 }
 
-
 tr:hover {
   background-color: #f1f1f1;
 }
 
-
-@media(max-width: 700px) {
-  th, td {
+@media (max-width: 700px) {
+  th,
+  td {
     padding: 10px;
   }
   table {
@@ -250,7 +283,7 @@ tr:hover {
   }
 }
 .butoni-tabeles {
-  background-color:white; 
+  background-color: white;
   border: 2px solid orangered;
   color: black;
   padding: 15px;
@@ -266,13 +299,3 @@ tr:hover {
 .butoni-tabeles:hover {
   color: white;
 }
-
-
-
-
-
-
-
-  
-
-
