@@ -116,7 +116,7 @@
                                     likeText.textContent = 'Liked';
                                     likeText.classList.add('liked-text');
                                     audio.play();
-                                    return (isNaN(count) ? 0 : count) + 1;
+                                    return (isNaN(count) ? 0 : count) + 1 <= Number.MAX_VALUE ? (isNaN(count) ? 0 : count) + 1 : Number.MAX_VALUE;
                                 }
                                
                             }
