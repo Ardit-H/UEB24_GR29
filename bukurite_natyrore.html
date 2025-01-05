@@ -112,6 +112,14 @@
             </tr>
           </tbody>
         </table>
+        <div class="vizitoret">
+          <p id="vizitoret-exponential" class="numri-vizitoreve">
+            Numri i vizitoreve ne faqe:
+          </p>
+          <p id="vizitoret-binary" class="numri-vizitoreve">
+            Numri i vizitoreve ne faqe(binare):
+          </p>
+        </div>
       </div>
       <footer id="footer-placeholder"></footer>
     </div>
@@ -195,6 +203,18 @@
             cityButton.click();
           }
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const vizitoret = 2100;
+
+        const exponentialFormat = vizitoret.toExponential(2);
+        const binaryFormat = vizitoret.toString(2);
+
+        document.getElementById("vizitoret-exponential").textContent +=
+          exponentialFormat;
+        document.getElementById("vizitoret-binary").textContent += binaryFormat;
       });
     </script>
 
