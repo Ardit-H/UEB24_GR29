@@ -13,7 +13,7 @@ body{
     background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     border-bottom: 1px solid #6c757d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    height: 60px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -52,7 +52,8 @@ svg {
 /* Slide foto*/
 
 .foto_k{
-    height:550px;
+    border: 0.5px solid black;
+    height:470px;
     background-image: url('FototperProjekt/Main/Prishtina.png');
     background-position: center;
     background-size: cover;
@@ -201,7 +202,15 @@ input[alt="kerkimi"]{
     margin-bottom: 10px;
     border-radius: 10px;
     transition: transform 0.5s ease;
+}
+figure {
+    margin: 0;
+}
 
+figcaption {
+    padding: 10px 0; 
+    text-align: center;
+    font-size: 14px; 
 }
 #imgVendet:hover {
     transform: scale(1.3);
@@ -399,3 +408,64 @@ input[alt="kerkimi"]{
     transform: scale(1.1); 
   }
 
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer-section {
+    flex: 1;
+    display: block;
+    min-width: 250px;
+}
+h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.5rem;
+}
+ol {
+    padding-left: 1.2rem;
+    counter-reset: item;
+}
+  
+  /* .footer-li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+  } */
+ol ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    counter-reset: item;
+    list-style-type: disc;
+}
+a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-li {
+    margin: 0.2rem;
+}
+.contact {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto; /* Add margin for spacing */
+    padding: 20px;
+    width: 100%; /* Optional: Limit the width */
+}
+.info p {
+    display: inline;
+    margin: 3rem;
+}

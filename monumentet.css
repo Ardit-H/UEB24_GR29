@@ -29,6 +29,7 @@
   #navbar-ul {
     list-style-type: none;
     display: flex;
+    gap: 20px;
     justify-content: flex-end; 
   }
 
@@ -42,7 +43,7 @@
   }
   .navbar-li a:hover {
     color: #6c757d;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   /* Navbar style end */
   
@@ -75,10 +76,6 @@
     counter-reset: item;
   }
   
-  /* .footer-li:before {
-    content: counters(item, ".") ". ";
-    counter-increment: item;
-  } */
   ol ul {
     margin-top: 0.5rem;
     margin-left: 1rem;
@@ -98,9 +95,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px auto; /* Add margin for spacing */
+    margin: 20px auto; 
     padding: 20px;
-    width: 100%; /* Optional: Limit the width */
+    width: 100%; 
   }
   .info p {
     display: inline;
@@ -176,7 +173,7 @@ mark {
     font-weight: bold; 
 }
 .Info{
-   height: 430px; 
+   height: 470px; 
    display: flex;
    justify-content: center;
    align-items: center;
@@ -190,7 +187,7 @@ mark {
    
     margin-bottom: 0.1%;
     border: 0.5px solid black;
-    height:430px;
+    height:470px;
     opacity:0.8;
     background-position: center;
     background-size: cover;
