@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="/general.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "fcF66uMQcK39mnTRI",
+      });
+   })();
+</script>
+<script src="rrethnesh.js"></script>
+
 <style>
   svg {
       width: 100px;
@@ -69,6 +81,52 @@
       <p><strong>Misioni ynë</strong> është të krijojmë mundësi për të eksploruar destinacione që përshtaten me interesat dhe dëshirat tuaja.</p>
       <p><strong>Ekipa jonë</strong> është e përbërë nga ekspertë të turizmit, historianë dhe udhëzues lokalë, të cilët janë të apasionuar pas promovimit të bukurive natyrore dhe historisë së Kosovës.</p>
       <p><strong>Na kontaktoni</strong> për çdo pyetje, sugjerim, ose informacion shtesë. Jemi gjithmonë të gatshëm t'ju ndihmojmë.</p>
+           <br><br>
+           <div>
+        <h3>Zbulo çfarë lloj udhëtari je!</h3>
+        <form id="survey-form">
+          <table>
+            <thead>
+              <tr>
+                <th>Pyetja</th>
+                <th>Opsionet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cilat janë interesat tuaja kryesore për udhëtimet?</td>
+                <td>
+                  <select name="travel-interests" required>
+                    <option value="natyrë">Eksplorimi i natyrës</option>
+                    <option value="histori">Monumentet historike</option>
+                    <option value="kulturë">Evenimente kulturore</option>
+                    <option value="ushqim">Gastronomia lokale</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>A preferoni të udhëtoni vetëm apo në grup?</td>
+                <td>
+                  <input type="radio" name="travel-preference" value="vetëm" > Vetëm
+                  <input type="radio" name="travel-preference" value="grup"> Në grup
+                </td>
+              </tr>
+              <tr>
+                <td>Cilat aktivitete preferoni gjatë udhëtimeve?</td>
+                <td>
+                  <input type="checkbox" name="activities" value="hiking" > Ecje në natyrë<br>
+                  <input type="checkbox" name="activities" value="cycling" > Çiklizëm<br>
+                  <input type="checkbox" name="activities" value="photography"> Fotografim<br>
+                  <input type="checkbox" name="activities" value="museum"> Vizitë muzeve
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="butoni-tabeles " type="button" onclick="generateMessage()">Shfaq Rezultatin</button>
+          <br>
+          <em><p id="result-message" style="color: black;"></p></em>
+        </form>
+      </div>
     </div>
 
     <div class="Kontakti-form" id="Kontakti-form">
@@ -85,7 +143,7 @@
           <div><textarea name="message" id="message" placeholder="Mesazhi juaj" maxlength="500" ></textarea></div>
           <div><input type="password" name="ID" id="ID" placeholder="ID-Unike" maxlength="50"></div>
           <button type="button" onclick="generateID()">Gjenero ID</button>
-          <button type="submit">Dërgo</button>
+          <button type="submit" onclick="sendMail()">Dërgo</button>
         </form>
       </div>
     </div>
@@ -197,16 +255,15 @@
   }
   return true;
 }
-    function validateID() {
-    const ID = document.getElementById('ID').value;
-    const IDPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*()_+!])[A-Za-z\d@#$%^&*()_+!]{8,}$/;
+function validateID() {
+  const ID = document.getElementById('ID').value;
 
-    if (!IDPattern.test(ID)) {
-      alert("ID duhet të ketë të paktën 8 karaktere, duke përfshirë një shkronjë të madhe, një të vogël, një numër dhe një karakter special.");
-      return false;
-    }
-    return true;
+  if (!ID.trim()) {
+    alert("ID është e kërkuar.");
+    return false;
   }
+  return true;
+}
 
     function validateForm() {
       if (!validateNameFields()) {
@@ -260,7 +317,7 @@
       timeout = setTimeout(function() {
         closeContactForm();
         alert("Forma u mbyll për shkat të mosaktivitetit.");
-      }, 60000);
+      }, 150000);
     }
 
 document.getElementById("Kontakti-form").addEventListener('mousemove', resetTimeout);
@@ -268,6 +325,33 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
 
 
   </script>
+
+<script>
+  function generateMessage() {
+    const travelInterest = document.querySelector('select[name="travel-interests"]').value;
+    const travelPreference = document.querySelector('input[name="travel-preference"]:checked')?.value;
+
+    let message = "Ti je një tip udhëtari që ka:";
+
+  
+    if (travelInterest === "natyrë") {
+      message += " aventurë dhe dëshirë për natyrë.";
+    } else if (travelInterest === "histori") {
+      message += " interes për histori.";
+    } else if (travelInterest === "kulturë") {
+      message += " pasion për kulturë.";
+    } else if (travelInterest === "ushqim") {
+      message += " dashuri për ushqim.";
+    }
+
+   
+    message += travelPreference === "vetëm" ? " Pëlqen të udhëtojë vetëm." : " Pëlqen të udhëtojë në grup.";
+
+    document.getElementById("result-message").textContent = message;
+  }
+</script>
+
+
 
 <footer>
   <div class="footer-content">
