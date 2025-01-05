@@ -25,28 +25,22 @@
     border-bottom: 1px solid #6c757d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     height: 30px;
-    text-align: right;
     display: flex;
     padding: 3%;
     align-items: center;
     width: 100%;
   }
-  img#logo {
-    width: 8%;
-    justify-content: center;
-    float: left;
-    padding: 0;
+  #navbar-logo{
+      list-style-type: none;
   }
   #navbar-ul {
     list-style-type: none;
     display: flex;
-    overflow: hidden;
+    justify-content: flex-end; 
   }
-  .navbar-li {
-    float: left;
-  }
+
   .navbar-li a {
-    font-size: 22px;
+    font-size: 20px;
     color: white;
     padding: 12px;
     display: block;

@@ -6,23 +6,29 @@
   <title>Rreth nesh</title>
   <link rel="stylesheet" href="rrethnesh.css">
   <link rel="stylesheet" href="/general.css">
-  <link rel="stylesheet" href="/style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
   <div class="content">
-      <nav class="navbar">
-      <div>
-        <ul>
-          <li><img src="/FototperProjekt/Main/logo.webp" id="logo"></li>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/monumentet.html">Monumentet historike</a></li>
-          <li><a href="/bukurite_natyrore.html">Bukurite natyrore</a></li>
-          <li><a href="/restaurantet.html">Restaurantet</a></li>
-          <li><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
+    <nav class="navbar">
+      <div style="display: flex">
+        <ul id="navbar-ul">
+          <li class="navbar-li">
+            <img src="../FototperProjekt/Main/logo.webp" id="logo" />
+          </li>
+          <li class="navbar-li"><a href="/index.html">Home</a></li>
+          <li class="navbar-li">
+            <a href="/monumentet.html">Monumentet historike</a>
+          </li>
+          <li class="navbar-li">
+            <a href="/bukurite_natyrore.html">Bukurit&#235; natyrore</a>
+          </li>
+          <li class="navbar-li"><a href="/restaurantet.html">Restaurantet</a></li>
+          <li class="navbar-li"><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
         </ul>
       </div>
     </nav>
+    
 
     <section class="Kontakti">
       <p class="Info">Ne butonin më poshtë mund të kontaktoni direkt me ne!</p>
@@ -49,6 +55,8 @@
           <div><input type="text" name="phone" id="phone" placeholder="Numri" pattern="\d{9,15}" inputmode="numeric" title="Numri duhet të përmbajë 9 deri në 15 shifra" ></div>
           <div><input type="email" name="email" id="email" placeholder="Email" autocomplete="email" ></div>
           <div><textarea name="message" id="message" placeholder="Mesazhi juaj" maxlength="500" ></textarea></div>
+          <div><input type="password" name="ID" id="ID" placeholder="ID-Unike" maxlength="50"></div>
+          <button type="button" onclick="generateID()">Gjenero ID</button>
           <button type="submit">Dërgo</button>
         </form>
       </div>
@@ -164,6 +172,16 @@
   }
   return true;
 }
+    function validateID() {
+    const ID = document.getElementById('ID').value;
+    const IDPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*()_+!])[A-Za-z\d@#$%^&*()_+!]{8,}$/;
+
+    if (!IDPattern.test(ID)) {
+      alert("ID duhet të ketë të paktën 8 karaktere, duke përfshirë një shkronjë të madhe, një të vogël, një numër dhe një karakter special.");
+      return false;
+    }
+    return true;
+  }
 
     function validateForm() {
       if (!validateNameFields()) {
@@ -178,6 +196,9 @@
       if(!validateMessage()){
         return false;
       }
+      if (!validateID()) {
+      return false;
+    }
       return true; 
     }
 
@@ -190,6 +211,38 @@
     }
   </script>
 
+<script>
+  function generateID() {
+      const length = 12; 
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+      let ID = "";
+      
+      for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * charset.length);
+          ID += charset[randomIndex];
+      }
+      
+      document.getElementById('ID').value = ID;
+  }
+</script>
+
+
+
+  <script>
+     let timeout;
+    function resetTimeout() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        closeContactForm();
+        alert("Forma u mbyll për shkat të mosaktivitetit.");
+      }, 60000);
+    }
+
+document.getElementById("Kontakti-form").addEventListener('mousemove', resetTimeout);
+document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeout);
+
+
+  </script>
 
 <footer>
   <div class="footer-content">

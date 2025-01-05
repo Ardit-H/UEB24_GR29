@@ -6,26 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monumentet kulturore/historike</title>
     <link rel="stylesheet" href="monumentet.css">
+    <style>
+        svg {
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+            float: left;
+        }
+    </style>
 </head>
 
 <body>
     <div class="content">
-        <header style="width: 100%;">
-            <nav class="navbar" id="fillimi faqes">
-                <div style="display: flex">
+        <header style="width: 100%;" id="fillimi faqes">
+            <nav class="navbar">
+                <div style="display: flex;justify-content: space-between; width: 100%; align-items: center;" >
+                  <ul id="navbar-logo">
+                    <li class="navbar-li">
+                        <svg viewBox="0 0 100 100">
+                            <!-- Definimi i gradientit për malet për të krijuar hije -->
+                            <defs>
+                                <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color: #388E3C; stop-opacity: 1" />
+                                    <stop offset="100%" style="stop-color: #2C6B3F; stop-opacity: 1" />
+                                </linearGradient>
+                                <linearGradient id="mountainShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color: #2C6B3F; stop-opacity: 0.7" />
+                                    <stop offset="100%" style="stop-color: #388E3C; stop-opacity: 0" />
+                                </linearGradient>
+                            </defs>
+                    
+                            <!-- Dielli -->
+                            <circle cx="50" cy="35" r="15" fill="yellow" />
+                    
+                            <!-- Malet me hije -->
+                            <polygon points="10,70 30,40 50,70" fill="url(#mountainGradient)" />
+                            <polygon points="25,70 50,30 75,70" fill="url(#mountainShadow)" />
+                            <polygon points="40,70 60,40 80,70" fill="url(#mountainGradient)" />
+                        </svg>
+                    </li>
+                  </ul>
                   <ul id="navbar-ul">
-                    <li class="navbar-li">
-                      <img src="FototperProjekt/Main/logo.webp" id="logo" />
-                    </li>
                     <li class="navbar-li"><a href="index.html">Home</a></li>
-                    <li class="navbar-li">
-                      <a href="monumentet.html">Monumentet historike</a>
-                    </li>
-                    <li class="navbar-li">
-                      <a href="bukurite_natyrore.html">Bukurit&#235; natyrore</a>
-                    </li>
+                    <li class="navbar-li"><a href="monumentet.html">Monumentet historike</a></li>
+                    <li class="navbar-li"><a href="bukurite_natyrore.html">Bukurit&#235; natyrore</a></li>
                     <li class="navbar-li"><a href="restaurantet.html">Restaurantet</a></li>
-                    <li class="navbar-li"><a href="#">Rreth nesh</a></li>
+                    <li class="navbar-li"><a href="RrethNesh/rrethnesh.html">Rreth nesh</a></li>
                   </ul>
                 </div>
               </nav>
@@ -406,7 +432,7 @@
             
 
             <div class="Qyteti" id="Prizreni">
-                <h2 class="EmriiQytetit">Prizren</h2>
+                <h2 class="EmriiQytetit">Prishtinë</h2>
                 <div class="rrethMonumentit" id="KalajaePrizrenit" >
                 <div class="EmriMonumentit">
                     <h3> Kalaja e Prizrenit</h3>
@@ -414,7 +440,7 @@
                     <p class="Detaje">Numri i vendimit: 1585/48</p>
                 </div>
                 <div id="bukuritelink">
-                    <a href="bukurite_natyrore.html#Prizren" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
+                    <a href="bukurite_natyrore.html#prizreni" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
                 </div>
                 <div id="restaurantetlink">
                     <a href="restaurantet.html#Prizren" id="restaurantetlinkBtn">Shiko restaurantet për këtë qytet</a>
@@ -750,7 +776,7 @@
 
             </div>
             <div class="Qyteti" id="Peja">
-                <h2 class="EmriiQytetit">Pejë</h2>
+                <h2 class="EmriiQytetit">Prishtinë</h2>
                 <div class="rrethMonumentit">
                 <div class="EmriMonumentit">
                     <h3> Kompleksi i Mullirit të Haxhi Zekës</h3>
@@ -758,7 +784,7 @@
                     <p class="Detaje">Numri i vendimit: 01 - 98/81</p>
                 </div>
                 <div id="bukuritelink">
-                    <a href="bukurite_natyrore.html#Peje" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
+                    <a href="bukurite_natyrore.html#peje" id="restaurantetlinkBtn">Shiko bukuritë natyrore për këtë qytet</a>
                 </div>
                 <div id="restaurantetlink">
                         <a href="restaurantet.html#Peje" id="restaurantetlinkBtn">Shiko restaurantet për këtë qytet</a>
@@ -1390,6 +1416,48 @@
         monumenti3.shfaqInformacion();
         monumenti4.shfaqInformacion();
     </script>
+    <script>
+        const pershkrime = document.querySelectorAll('.Pershkrimi');
+        let kaTekstArkitekturor = false;
+
+        pershkrime.forEach(function(div) {
+            if (div.textContent.match(/Arkitekturor/)) {
+                kaTekstArkitekturor = true;
+            }
+        });
+
+        if (kaTekstArkitekturor) {
+            console.log("Teksti 'Arkitekturor' është gjetur në faqen tuaj.");
+        } else {
+            console.log("Teksti 'Arkitekturor' nuk është gjetur.");
+        }
+    </script>
+    
+   <script>
+    function ndryshoEmrinQytetit(qytetiId) {
+    // Merr div-in e qytetit me ID të dhënë
+    let qytetiDiv = document.getElementById(qytetiId);
+
+    // Gjen elementin <h2> për emrin e qytetit
+    let emriQytetit = qytetiDiv.querySelector(".EmriiQytetit");
+
+    // Merr ID-në e qytetit (p.sh., "Prishtina", "Peja", "Prizren")
+    let qytetiEmri = qytetiId.toLowerCase();
+
+    // Përdorimi i replace për të ndryshuar emrin e qytetit
+    if (qytetiEmri === "prishtina") {
+        emriQytetit.textContent = emriQytetit.textContent.replace("Prishtinë", "Prishtinë");
+    } else if (qytetiEmri === "peja") {
+        emriQytetit.textContent = emriQytetit.textContent.replace("Prishtinë", "Pejë");
+    } else if (qytetiEmri === "prizreni") {
+        emriQytetit.textContent = emriQytetit.textContent.replace("Prishtinë", "Prizren");
+    }
+}
+
+ndryshoEmrinQytetit("Prishtina");  
+ndryshoEmrinQytetit("Peja");      
+ndryshoEmrinQytetit("Prizreni"); 
+   </script>
 </body>
 
 </html>
