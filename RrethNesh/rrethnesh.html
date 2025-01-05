@@ -55,6 +55,8 @@
           <div><input type="text" name="phone" id="phone" placeholder="Numri" pattern="\d{9,15}" inputmode="numeric" title="Numri duhet të përmbajë 9 deri në 15 shifra" ></div>
           <div><input type="email" name="email" id="email" placeholder="Email" autocomplete="email" ></div>
           <div><textarea name="message" id="message" placeholder="Mesazhi juaj" maxlength="500" ></textarea></div>
+          <div><input type="password" name="ID" id="ID" placeholder="ID-Unike" maxlength="50"></div>
+          <button type="button" onclick="generateID()">Gjenero ID</button>
           <button type="submit">Dërgo</button>
         </form>
       </div>
@@ -170,6 +172,16 @@
   }
   return true;
 }
+    function validateID() {
+    const ID = document.getElementById('ID').value;
+    const IDPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*()_+!])[A-Za-z\d@#$%^&*()_+!]{8,}$/;
+
+    if (!IDPattern.test(ID)) {
+      alert("ID duhet të ketë të paktën 8 karaktere, duke përfshirë një shkronjë të madhe, një të vogël, një numër dhe një karakter special.");
+      return false;
+    }
+    return true;
+  }
 
     function validateForm() {
       if (!validateNameFields()) {
@@ -184,6 +196,9 @@
       if(!validateMessage()){
         return false;
       }
+      if (!validateID()) {
+      return false;
+    }
       return true; 
     }
 
@@ -195,6 +210,22 @@
       document.getElementById("Kontakti-form").style.visibility = "hidden";
     }
   </script>
+
+<script>
+  function generateID() {
+      const length = 12; 
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+      let ID = "";
+      
+      for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * charset.length);
+          ID += charset[randomIndex];
+      }
+      
+      document.getElementById('ID').value = ID;
+  }
+</script>
+
 
 
   <script>
