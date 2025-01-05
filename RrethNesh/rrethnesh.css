@@ -77,9 +77,10 @@ body {
 }
 
 .Kontakti {
-  margin-top: 0.5%;
+  
   width: 100%;
   background-image: url(../FototperProjekt/Rrethnesh/Offices.jpg);
+  border: 0.5px solid black;
   background-position: center;
   background-size: cover;
   min-height: 430px; 
