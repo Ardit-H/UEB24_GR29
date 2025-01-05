@@ -76,10 +76,6 @@
     counter-reset: item;
   }
   
-  /* .footer-li:before {
-    content: counters(item, ".") ". ";
-    counter-increment: item;
-  } */
   ol ul {
     margin-top: 0.5rem;
     margin-left: 1rem;
@@ -99,9 +95,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px auto; /* Add margin for spacing */
+    margin: 20px auto; 
     padding: 20px;
-    width: 100%; /* Optional: Limit the width */
+    width: 100%; 
   }
   .info p {
     display: inline;
