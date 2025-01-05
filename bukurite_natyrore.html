@@ -128,6 +128,7 @@
           } else {
             console.error("vleresimiIVendeve nuk u gjend!");
           }
+          initializeAllSlideshows();
         } else {
           console.error(
             `Deshtoj mbushja e permbajtjes se qytetit ${qytetiID}:`,
@@ -142,7 +143,6 @@
     <script src="Bukurite/bukurite_natyrore.js" defer></script>
     <script src="general.js"></script>
     <script src="Bukurite/tabs.js"></script>
-    <script src="Bukurite/update-foto.js"></script>
     <script>
       async function loadFooter() {
         const footerPlaceholder = document.getElementById("footer-placeholder");
@@ -176,24 +176,28 @@
         loadFooter();
       });
     </script>
-        <script>
-          //Lidhja nga faqja e monumenteve dhe restauranteve me faqen e bukurive
-          document.addEventListener("DOMContentLoaded", function() {
-              // Kontrollo URL-në për të marrë pjesën pas #
-              const hash = window.location.hash;  
-              
-              if (hash) {
-                  const city = hash.replace('#', '');  // Merr qytetin nga hash (pa #)
-                  
-                  // Gjej butonin për qytetin që përputhet me hash-in e URL-së
-                  const cityButton = document.querySelector(`button[data-city="${city}"]`);
-                  
-                  if (cityButton) {
-                      // Kliko butonin përkatës për qytetin që është përmendur në URL
-                      cityButton.click();
-                  }
-              }
-          });
-                </script>
+    <script>
+      //Lidhja nga faqja e monumenteve dhe restauranteve me faqen e bukurive
+      document.addEventListener("DOMContentLoaded", function () {
+        // Kontrollo URL-në për të marrë pjesën pas #
+        const hash = window.location.hash;
+
+        if (hash) {
+          const city = hash.replace("#", ""); // Merr qytetin nga hash (pa #)
+
+          // Gjej butonin për qytetin që përputhet me hash-in e URL-së
+          const cityButton = document.querySelector(
+            `button[data-city="${city}"]`
+          );
+
+          if (cityButton) {
+            // Kliko butonin përkatës për qytetin që është përmendur në URL
+            cityButton.click();
+          }
+        }
+      });
+    </script>
+
+    <script src="Bukurite/slides.js"></script>
   </body>
 </html>
