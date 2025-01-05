@@ -175,6 +175,7 @@ h3{
   #navbar-ul {
     list-style-type: none;
     display: flex;
+    gap: 20px;
     justify-content: flex-end; 
   }
 
