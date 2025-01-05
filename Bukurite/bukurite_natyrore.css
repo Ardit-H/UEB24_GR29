@@ -130,47 +130,6 @@ header {
 .vleresimi input {
   display: none;
 }
-.foto {
-  width: 500px;
-  height: 350px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-.foto-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-  overflow: hidden;
-}
-.secila-foto {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  flex: 0 0 100%;
-  transition: transform 0.5s ease-in-out; /* Smooth animation */
-}
-.butoni {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px 15px;
-  border-radius: 50%;
-}
-.butoni-majt {
-  left: 10px;
-}
-.butoni-djatht {
-  right: 10px;
-}
 .permbajtja {
   display: flex;
   justify-self: center;
@@ -188,60 +147,6 @@ header {
 }
 .galleri-germia {
   justify-content: center;
-}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 .tabs {
@@ -296,4 +201,79 @@ td[rowspan] {
   font-weight: bold;
 }
 
-/* end of tabs */
+.permbajtja .slideshow-container {
+  max-width: 500px;
+  max-height: 288px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  background: #000;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.permbajtja .mySlides {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.permbajtja .mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+.permbajtja .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.permbajtja .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.permbajtja .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number Text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .permbajtja .slideshow-container {
+    max-width: 100%;
+    max-height: 250px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .permbajtja .prev,
+  .next {
+    font-size: 14px;
+    padding: 10px;
+  }
+} */
