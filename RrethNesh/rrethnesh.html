@@ -113,13 +113,10 @@
       </div>
   </div>
 
-  <audio id="audio">
-    <source src="clicksound.mp3" type="audio/mp3">
-  </audio>
 
   <script>
     function playAudio(){
-      var audio = document.getElementById("audio");
+      var audio = new Audio('clicksound.mp3');
       audio.play();
     }
   </script>
