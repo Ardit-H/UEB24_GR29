@@ -1,4 +1,16 @@
-<h2 class="emri-i-qytetit">Prishtin&#235;</h2>
+<h2 class="emri-i-qytetit" id="emri-qytetit">Prishtin&#235;</h2>
+<div class="page-buton">
+  <div id="bukuritelink">
+    <a href="monumentet.html#Prishtina" id="restaurantetlinkBtn"
+      >Shiko monumentet për këtë qytet</a
+    >
+  </div>
+  <div id="restaurantetlink">
+    <a href="restaurantet.html#Prishtina" id="restaurantetlinkBtn"
+      >Shiko restaurantet për këtë qytet</a
+    >
+  </div>
+</div>
 <div class="permbajtja" id="germia">
   <section class="content" id="galleri-germia">
     <div>
@@ -43,8 +55,14 @@
         </div>
       </div>
       <div class="foto" id="foto">
-        <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
-        <div class="foto-content">
+        <button
+          class="butoni butoni-majt"
+          id="meparshem"
+          onclick="showPrevious('germia')"
+        >
+          &#9664;
+        </button>
+        <div id="foto-content-germia">
           <img
             class="secila-foto"
             src="FototperProjekt/BukuriteNatyrore/Germia.webp"
@@ -56,7 +74,13 @@
             alt="Foto e Germise 2"
           />
         </div>
-        <button class="butoni butoni-djatht" id="ardhshem">&#9654;</button>
+        <button
+          class="butoni butoni-djatht"
+          id="ardhshem"
+          onclick="window.showNext('germia')"
+        >
+          &#9654;
+        </button>
       </div>
     </div>
   </section>
@@ -120,7 +144,13 @@
         </div>
       </div>
       <div class="foto" id="foto">
-        <button class="butoni butoni-majt" id="meparshem">&#9664;</button>
+        <button
+          onclick="this.window.showNext('germia')"
+          class="butoni butoni-majt"
+          id="meparshem"
+        >
+          &#9664;
+        </button>
         <div class="foto-content">
           <img
             class="secila-foto"
