@@ -71,6 +71,9 @@
     border-bottom: 2px solid #555;
     padding-bottom: 0.5rem;
   }
+  .footer-h3{
+    text-decoration: none;
+  }
   ol {
     padding-left: 1.2rem;
     counter-reset: item;
