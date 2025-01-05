@@ -131,7 +131,7 @@ h3{
     background-position: center;
     background-size: cover;
     animation: change 30s infinite ease;
-    margin-top: 0.5%;
+    border: 0.5px solid black;
     margin-bottom: 0.5%;
     width: 100vw;
     max-width: 100%;
@@ -160,7 +160,7 @@ h3{
 /* Navbar style */
 .navbar {
     background: linear-gradient(135deg, #343a40 0%, #495057 100%);
-    border-bottom: 1px solid #6c757d;
+   
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     height: 30px;
     display: flex;
