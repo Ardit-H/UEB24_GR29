@@ -127,7 +127,7 @@ h3{
     text-decoration: underline;
 }
 .fotografite{
-    height: 450px;
+    height: 470px;
     opacity: 1;
     background-position: center;
     background-size: cover;
@@ -189,7 +189,7 @@ h3{
   }
   .navbar-li a:hover {
     color: #6c757d;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   /* Navbar style end */
 #linqet{

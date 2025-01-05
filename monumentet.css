@@ -43,7 +43,7 @@
   }
   .navbar-li a:hover {
     color: #6c757d;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   /* Navbar style end */
   
@@ -177,7 +177,7 @@ mark {
     font-weight: bold; 
 }
 .Info{
-   height: 430px; 
+   height: 470px; 
    display: flex;
    justify-content: center;
    align-items: center;
@@ -191,7 +191,7 @@ mark {
    
     margin-bottom: 0.1%;
     border: 0.5px solid black;
-    height:430px;
+    height:470px;
     opacity:0.8;
     background-position: center;
     background-size: cover;
