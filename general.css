@@ -3,28 +3,29 @@
   background: linear-gradient(135deg, #343a40 0%, #495057 100%);
   border-bottom: 1px solid #6c757d;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  height: 30px;
-  text-align: right;
+  height: 60px;
   display: flex;
-  padding: 3%;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  padding: 0 3%;
+  box-sizing: border-box;
 }
-img#logo {
-  width: 8%;
-  justify-content: center;
-  float: left;
-  padding: 0;
+
+svg {
+  width: 100px;
+  height: 100px;
 }
-#navbar-ul {
+
+.navbar ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  overflow: hidden;
+  gap: 20px;
+  justify-content: flex-end;
 }
-.navbar-li {
-  float: left;
-}
-.navbar-li a {
+
+.navbar li a {
   font-size: 20px;
   color: white;
   padding: 12px;
@@ -32,9 +33,10 @@ img#logo {
   text-decoration: none;
   transition: all 0.5s ease;
 }
-.navbar-li a:hover {
+
+.navbar li a:hover {
   color: #6c757d;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 /* Navbar style end */
 
