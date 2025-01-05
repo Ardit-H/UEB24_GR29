@@ -112,6 +112,14 @@
             </tr>
           </tbody>
         </table>
+        <div class="vizitoret">
+          <p id="vizitoret-exponential" class="numri-vizitoreve">
+            Numri i vizitoreve ne faqe:
+          </p>
+          <p id="vizitoret-binary" class="numri-vizitoreve">
+            Numri i vizitoreve ne faqe(binare):
+          </p>
+        </div>
       </div>
       <footer id="footer-placeholder"></footer>
     </div>
@@ -128,6 +136,7 @@
           } else {
             console.error("vleresimiIVendeve nuk u gjend!");
           }
+          initializeAllSlideshows();
         } else {
           console.error(
             `Deshtoj mbushja e permbajtjes se qytetit ${qytetiID}:`,
@@ -142,7 +151,6 @@
     <script src="Bukurite/bukurite_natyrore.js" defer></script>
     <script src="general.js"></script>
     <script src="Bukurite/tabs.js"></script>
-    <script src="Bukurite/update-foto.js"></script>
     <script>
       async function loadFooter() {
         const footerPlaceholder = document.getElementById("footer-placeholder");
@@ -176,24 +184,40 @@
         loadFooter();
       });
     </script>
-        <script>
-          //Lidhja nga faqja e monumenteve dhe restauranteve me faqen e bukurive
-          document.addEventListener("DOMContentLoaded", function() {
-              // Kontrollo URL-në për të marrë pjesën pas #
-              const hash = window.location.hash;  
-              
-              if (hash) {
-                  const city = hash.replace('#', '');  // Merr qytetin nga hash (pa #)
-                  
-                  // Gjej butonin për qytetin që përputhet me hash-in e URL-së
-                  const cityButton = document.querySelector(`button[data-city="${city}"]`);
-                  
-                  if (cityButton) {
-                      // Kliko butonin përkatës për qytetin që është përmendur në URL
-                      cityButton.click();
-                  }
-              }
-          });
-                </script>
+    <script>
+      //Lidhja nga faqja e monumenteve dhe restauranteve me faqen e bukurive
+      document.addEventListener("DOMContentLoaded", function () {
+        // Kontrollo URL-në për të marrë pjesën pas #
+        const hash = window.location.hash;
+
+        if (hash) {
+          const city = hash.replace("#", ""); // Merr qytetin nga hash (pa #)
+
+          // Gjej butonin për qytetin që përputhet me hash-in e URL-së
+          const cityButton = document.querySelector(
+            `button[data-city="${city}"]`
+          );
+
+          if (cityButton) {
+            // Kliko butonin përkatës për qytetin që është përmendur në URL
+            cityButton.click();
+          }
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const vizitoret = 2100;
+
+        const exponentialFormat = vizitoret.toExponential(2);
+        const binaryFormat = vizitoret.toString(2);
+
+        document.getElementById("vizitoret-exponential").textContent +=
+          exponentialFormat;
+        document.getElementById("vizitoret-binary").textContent += binaryFormat;
+      });
+    </script>
+
+    <script src="Bukurite/slides.js"></script>
   </body>
 </html>

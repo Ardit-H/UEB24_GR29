@@ -22,8 +22,8 @@
 
 <style>
   svg {
-      width: 130px;
-      height: 130px;
+      width: 100px;
+      height: 100px;
       justify-content: center;
       float: left;
       padding: 0;
@@ -36,7 +36,7 @@
       <div style="display: flex;justify-content: space-between; width: 100%; align-items: center;" >
         <ul id="navbar-logo">
           <li class="navbar-li">
-              <svg viewBox="0 0 100 90">
+              <svg viewBox="0 0 100 100">
                   <!-- Definimi i gradientit për malet për të krijuar hije -->
                   <defs>
                       <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -61,7 +61,7 @@
         </ul>
         <ul id="navbar-ul">
           <li class="navbar-li"><a href="/index.html">Home</a></li>
-          <li class="navbar-li"><a href="/monumentet.html">Monumentet historike</a></li>
+          <li class="navbar-li"><a href="/monumentet.html">Monumentet </a></li>
           <li class="navbar-li"><a href="/bukurite_natyrore.html">Bukurit&#235; natyrore</a></li>
           <li class="navbar-li"><a href="/restaurantet.html">Restaurantet</a></li>
           <li class="navbar-li"><a href="/RrethNesh/rrethnesh.html">Rreth nesh</a></li>
@@ -171,13 +171,10 @@
       </div>
   </div>
 
-  <audio id="audio">
-    <source src="clicksound.mp3" type="audio/mp3">
-  </audio>
 
   <script>
     function playAudio(){
-      var audio = document.getElementById("audio");
+      var audio = new Audio('clicksound.mp3');
       audio.play();
     }
   </script>
