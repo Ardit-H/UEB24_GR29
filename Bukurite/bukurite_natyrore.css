@@ -3,6 +3,14 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "LibreBodoni";
+  src: url(../LibreBodoni-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Lobster";
+  src: url(../Lobster-Regular.ttf);
+}
 /* body {
   height: 100%;
   margin: 0;
@@ -21,8 +29,10 @@ body {
 header {
   width: 100%;
 }
+#navbar-placeholder {
+  visibility: visible;
+}
 .imazhet {
-  margin-top: 0.5%;
   margin-bottom: 0.1%;
   border: 0.5px solid black;
   height: 430px;
@@ -53,12 +63,44 @@ header {
     background-image: url("../FototperProjekt/BukuriteNatyrore/ParkuBlinajes2.jpg");
   }
 }
+.page-buton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+#restaurantetlinkBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Lobster", sans-serif;
+  color: #fff;
+  background-color: #343a40;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#restaurantetlinkBtn:hover {
+  background-color: #555a5f;
+}
 
 .qyteti {
   border: thin solid black;
   border-radius: 0.5rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 20px;
+}
+#emri-qytetit {
+  text-align: center;
+  font-size: 30px;
+  font-family: "LibreBodoni", sans-serif;
+  padding-top: 0;
 }
 .emri-i-qytetit {
   padding: 2rem;
@@ -101,12 +143,14 @@ header {
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 .secila-foto {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out; /* Smooth animation */
 }
 .butoni {
   position: absolute;
@@ -146,7 +190,59 @@ header {
   justify-content: center;
 }
 
-/* tabs */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
 .tabs {
   margin-top: 20px;
@@ -174,7 +270,30 @@ header {
 }
 
 .qyteti:not(.active) {
-  display: none; /* Only show active city */
+  display: none;
+}
+
+table {
+  border: 1px solid;
+  width: 100%;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px 26px;
+  text-align: left;
+}
+thead {
+  background-color: #495057;
+  color: white;
+}
+
+td[rowspan] {
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  font-weight: bold;
 }
 
 /* end of tabs */
