@@ -115,12 +115,6 @@
   }
   
   /* End footer style */
-  body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    
-}
 .Qytetet{
     border-radius: 10px;
     display: flex;

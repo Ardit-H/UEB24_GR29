@@ -7,6 +7,12 @@
     <title>Monumentet kulturore/historike</title>
     <link rel="stylesheet" href="monumentet.css">
     <style>
+         body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        
+    }
         svg {
             width: 100px;
             height: 100px;
@@ -116,7 +122,7 @@
                                     likeText.textContent = 'Liked';
                                     likeText.classList.add('liked-text');
                                     audio.play();
-                                    return (isNaN(count) ? 0 : count) + 1;
+                                    return (isNaN(count) ? 0 : count) + 1 <= Number.MAX_VALUE ? (isNaN(count) ? 0 : count) + 1 : Number.MAX_VALUE;
                                 }
                                
                             }
@@ -1126,76 +1132,76 @@
                             <td>Muzeu Kombëtar i Kosovës</td>
                             <td><a href="https://maps.app.goo.gl/DA1j6oRS14RzUgb98" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.0</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Muzeu_Komb%C3%ABtar_i_Kosov%C3%ABs">Informacion shtesë rreth Muzeut Kombëtar</a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Muzeu_Komb%C3%ABtar_i_Kosov%C3%ABs" target="_blank">Informacion shtesë rreth Muzeut Kombëtar</a></td>
                         </tr>
                         <tr>
                             <td>Xhamia e Pirinazit</td>
-                            <td><a href="https://maps.app.goo.gl/dRUJ7mDtbLZ9QumF9">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/dRUJ7mDtbLZ9QumF9" target="_blank">Shiko në Google Maps</a></td>
                             <td>5.0</td>
-                            <td><a href="https://www.prishtinanehistori.org/article/84/xhamia-piri-nazer">Informacion shtesë rreth Xhamisë së Pirinazit</a></td>
+                            <td><a href="https://www.prishtinanehistori.org/article/84/xhamia-piri-nazer" target="_blank">Informacion shtesë rreth Xhamisë së Pirinazit</a></td>
                         </tr>
                         <tr>
                             <td>Sahat Kulla</td>
                             <td><a href="https://maps.app.goo.gl/bzraL8r8HL3d5sFa7" target="_blank">Shiko në Google Maps</a></td></td>
                             <td>4.5</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Kulla_e_Sahatit_n%C3%AB_Prishtin%C3%AB">Informacion shtesë rreth Sahat Kullës</a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Kulla_e_Sahatit_n%C3%AB_Prishtin%C3%AB" target="_blank">Informacion shtesë rreth Sahat Kullës</a></td>
                         </tr>
                         
                         <tr>
                             <td>Xhamia e Mbretit</td>
-                            <td><a href="https://maps.app.goo.gl/phj9HAMCCy7AJkqd9">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/phj9HAMCCy7AJkqd9" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.8</td>
-                            <td><a href="https://telegrafi.com/historia-e-xhamise-se-mbretit-ne-kryeqytet-vizitohet-edhe-nga-turistet-e-huaj-video/">Informacion shtesë rreth Xhamisë së Mbretit </a></td>
+                            <td><a href="https://telegrafi.com/historia-e-xhamise-se-mbretit-ne-kryeqytet-vizitohet-edhe-nga-turistet-e-huaj-video/" target="_blank">Informacion shtesë rreth Xhamisë së Mbretit </a></td>
                         </tr>
                         <tr>
                             <td rowspan="4">Prizren</td>
                             <td>Kalaja e Prizrenit</td>
-                            <td><a href="https://maps.app.goo.gl/iF4kJrJydVawuyZb7">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/iF4kJrJydVawuyZb7" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.7</td>
-                            <td><a href="https://kalajaprizrenit.com/">Informacion shtesë rreth Kalasë së Prizrenit </a></td>
+                            <td><a href="https://kalajaprizrenit.com/" target="_blank">Informacion shtesë rreth Kalasë së Prizrenit </a></td>
                         </tr>
                         <tr>
                             <td>Kompleksi Monumental i Lidhjes Shqiptare të Prizrenit</td>
-                            <td><a href="https://maps.app.goo.gl/88LMb9ZK7qprWsPd7">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/88LMb9ZK7qprWsPd7" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.6</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Kompleksi_i_Lidhjes_s%C3%AB_Prizrenit">Informacion shtesë rreth Kompleksit të Lidhjes Shqiptare të Prizrenit </a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Kompleksi_i_Lidhjes_s%C3%AB_Prizrenit" target="_blank">Informacion shtesë rreth Kompleksit të Lidhjes Shqiptare të Prizrenit </a></td>
                         </tr>
                         <tr>
                             <td>Xhamia e Sinan Pashës</td>
-                            <td><a href="https://maps.app.goo.gl/73JkrUYwjFsRw7Bz6">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/73JkrUYwjFsRw7Bz6" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.8</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Xhamia_e_Sinan_Pash%C3%ABs,_Prizren">Informacion shtesë rreth Xhamisë së Sinan Pashës </a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Xhamia_e_Sinan_Pash%C3%ABs,_Prizren" target="_blank">Informacion shtesë rreth Xhamisë së Sinan Pashës </a></td>
                         </tr>
                         <tr>
                             <td>Kisha e Shën Spasit(Shëlbuesit)</td>
-                            <td><a href="https://maps.app.goo.gl/hvHgvGZCHDGm5BDQ7">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/hvHgvGZCHDGm5BDQ7" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.5</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Kisha_e_Sh%C3%ABn_Spasit_(Prizren)">Informacion shtesë rreth Kishës së Shën Spasit </a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Kisha_e_Sh%C3%ABn_Spasit_(Prizren)" target="_blank">Informacion shtesë rreth Kishës së Shën Spasit </a></td>
                         </tr>
                         <tr>
                             <td rowspan="4">Pejë</td>
                             <td>Kompleksi i Mullirit i Haxhi Zekës</td>
-                            <td><a href="https://maps.app.goo.gl/NZX7zsVFo3GuFV2P6">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/NZX7zsVFo3GuFV2P6" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.0</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Kompleksi_i_Mullirit_t%C3%AB_Haxhi_Zek%C3%ABs">Informacion shtesë rreth Kompleksit të Mullirit të Haxhi Zekës </a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Kompleksi_i_Mullirit_t%C3%AB_Haxhi_Zek%C3%ABs" target="_blank">Informacion shtesë rreth Kompleksit të Mullirit të Haxhi Zekës </a></td>
                         </tr>
                         <tr>
                             <td>Gërmadhat e Hamamit të Haxhi Beut</td>
-                            <td><a href="https://maps.app.goo.gl/Fz6LaVn4bmG43M8D9">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/Fz6LaVn4bmG43M8D9" target="_blank">Shiko në Google Maps</a></td>
                             <td>Nuk ka vlerësime</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Hamami_i_Haxhi_Beut,_Pej%C3%AB">Informacion shtesë rreth Gërmadhave të Hamamit të Haxhi Beut</a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Hamami_i_Haxhi_Beut,_Pej%C3%AB" target="_blank">Informacion shtesë rreth Gërmadhave të Hamamit të Haxhi Beut</a></td>
                         </tr>
                         <tr>
                             <td>Konaku i Tahir Begut</td>
                             <td>Nuk ka të dhëna të disponueshme</td>
                             <td>Nuk ka vlerësime</td>
-                            <td><a href="https://sq.wikipedia.org/wiki/Konaku_i_Tahir_Begut">Informacion shtesë rreth Konakut të Tahir Begut </a></td>
+                            <td><a href="https://sq.wikipedia.org/wiki/Konaku_i_Tahir_Begut" target="_blank">Informacion shtesë rreth Konakut të Tahir Begut </a></td>
                         </tr>
                         <tr>
                             <td>Patriarkana e Pejës</td>
-                            <td><a href="https://maps.app.goo.gl/3kCH4FQsigGxbshp9">Shiko në Google Maps</a></td>
+                            <td><a href="https://maps.app.goo.gl/3kCH4FQsigGxbshp9" target="_blank">Shiko në Google Maps</a></td>
                             <td>4.9</td>
-                            <td><a href="https://kktk.rks-gov.net/CulturalHeritage/Details/32">Informacion shtesë rreth Patrikanës së Pejës </a></td>
+                            <td><a href="https://kktk.rks-gov.net/CulturalHeritage/Details/32" target="_blank">Informacion shtesë rreth Patrikanës së Pejës </a></td>
                         </tr>
                     </tbody>
                 </table>
