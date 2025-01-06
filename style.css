@@ -52,7 +52,8 @@ svg {
 /* Slide foto*/
 
 .foto_k{
-    height:550px;
+    border: 0.5px solid black;
+    height:470px;
     background-image: url('FototperProjekt/Main/Prishtina.png');
     background-position: center;
     background-size: cover;
@@ -201,7 +202,15 @@ input[alt="kerkimi"]{
     margin-bottom: 10px;
     border-radius: 10px;
     transition: transform 0.5s ease;
+}
+figure {
+    margin: 0;
+}
 
+figcaption {
+    padding: 10px 0; 
+    text-align: center;
+    font-size: 14px; 
 }
 #imgVendet:hover {
     transform: scale(1.3);
