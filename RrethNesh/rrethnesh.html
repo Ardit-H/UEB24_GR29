@@ -136,6 +136,9 @@
           <div><input type="email" name="email" id="email" placeholder="Email" autocomplete="email" ></div>
           <div><textarea name="message" id="message" placeholder="Mesazhi juaj" maxlength="500" ></textarea></div>
           <div><input type="password" name="ID" id="ID" placeholder="ID-Unike" maxlength="50"></div>
+          <div><label for="key">Kliko për të krijuar një çelës unik:</label><br><br>
+           <keygen name="key" id="key" value="uniqueKey123"></keygen><br><br>
+          </div>
           <button type="button" onclick="generateID()">Gjenero ID</button>
           <button type="submit" onclick="sendMail()">Dërgo</button>
         </form>
