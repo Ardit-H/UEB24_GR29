@@ -51,6 +51,64 @@ svg {
   color: #6c757d;
   transform: scale(1.2);
 }
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-section {
+  flex: 1;
+  display: block;
+  min-width: 250px;
+}
+h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #555;
+  padding-bottom: 0.5rem;
+}
+.footer-h3{
+  text-decoration: none;
+}
+ol {
+  padding-left: 1.2rem;
+  counter-reset: item;
+}
+
+ol ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  counter-reset: item;
+  list-style-type:disc;
+}
+.footer-li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-li {
+  margin: 0.2rem;
+}
+.contact {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto; 
+  padding: 20px;
+  width: 100%; 
+}
+.info p {
+  display: inline;
+  margin: 4rem;
+}
 .title {
   display: block;
   margin-top: 3em;
