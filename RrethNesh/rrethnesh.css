@@ -258,7 +258,7 @@ body {
   width: 434px;
   height: 58px;
   padding: 16px 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   border: 1px solid rgb(173, 181, 189);
   border-radius: 5px;
 }
@@ -280,7 +280,7 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   width: 200px;
-  margin-top: 20px;
+  margin-top: 1px;
 }
 
 button:hover {
