@@ -358,3 +358,38 @@ tr:hover {
 .butoni-tabeles:hover {
   color: white;
 }
+.fill {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  border: solid 2px #ccc;
+}
+
+.hold {
+  opacity: 0.5;
+}
+
+.empty {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  padding: 3px;
+  border: solid 3px black;
+  background: white;
+  position: relative;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
+
+.total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

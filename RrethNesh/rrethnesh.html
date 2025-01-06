@@ -141,7 +141,68 @@
         </form>
       </div>
     </div>
+    <div class="content">
+      <div class="total">
+        <div class="empty" id="empty1">
+          <div class="fill" draggable="true" id="img1" style="background-image: url('Foto1-Aventure.webp');"></div>
+        </div>
+        <div class="empty" id="empty2">
+          <div class="fill" draggable="true" id="img2" style="background-image: url('Foto2-Aventure.jpg');"></div>
+        </div>
+        <div class="empty" id="empty3">
+          <div class="fill" draggable="true" id="img3" style="background-image: url('Foto3-Aventure.jpg');"></div>
+        </div>
+      
+      </div>
+    </div>
+  
+    <script>
+      const fills = document.querySelectorAll('.fill');
+      const empties = document.querySelectorAll('.empty');
+  
+      fills.forEach(fill => {
+        fill.addEventListener('dragstart', dragStart);
+        fill.addEventListener('dragend', dragEnd);
+      });
 
+      empties.forEach(empty => {
+        empty.addEventListener('dragover', dragOver);
+        empty.addEventListener('dragenter', dragEnter);
+        empty.addEventListener('dragleave', dragLeave);
+        empty.addEventListener('drop', dragDrop);
+      });
+ 
+      function dragStart(e) {
+        e.dataTransfer.setData('text', e.target.id);
+        setTimeout(() => {
+          e.target.classList.add('hold');
+        }, 0);
+      }
+  
+      function dragEnd(e) {
+        e.target.classList.remove('hold');
+      }
+  
+      function dragOver(e) {
+        e.preventDefault(); 
+      }
+  
+      function dragEnter(e) {
+        e.preventDefault();
+        e.target.classList.add('hovered');
+      }
+  
+      function dragLeave(e) {
+        e.target.classList.remove('hovered');
+      }
+  
+      function dragDrop(e) {
+        e.target.classList.remove('hovered');
+        const dragElementId = e.dataTransfer.getData('text');
+        const dragElement = document.getElementById(dragElementId);
+        e.target.appendChild(dragElement); 
+      }
+    </script>
 
     <div class="seksioni-ekipit" style="margin-bottom: 8px;">
       <button onclick="playAudio()" id="ndiqniEkipin">Ekipi Yn&euml;</button>
