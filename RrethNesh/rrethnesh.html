@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rreth nesh</title>
   <link rel="stylesheet" href="rrethnesh.css">
-  <link rel="stylesheet" href="/general.css">
+ 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <script type="text/javascript"
@@ -143,7 +143,7 @@
     </div>
 
 
-    <div class="seksioni-ekipit">
+    <div class="seksioni-ekipit" style="margin-bottom: 3px;">
       <button onclick="playAudio()" id="ndiqniEkipin">Ekipi Yn&euml;</button>
       <div id="informacioniEkipit">
           <h2>Njihuni me Ekipin Ton&euml;</h2>
@@ -346,11 +346,34 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
 </script>
 
 
-
+ <script>
+             function loadFooter() {
+                const currentYearElement = document.getElementById("currentYear");
+                if (currentYearElement) {
+                  currentYearElement.textContent = new Date().getFullYear();
+                } else {
+                  console.error(
+                    "Elementi me id 'currentYear' nuk u gjete ne footer!"
+                  );
+                }
+                const canvas = document.getElementById("circleCanvas");
+                if (canvas) {
+                  const ctx = canvas.getContext("2d");
+                  ctx.beginPath();
+                  ctx.arc(10, 10, 8, 0, 2 * Math.PI);
+                  ctx.stroke();
+                } else {
+                  console.error("Elementi Canvas nuk u gjete!");
+                }
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+              loadFooter();
+            });
+          </script>
 <footer>
   <div class="footer-content">
     <div class="footer-section">
-      <h3>Monumentet historike</h3>
+      <h3 class="footer-h3">Monumentet historike</h3>
       <div class="lists-container">
         <ol>
           <li class="footer-li">
@@ -390,7 +413,7 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
       </div>
     </div>
     <div class="footer-section">
-      <h3>Bukurit&#235; Natyrore</h3>
+      <h3 class="footer-h3">Bukurit&#235; Natyrore</h3>
       <div class="lists-container">
         <ol>
           <li class="footer-li">
@@ -421,7 +444,7 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
       </div>
     </div>
     <div class="footer-section">
-      <h3>Restaurantet</h3>
+      <h3 class="footer-h3">Restaurantet</h3>
       <div class="lists-container">
         <ol>
           <li>
@@ -464,10 +487,10 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
     </div>
   </div>
   <div class="contact">
-    <h3>Contact us</h3>
+    <h3 style="text-decoration: none;">Contact us</h3>
     <address>
       <div class="info">
-        <p id="email">
+        <p id="email" class="footer-li">
           Email:
           <u
             ><a href="mailto:sugjerimeturistike@gmail.com"
