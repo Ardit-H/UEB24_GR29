@@ -37,7 +37,7 @@
         <ul id="navbar-logo">
           <li class="navbar-li">
               <svg viewBox="0 0 100 100">
-                  <!-- Definimi i gradientit për malet për të krijuar hije -->
+                 
                   <defs>
                       <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                           <stop offset="0%" style="stop-color: #388E3C; stop-opacity: 1" />
@@ -49,10 +49,10 @@
                       </linearGradient>
                   </defs>
           
-                  <!-- Dielli -->
+                  
                   <circle cx="50" cy="35" r="15" fill="yellow" />
           
-                  <!-- Malet me hije -->
+                 
                   <polygon points="10,70 30,40 50,70" fill="url(#mountainGradient)" />
                   <polygon points="25,70 50,30 75,70" fill="url(#mountainShadow)" />
                   <polygon points="40,70 60,40 80,70" fill="url(#mountainGradient)" />
@@ -96,14 +96,15 @@
               <tr>
                 <td>Cilat janë interesat tuaja kryesore për udhëtimet?</td>
                 <td>
-                  <select name="travel-interests" required>
-                    <option value="natyrë">Eksplorimi i natyrës</option>
-                    <option value="histori">Monumentet historike</option>
-                    <option value="kulturë">Evenimente kulturore</option>
-                    <option value="ushqim">Gastronomia lokale</option>
-                  </select>
+                    <input list="travel-interests-list" name="travel-interests" id="travel-interests" placeholder="Zgjedh njeren" required/>
+                    <datalist id="travel-interests-list">
+                        <option value="natyrë">
+                        <option value="histori">
+                        <option value="kulturë">
+                        <option value="ushqim">
+                    </datalist>
                 </td>
-              </tr>
+            </tr>
               <tr>
                 <td>A preferoni të udhëtoni vetëm apo në grup?</td>
                 <td>
@@ -122,9 +123,10 @@
               </tr>
             </tbody>
           </table>
-          <button class="butoni-tabeles " type="button" onclick="generateMessage()">Shfaq Rezultatin</button>
+          <button class="butoni-tabeles" type="button" onclick="generateMessage()">Shfaq Rezultatin</button>
           <br>
-          <em><p id="result-message" style="color: black;"></p></em>
+         
+          <em><output id="result-message" style="color: black;"></output></em>
         </form>
       </div>
     </div>
@@ -328,7 +330,7 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
 
 <script>
   function generateMessage() {
-    const travelInterest = document.querySelector('select[name="travel-interests"]').value;
+    const travelInterest = document.getElementById("travel-interests").value;
     const travelPreference = document.querySelector('input[name="travel-preference"]:checked')?.value;
 
     let message = "Ti je një tip udhëtari që ka:";
