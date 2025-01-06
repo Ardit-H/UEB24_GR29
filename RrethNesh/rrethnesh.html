@@ -353,18 +353,14 @@ function validateID() {
 
 <script>
   function generateID() {
-      const length = 12; 
-      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
-      let ID = "";
-      
-      for (let i = 0; i < length; i++) {
-          const randomIndex = Math.floor(Math.random() * charset.length);
-          ID += charset[randomIndex];
-      }
+      const wordList = ["kompjuter", "lajm", "programim", "kodim", "shkencë", "mendim", "rrjet", "web", "data", "teleskop", "fjalë", "strategji"];
+      const randomIndex = Math.floor(Math.random() * wordList.length);
+      const ID = wordList[randomIndex];
       
       document.getElementById('ID').value = ID;
   }
 </script>
+
 
 
 
