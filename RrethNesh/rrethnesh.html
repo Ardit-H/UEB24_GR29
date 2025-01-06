@@ -327,19 +327,26 @@ document.getElementById("Kontakti-form").addEventListener('keypress', resetTimeo
 
     let message = "Ti je një tip udhëtari që ka:";
 
-  
-    if (travelInterest === "natyrë") {
-      message += " aventurë dhe dëshirë për natyrë.";
-    } else if (travelInterest === "histori") {
-      message += " interes për histori.";
-    } else if (travelInterest === "kulturë") {
-      message += " pasion për kulturë.";
-    } else if (travelInterest === "ushqim") {
-      message += " dashuri për ushqim.";
-    }
+    if (!travelInterest) {
+      message = "Nuk keni zgjedhur interesin për udhëtimin.";
+    } else {
 
-   
-    message += travelPreference === "vetëm" ? " Pëlqen të udhëtojë vetëm." : " Pëlqen të udhëtojë në grup.";
+      if (travelInterest === "natyrë") {
+        message += " aventurë dhe dëshirë për natyrë.";
+      } else if (travelInterest === "histori") {
+        message += " interes për histori.";
+      } else if (travelInterest === "kulturë") {
+        message += " pasion për kulturë.";
+      } else if (travelInterest === "ushqim") {
+        message += " dashuri për ushqim.";
+      }
+
+      if (!travelPreference) {
+        message += " Nuk keni zgjedhur preferencën për udhëtim (vetëm ose në grup).";
+      } else {
+        message += travelPreference === "vetëm" ? " Pëlqen të udhëtojë vetëm." : " Pëlqen të udhëtojë në grup.";
+      }
+    }
 
     document.getElementById("result-message").textContent = message;
   }
